@@ -1,0 +1,43 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# local Claude settings
+.claude/settings.local.json
+
+# Pre-NDA reference / internal research — NOT for the public repo.
+# La maqueta v2 y el scrape traen rótulos previos a la confirmación de los NDAs.
+# El repo es público: estos archivos filtrarían clientes confidenciales.
+# Se quedan solo en local.
+index (4).html
+km-scrape-findings.md
+scrape-km.sh

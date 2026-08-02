@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "home": {
+      "title": "",
+      "description": ""
+    },
+    "projects": {
+      "title": "",
+      "description": ""
+    },
+    "services": {
+      "title": "",
+      "description": ""
+    },
+    "products": {
+      "title": "",
+      "description": ""
+    },
+    "about": {
+      "title": "",
+      "description": ""
+    },
+    "contact": {
+      "title": "",
+      "description": ""
+    }
+  },
+  "nav": {
+    "projects": "",
+    "services": "",
+    "products": "",
+    "about": "",
+    "journal": "",
+    "contact": "",
+    "letsTalk": ""
+  },
+  "languages": {
+    "en": "",
+    "es": "",
+    "pt": "",
+    "ru": "",
+    "pending": ""
+  },
+  "home": {
+    "hero": {
+      "kicker": "",
+      "titleLines": [
+        "",
+        "",
+        ""
+      ],
+      "scroll": ""
+    },
+    "statement": {
+      "titleLines": [
+        "",
+        ""
+      ],
+      "p1": "",
+      "p2": ""
+    },
+    "philosophy": {
+      "micro": "",
+      "titleLines": [
+        "",
+        "",
+        ""
+      ],
+      "body": "",
+      "sign": ""
+    },
+    "selected": {
+      "micro": "",
+      "titleLines": [
+        "",
+        ""
+      ],
+      "side": "",
+      "cta": ""
+    },
+    "range": {
+      "micro": "",
+      "titleLines": [
+        "",
+        ""
+      ],
+      "side": "",
+      "ramsaName": "",
+      "ramsaTitle": "",
+      "ramsaGo": "",
+      "elicyonName": "",
+      "elicyonTitle": "",
+      "elicyonGo": ""
+    },
+    "partnership": {
+      "micro": "",
+      "titleLines": [
+        "",
+        "",
+        ""
+      ],
+      "p1": "",
+      "p2": ""
+    },
+    "tech": {
+      "micro": "",
+      "titleLines": [
+        "",
+        "",
+        ""
+      ],
+      "side": "",
+      "c1Label": "",
+      "c1Title": "",
+      "c1Body": "",
+      "c2Label": "",
+      "c2Title": "",
+      "c2Body": "",
+      "c3Label": "",
+      "c3Title": "",
+      "c3Body": ""
+    },
+    "marquee1": "",
+    "marquee2": "",
+    "where": {
+      "micro": "",
+      "titleLines": [
+        "",
+        ""
+      ],
+      "side": ""
+    },
+    "trusted": {
+      "micro": "",
+      "titleLines": [
+        "",
+        ""
+      ]
+    }
+  },
+  "projects": {
+    "kicker": "",
+    "titleLines": [
+      ""
+    ],
+    "introLead": "",
+    "introNote": "",
+    "typology": "",
+    "location": "",
+    "status": "",
+    "density": "",
+    "countOne": "",
+    "countOther": "",
+    "empty": ""
+  },
+  "services": {
+    "kicker": "",
+    "titleLines": [
+      "",
+      ""
+    ],
+    "introLead": "",
+    "introNote": "",
+    "projectCountOne": "",
+    "projectCountOther": "",
+    "workProcess": ""
+  },
+  "vertical": {
+    "back": "",
+    "wpMicro": "",
+    "wpTitle1": "",
+    "wpTitle2": "",
+    "stage": "",
+    "dossierMicro": "",
+    "dossierTitle1": "",
+    "dossierTitle2": "",
+    "dossierLead": "",
+    "selectedWork": ""
+  },
+  "products": {
+    "kicker": "",
+    "titleLines": [
+      ""
+    ],
+    "introLead": "",
+    "introNote": ""
+  },
+  "about": {
+    "kicker": "",
+    "titleLines": [
+      "",
+      ""
+    ],
+    "introLead": "",
+    "introNote": "",
+    "lead": "",
+    "throughline": "",
+    "stat1Num": "",
+    "stat1Sup": "",
+    "stat1Label": "",
+    "stat2Num": "",
+    "stat2Sup": "",
+    "stat2Label": "",
+    "stat3Num": "",
+    "stat3Sup": "",
+    "stat3Label": "",
+    "stat4Num": "",
+    "stat4Sup": "",
+    "stat4Label": "",
+    "founderMicro": "",
+    "founderName": "",
+    "founderRole": "",
+    "founderQuote": "",
+    "founderBody": "",
+    "teamMicro": "",
+    "teamTitle": "",
+    "teamSide": "",
+    "trustedMicro": "",
+    "trustedTitle1": "",
+    "trustedTitle2": ""
+  },
+  "contact": {
+    "kicker": "",
+    "titleLines": [
+      "",
+      ""
+    ],
+    "introLead": "",
+    "introNote": "",
+    "officeFallback": "",
+    "addressPending": ""
+  },
+  "cta": {
+    "kicker": "",
+    "titleLines": [
+      "",
+      ""
+    ],
+    "body": "",
+    "button": ""
+  },
+  "footer": {
+    "navigate": "",
+    "verticals": "",
+    "studio": "",
+    "follow": "",
+    "linkedin": "",
+    "instagram": "",
+    "tag": "",
+    "copyright": ""
+  },
+  "project": {
+    "credArchitecture": "",
+    "credInterior": "",
+    "credDeveloper": "",
+    "credLighting": "",
+    "credYear": "",
+    "lightingValue": "",
+    "credPending": "",
+    "conceptMicro": "",
+    "conceptTitleReal": "",
+    "conceptTitleTodo": "",
+    "conceptTodo": "",
+    "challengeMicro": "",
+    "challengeTitle": "",
+    "challengeTodo": "",
+    "pullQuote": "",
+    "pullCite": "",
+    "specMicro": "",
+    "specTypology": "",
+    "specLocation": "",
+    "specArchitecture": "",
+    "specInterior": "",
+    "specDeveloper": "",
+    "specScale": "",
+    "specYear": "",
+    "specStatus": "",
+    "specControl": "",
+    "specPhotography": "",
+    "specPending": "",
+    "nextMicro": "",
+    "viewProject": "",
+    "nameTBD": ""
+  }
+}

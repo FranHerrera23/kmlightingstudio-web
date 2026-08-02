@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "home": {
+      "title": "KM Lighting Studio — Architectural Lighting Design · Lima · Miami · Madrid",
+      "description": "Karen Mannheim Lighting Studio. 33 years, 2,500+ projects, six countries. Architectural lighting for residences, multifamily, hospitality, aviation and yachts."
+    },
+    "projects": {
+      "title": "Projects — KM Lighting Studio",
+      "description": "Filter by typology, location or status. Every project opens as a full, indexable page. Images first, always."
+    },
+    "services": {
+      "title": "Services — KM Lighting Studio",
+      "description": "One discipline, seven worlds. Lighting design, design management and on-site management across every typology."
+    },
+    "products": {
+      "title": "What We Specify — KM Lighting Studio",
+      "description": "The instruments we return to — because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended."
+    },
+    "about": {
+      "title": "About — KM Lighting Studio",
+      "description": "For 33 years, one thing: make light give a space its meaning. A practice of more than 80 people across three continents."
+    },
+    "contact": {
+      "title": "Contact — KM Lighting Studio",
+      "description": "We don't pitch. We partner. Lima · Miami · Madrid."
+    }
+  },
+
+  "nav": {
+    "projects": "Projects",
+    "services": "Services",
+    "products": "Products",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "Contact",
+    "letsTalk": "Let's talk"
+  },
+
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "pt": "Português",
+    "ru": "Русский",
+    "pending": "pend"
+  },
+
+  "home": {
+    "hero": {
+      "kicker": "Architectural Lighting Design · Lima · Miami · Madrid",
+      "titleLines": ["Great architecture", "deserves lighting", "that understands."],
+      "scroll": "Scroll"
+    },
+    "statement": {
+      "titleLines": ["You spend years", "on a space."],
+      "p1": "Every detail considered. Then lighting becomes an afterthought — and the architecture disappears.",
+      "p2": "We design light that reveals what you've already created. Not light you notice; light that makes the room, the material and the person inside it feel <it>inevitable.</it>"
+    },
+    "philosophy": {
+      "micro": "Our philosophy",
+      "titleLines": ["Lighting designed", "for the architecture.", "Not for the portfolio."],
+      "body": "We listen to what each space wants to be — then design light that helps it become that. Single, intentional sources over flooded rooms. Deliberate pools of shadow that make warmth feel warmer.",
+      "sign": "The architecture is the vision. Lighting serves it."
+    },
+    "selected": {
+      "micro": "Selected work",
+      "titleLines": ["A portfolio,", "by typology."],
+      "side": "The same studio that lights an art collector's home lights a tower, a beach house, a flagship, a jet.",
+      "cta": "See all projects →"
+    },
+    "range": {
+      "micro": "Our range",
+      "titleLines": ["Classical or", "contemporary."],
+      "side": "The language changes. The discipline doesn't.",
+      "ramsaName": "RAMSA",
+      "ramsaTitle": "Traditional",
+      "ramsaGo": "Lighting that honours heritage and craftsmanship",
+      "elicyonName": "Elicyon London",
+      "elicyonTitle": "Modern",
+      "elicyonGo": "Lighting that celebrates line and transparency"
+    },
+    "partnership": {
+      "micro": "Partnership",
+      "titleLines": ["When lighting fails,", "it's your name", "on the line."],
+      "p1": "Your clients expect perfection from day one. You work with architects who demand precision. And international projects fail on coordination — three continents, different languages, regulations, teams.",
+      "p2": "We've been making that work for thirty-three years."
+    },
+    "tech": {
+      "micro": "The technology",
+      "titleLines": ["You design the room.", "We make the light", "disappear into it."],
+      "side": "The light that feels like it was always there is the hardest kind to engineer. It takes more control, not less, to make light this calm.",
+      "c1Label": "The light",
+      "c1Title": "A light that dims like a candle.",
+      "c1Body": "Most LEDs hold the same cold tone all the way down. Ours warms as it lowers — clean white to the amber of a flame, the way daylight fades at dusk.",
+      "c2Label": "The system",
+      "c2Title": "A house that keeps time with the sun.",
+      "c2Body": "The light shifts on its own — cool in the morning, golden by night. No switches to read, no cold glow at midnight.",
+      "c3Label": "The control",
+      "c3Title": "One gesture, the whole room answers.",
+      "c3Body": "One control layer holds every fixture in agreement. Scenes composed in advance, so the room arrives complete at a single touch."
+    },
+    "marquee1": "Great lighting disappears —",
+    "marquee2": "the architecture remains —",
+    "where": {
+      "micro": "Where we work",
+      "titleLines": ["Six countries.", "One standard."],
+      "side": "Residential needs scene control. Hospitality needs reliability at scale. Commercial needs adaptability."
+    },
+    "trusted": {
+      "micro": "Trusted by",
+      "titleLines": ["The firms who", "trust KMLS."]
+    }
+  },
+
+  "projects": {
+    "kicker": "Projects",
+    "titleLines": ["All projects."],
+    "introLead": "Filter by typology, location or status. Concept studies are labelled as such — we show them because they define the range of the studio, not because we're claiming them as delivered work.",
+    "introNote": "Every project opens as a full page. Images first, always.",
+    "typology": "Typology",
+    "location": "Location",
+    "status": "Status",
+    "density": "Density",
+    "countOne": "{count} project",
+    "countOther": "{count} projects",
+    "empty": "No projects match this combination."
+  },
+
+  "services": {
+    "kicker": "Services",
+    "titleLines": ["One discipline.", "Seven worlds."],
+    "introLead": "We design the light, we protect it through construction, and we stay until it's right. What changes is what the space demands of it.",
+    "introNote": "A jet needs certified components. A tower needs one identity from lobby to penthouse. A yacht needs to survive salt.",
+    "projectCountOne": "{count} project",
+    "projectCountOther": "{count} projects",
+    "workProcess": "Work process"
+  },
+
+  "vertical": {
+    "back": "← All services",
+    "wpMicro": "Work process",
+    "wpTitle1": "Three stages,",
+    "wpTitle2": "one commitment.",
+    "stage": "Stage {n}",
+    "dossierMicro": "What you receive",
+    "dossierTitle1": "Every drawing,",
+    "dossierTitle2": "one final dossier.",
+    "dossierLead": "Not a set of fragments handed over stage by stage — one complete, closeout dossier you can hold us to.",
+    "selectedWork": "Selected work in this vertical"
+  },
+
+  "products": {
+    "kicker": "Products",
+    "titleLines": ["What we specify."],
+    "introLead": "Every project is built from a short, deliberate list of instruments — fixtures we return to because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended.",
+    "introNote": "Not a shop. Photometric files and spec sheets available to specifying professionals, ungated."
+  },
+
+  "about": {
+    "kicker": "About",
+    "titleLines": ["For 33 years,", "one thing."],
+    "introLead": "Karen Mannheim Lighting Studio has done one thing: make light give a space its meaning.",
+    "introNote": "What began as one person knocking on doors in Lima is now a practice of more than 80 people across three continents.",
+    "lead": "We've delivered more than 2,500 projects across six countries, working alongside firms like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on this list: after three decades and that much scale, the studio still designs each project as if it were the only one.",
+    "throughline": "The throughline never changed — light, here, is never decoration. It's the soul of the architecture.",
+    "stat1Num": "33", "stat1Sup": "+", "stat1Label": "Years of practice",
+    "stat2Num": "2,500", "stat2Sup": "+", "stat2Label": "Projects delivered",
+    "stat3Num": "80", "stat3Sup": "+", "stat3Label": "People in the studio",
+    "stat4Num": "6", "stat4Sup": "", "stat4Label": "Countries · 3 offices",
+    "founderMicro": "Who we are",
+    "founderName": "Karen Mannheim.",
+    "founderRole": "Founder & Creative Director",
+    "founderQuote": "\"I don't design light to be noticed. I design it so the room, the material, the person living there all feel inevitable.\"",
+    "founderBody": "Karen has spent more than three decades building one of the few lighting practices that works at the level of the world's most demanding architecture firms — and keeps the soul of a studio. She leads the design on every project the studio takes.",
+    "teamMicro": "Our team",
+    "teamTitle": "Leadership.",
+    "teamSide": "Architecture this complex needs partners who understand the stakes.",
+    "trustedMicro": "Trusted by",
+    "trustedTitle1": "The firms who",
+    "trustedTitle2": "trust KMLS."
+  },
+
+  "contact": {
+    "kicker": "Contact",
+    "titleLines": ["We don't pitch.", "We partner."],
+    "introLead": "Whether it's a listed building in London, a resort in Dubai, or a penthouse in São Paulo — we'd love to collaborate on projects that demand lighting worthy of the architecture.",
+    "introNote": "Your clients will never know our name. They'll just never want to leave.",
+    "officeFallback": "Office",
+    "addressPending": "Address to be confirmed"
+  },
+
+  "cta": {
+    "kicker": "Start here",
+    "titleLines": ["Tell us what", "you're building."],
+    "body": "Whatever stage you're at — concept, tender, or a ceiling that's already closed. We'll tell you honestly whether we're the right studio for it.",
+    "button": "Write to the studio"
+  },
+
+  "footer": {
+    "navigate": "Navigate",
+    "verticals": "Verticals",
+    "studio": "Studio",
+    "follow": "Follow",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "tag": "Great lighting disappears. The architecture remains.",
+    "copyright": "© 2026"
+  },
+
+  "project": {
+    "credArchitecture": "Architecture",
+    "credInterior": "Interior Design",
+    "credDeveloper": "Developer",
+    "credLighting": "Lighting Design",
+    "credYear": "Year",
+    "lightingValue": "KM Lighting Studio",
+    "credPending": "To be confirmed",
+    "conceptMicro": "Concept",
+    "conceptTitleReal": "The idea",
+    "conceptTitleTodo": "The project",
+    "conceptTodo": "To be written — 2 to 3 self-contained sentences. What the project was. This is the block an AI lifts.",
+    "challengeMicro": "Challenge",
+    "challengeTitle": "What it demanded",
+    "challengeTodo": "To be written — what the technical problem was and how it was resolved. Ideally with a number: a CRI, an angle, a lux level, a material that forced a decision.",
+    "pullQuote": "The hardest light to engineer is the light you never notice.",
+    "pullCite": "Karen Mannheim · Founder",
+    "specMicro": "Project data",
+    "specTypology": "Typology",
+    "specLocation": "Location",
+    "specArchitecture": "Architecture",
+    "specInterior": "Interior Design",
+    "specDeveloper": "Developer",
+    "specScale": "Scale",
+    "specYear": "Year",
+    "specStatus": "Status",
+    "specControl": "Control system",
+    "specPhotography": "Photography",
+    "specPending": "To be confirmed",
+    "nextMicro": "Next project",
+    "viewProject": "View project",
+    "nameTBD": "[NAME TO BE DEFINED]"
+  }
+}
