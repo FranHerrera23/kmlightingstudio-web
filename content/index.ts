@@ -4,11 +4,15 @@
 import { TODO, type Project, type Todoable, type Photo, type Ratio } from './types';
 import { TYPOLOGIES, LOCATIONS, STATUSES } from './taxonomy';
 import { PROJECTS, DEFAULT_GALLERY } from './projects';
+import { FIX } from './products';
+import { ARTICLES } from './articles';
 import { ASSET } from './site';
+import type { Fixture, Article } from './types';
 
 export * from './types';
 export * from './taxonomy';
 export * from './projects';
+export * from './gallery';
 export * from './verticals';
 export * from './scope';
 export * from './studio';
@@ -88,4 +92,23 @@ export function isIndexable(p: Project): boolean {
 /** Valor real o null (para mostrar "Por confirmar" en fase 1). */
 export function displayValue<T>(v: Todoable<T>): T | null {
   return isTodo(v) ? null : (v as T);
+}
+
+/* ── Products ── */
+export function getFixture(id: string): Fixture | undefined {
+  return FIX.find((f) => f.id === id);
+}
+/** Familias únicas, en orden de aparición — para la faceta de filtro. */
+export function fixtureFamilies(): string[] {
+  return [...new Set(FIX.map((f) => f.family))];
+}
+
+/* ── Journal ── */
+export function getArticle(slug: string): Article | undefined {
+  return ARTICLES.find((a) => a.slug === slug);
+}
+/** ¿El artículo tiene contenido real? Regla del sitemap/noindex: necesita al
+ *  menos el answer capsule escrito. Los seeds (todo TODO) van noindex. */
+export function isArticleReady(a: Article): boolean {
+  return !isTodo(a.answer);
 }

@@ -152,7 +152,22 @@
     "kicker": "Products",
     "titleLines": ["What we specify."],
     "introLead": "Every project is built from a short, deliberate list of instruments — fixtures we return to because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended.",
-    "introNote": "Not a shop. Photometric files and spec sheets available to specifying professionals, ungated."
+    "introNote": "Not a shop. Photometric files and spec sheets available to specifying professionals, ungated.",
+    "family": "Family",
+    "all": "All",
+    "countOne": "{count} fixture",
+    "countOther": "{count} fixtures",
+    "backToProducts": "← All products",
+    "whySpecify": "Why we specify it",
+    "addToSpec": "Add to spec sheet",
+    "addedToSpec": "Added to spec sheet",
+    "specsHeading": "Technical data",
+    "downloadsHeading": "Downloads",
+    "accessoriesHeading": "Accessories",
+    "finishesHeading": "Finishes",
+    "opticsHeading": "Optics",
+    "cctHeading": "Colour temperature",
+    "technicalPending": "Awaiting TRAZZO data"
   },
 
   "about": {

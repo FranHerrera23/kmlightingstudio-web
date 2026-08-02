@@ -98,6 +98,20 @@ export const PROJECTS: Project[] = [
   { id: 'jet', typ: 'aviation', loc: 'confidential', sta: 'progress', ph: 4, name: 'Private Jet', partner: 'Private Asset · Aviation', place: 'Confidential', arch: TODO, dev: TODO, interior: TODO, year: '2026', scale: TODO,
     concept: 'Cabin lighting that has to work at altitude, across time zones, in a very small volume.', challenge: TODO },
 
+  /* ── LEGACY · karenmannheim.com (scrape) ──
+     Solo name/typología/ubicación cargados; el resto TODO para completar en
+     fase 2 (arquitecto, interiorista, año, escala, concept, challenge). La
+     ubicación sale del scrape: el portfolio residencial es de Lima salvo el de
+     Miami (Collins). ph:0 hasta subir fotos a /{id}/{n}.jpg. */
+  { id: 'san-isidro-home', typ: 'residences', loc: 'peru', sta: 'completed', ph: 0, name: 'San Isidro Home', partner: TODO, place: 'San Isidro · Lima', arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'san-isidro-apartment', typ: 'residences', loc: 'peru', sta: 'completed', ph: 0, name: 'San Isidro Apartment', partner: TODO, place: 'San Isidro · Lima', arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'park-apartment', typ: 'residences', loc: 'peru', sta: 'completed', ph: 0, name: 'Park Apartment', partner: TODO, place: TODO, arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'collins-apartment', typ: 'residences', loc: 'usa', sta: 'completed', ph: 0, name: 'Collins Apartment', partner: TODO, place: 'Collins Ave · Miami', arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'starman', typ: 'residences', loc: 'peru', sta: 'completed', ph: 0, name: 'Starman', partner: TODO, place: TODO, arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'multifamily-acm', typ: 'multifamily', loc: 'peru', sta: 'completed', ph: 0, name: 'Multifamily by ACM', partner: TODO, place: 'Lima', arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'stylish-duplex', typ: 'residences', loc: 'peru', sta: 'completed', ph: 0, name: 'Stylish Duplex', partner: TODO, place: TODO, arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+  { id: 'private-residence-lima', typ: 'residences', loc: 'peru', sta: 'completed', ph: 0, name: 'Private Residence Lima', partner: TODO, place: 'Lima', arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
+
   /* ── CONCEPT STUDIES · 6 — todo por definir con Karen ── */
   { id: 'c1', typ: 'yachts', loc: 'confidential', sta: 'concept', ph: 0, name: TODO, hint: 'Concepto 01 · Superyacht', partner: 'Concept study', place: TODO, arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },
   { id: 'c2', typ: 'yachts', loc: 'confidential', sta: 'concept', ph: 0, name: TODO, hint: 'Concepto 02 · Sailing yacht', partner: 'Concept study', place: TODO, arch: TODO, dev: TODO, interior: TODO, year: TODO, scale: TODO, concept: TODO, challenge: TODO },

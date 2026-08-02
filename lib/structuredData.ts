@@ -5,7 +5,9 @@ import {
   isTodo,
   typologyLabel,
   statusLabel,
-  type Project
+  type Project,
+  type Fixture,
+  type Article
 } from '@/content';
 
 const ORG_ID = `${SITE_URL}/#org`;
@@ -101,4 +103,69 @@ export function creativeWork(p: Project) {
   if (contributors.length) data.contributor = contributors;
 
   return data;
+}
+
+/**
+ * Product por luminaria. Sin `offers` — especificamos, no vendemos.
+ * Los campos técnicos en TODO se omiten (no se inventan). (Brief §6)
+ */
+export function fixtureProduct(f: Fixture) {
+  const url = `${SITE_URL}/products/${f.id}`;
+  const data: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `${url}#product`,
+    url,
+    name: f.name,
+    category: f.family,
+    description: f.blurb,
+    brand: { '@id': ORG_ID }
+  };
+  if (!isTodo(f.cct)) {
+    data.additionalProperty = (f.cct as string[]).map((value) => ({
+      '@type': 'PropertyValue',
+      name: 'CCT',
+      value
+    }));
+  }
+  return data;
+}
+
+/**
+ * Article + FAQPage por artículo del Journal. Solo campos con contenido real —
+ * los TODO se omiten del JSON-LD (answer, faq sin responder, fecha…). (Brief §6)
+ */
+export function articleGraph(a: Article) {
+  const url = `${SITE_URL}/journal/${a.slug}`;
+
+  const article: Record<string, unknown> = {
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    url,
+    headline: a.title,
+    about: a.question,
+    author: { '@type': 'Person', name: a.author },
+    reviewedBy: { '@type': 'Person', name: a.reviewedBy },
+    publisher: { '@id': ORG_ID }
+  };
+  if (!isTodo(a.answer)) article.description = a.answer;
+  if (!isTodo(a.published)) article.datePublished = a.published;
+
+  const graph: Record<string, unknown>[] = [article];
+
+  // FAQPage solo con las preguntas que ya tienen respuesta escrita.
+  const answered = a.faq.filter((x) => !isTodo(x.a));
+  if (answered.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: answered.map((x) => ({
+        '@type': 'Question',
+        name: x.q,
+        acceptedAnswer: { '@type': 'Answer', text: x.a }
+      }))
+    });
+  }
+
+  return { '@context': 'https://schema.org', '@graph': graph };
 }

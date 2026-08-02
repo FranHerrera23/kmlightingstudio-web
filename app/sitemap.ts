@@ -1,5 +1,13 @@
 import type { MetadataRoute } from 'next';
-import { SITE_URL, PROJECTS, VERTICALS, isIndexable } from '@/content';
+import {
+  SITE_URL,
+  PROJECTS,
+  VERTICALS,
+  FIX,
+  ARTICLES,
+  isIndexable,
+  isArticleReady
+} from '@/content';
 
 /**
  * Sitemap dinámico.
@@ -47,6 +55,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5
+    });
+  }
+
+  // Productos — todas las luminarias tienen name/family/blurb reales.
+  for (const f of FIX) {
+    entries.push({
+      url: `${SITE_URL}/products/${f.id}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5
+    });
+  }
+
+  // Journal — solo artículos con contenido real (answer escrito). Los seeds
+  // en TODO quedan afuera hasta que se redacten. (EN-only, sin alternates.)
+  for (const a of ARTICLES.filter(isArticleReady)) {
+    entries.push({
+      url: `${SITE_URL}/journal/${a.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6
     });
   }
 

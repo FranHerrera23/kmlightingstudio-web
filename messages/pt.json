@@ -183,7 +183,22 @@
       ""
     ],
     "introLead": "",
-    "introNote": ""
+    "introNote": "",
+    "family": "",
+    "all": "",
+    "countOne": "",
+    "countOther": "",
+    "backToProducts": "",
+    "whySpecify": "",
+    "addToSpec": "",
+    "addedToSpec": "",
+    "specsHeading": "",
+    "downloadsHeading": "",
+    "accessoriesHeading": "",
+    "finishesHeading": "",
+    "opticsHeading": "",
+    "cctHeading": "",
+    "technicalPending": ""
   },
   "about": {
     "kicker": "",

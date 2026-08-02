@@ -83,23 +83,66 @@ export interface ScopeStage {
   steps: Array<[index: string, title: string, items: string[]]>;
 }
 
+/**
+ * Luminaria. Misma arquitectura que Project: tiene id (→ /products/[slug]),
+ * campos vitrina (family/name/diameter/blurb/draw) y campos técnicos que
+ * quedan TODO hasta que TRAZZO entregue los datos reales. Sin precios.
+ */
 export interface Fixture {
-  /** Clave del dibujo técnico en DRAW. */
-  draw: string;
-  fam: string;
+  id: string;
+  /** Familia — se usa como faceta de filtro (valores únicos) y como label. */
+  family: string;
   name: string;
-  dia: string;
-  bl: string;
+  diameter: string;
+  blurb: string;
+  /** Clave del dibujo técnico (elevación) en DRAW. */
+  draw: string;
+  /** Ficha técnica: filas [label, valor]. TODO hasta TRAZZO. */
+  specs: Todoable<Array<[label: string, value: string]>>;
+  /** Descargables: {label, href} — IES, spec sheet, dwg. TODO hasta TRAZZO. */
+  downloads: Todoable<Array<{ label: string; href: string }>>;
+  accessories: Todoable<string[]>;
+  finishes: Todoable<string[]>;
+  optics: Todoable<string[]>;
+  /** Temperaturas de color disponibles (2700K, 3000K, warm-dim…). */
+  cct: Todoable<string[]>;
 }
 
-/** Artículo del Journal: [título, pregunta, tag, autor, tiempo de lectura]. */
-export type Article = [
-  title: string,
-  question: string,
-  tag: string,
-  author: string,
-  read: string
-];
+/* ── Journal · molde AEO ── */
+export interface FaqItem {
+  q: string;
+  a: Todoable<string>;
+}
+export interface ArticleSection {
+  /** Subheader = una afirmación, no una etiqueta. */
+  heading: Todoable<string>;
+  body: Todoable<string>;
+}
+export interface ComparisonTable {
+  caption: Todoable<string>;
+  headers: string[];
+  rows: string[][];
+}
+export interface Article {
+  slug: string;
+  title: string;
+  /** La pregunta que responde (search / AI). */
+  question: string;
+  tag: string;
+  author: string;
+  /** Credenciales del autor para el bloque de autor + JSON-LD. */
+  credentials: Todoable<string>;
+  reviewedBy: string;
+  read: Todoable<string>;
+  published: Todoable<string>;
+  /** Answer capsule — 2 a 3 frases autocontenidas. El bloque que la IA levanta. */
+  answer: Todoable<string>;
+  takeaways: Todoable<string[]>;
+  /** Cuerpo en secciones con subheaders-afirmación. */
+  sections: ArticleSection[];
+  table: Todoable<ComparisonTable>;
+  faq: FaqItem[];
+}
 
 /** Oficina: [ciudad, etiqueta, timezone]. La dirección se confirma en fase 2. */
 export type Office = [city: string, tag: string, tz: string];

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import MaskLines from '@/components/MaskLines';
 import BuildNote from '@/components/BuildNote';
-import { ARTICLES, SITE_NAME } from '@/content';
+import { ARTICLES, isTodo, SITE_NAME } from '@/content';
 
 /**
  * JOURNAL · v2 — SOLO EN, fuera del sistema de idiomas.
@@ -47,21 +47,22 @@ export default async function JournalPage(props: {
 
       <section className="sec-s">
         <div className="jr">
-          {ARTICLES.map(([title, question, tag, author, read]) => (
-            <div className="jrow rise" key={title}>
+          {ARTICLES.map((a) => (
+            // Journal fuera del sistema de idiomas: <a> plano, siempre /journal.
+            <a className="jrow rise" key={a.slug} href={`/journal/${a.slug}`}>
               <span>
-                <h4>{title}</h4>
+                <h4>{a.title}</h4>
                 <span className="q">
                   <b>Answers</b>
-                  {question}
+                  {a.question}
                 </span>
               </span>
               <span className="t">
-                {tag}
-                <i>{author}</i>
+                {a.tag}
+                <i>{a.author}</i>
               </span>
-              <span className="rd">{read}</span>
-            </div>
+              <span className="rd">{isTodo(a.read) ? '' : (a.read as string)}</span>
+            </a>
           ))}
         </div>
         <BuildNote title="Journal · fase 3" style={{ marginTop: 'clamp(36px,5vh,60px)' }}>

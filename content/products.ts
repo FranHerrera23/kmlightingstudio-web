@@ -1,8 +1,11 @@
-import type { Fixture } from './types';
+import { TODO, type Fixture } from './types';
 
-/* ── Products · v2 ── (portado tal cual de DRAW + FIX)
-   "Qué especificamos y por qué" — sin SKUs ni precios.
-   Ver la nota de build en Products (decisión TRAZZO vs KMLS). */
+/* ── Products · v2 ── (dibujos técnicos + fichas)
+   Misma arquitectura que projects: cada luminaria tiene id y página propia.
+   Los campos vitrina (family/name/diameter/blurb/draw) van cargados; TODA la
+   ficha técnica queda TODO hasta que TRAZZO entregue los datos reales.
+   "Qué especificamos y por qué" — sin SKUs ni precios. Ver la nota de build
+   en Products (decisión TRAZZO vs KMLS). */
 export const DRAW: Record<string, string> = {
   down: '<svg viewBox="0 0 120 90"><path d="M10 22h100M10 22v6h100v-6"/><path d="M34 28v34a26 26 0 0 0 52 0V28"/><ellipse cx="60" cy="62" rx="26" ry="7"/></svg>',
   adj: '<svg viewBox="0 0 120 90"><path d="M10 20h100M10 20v6h100v-6"/><path d="M36 26v20a24 24 0 0 0 48 0V26"/><path d="M44 48l30 24M74 48L44 72" opacity=".4"/></svg>',
@@ -14,13 +17,31 @@ export const DRAW: Record<string, string> = {
   drv: '<svg viewBox="0 0 120 90"><rect x="14" y="30" width="92" height="30" rx="2"/><path d="M14 40h92M14 50h92" opacity=".28"/><path d="M6 45h8M106 45h8"/></svg>'
 };
 
+/** Campos técnicos, todos pendientes de TRAZZO (se completan en /content). */
+const PENDING = {
+  specs: TODO,
+  downloads: TODO,
+  accessories: TODO,
+  finishes: TODO,
+  optics: TODO,
+  cct: TODO
+} as const;
+
 export const FIX: Fixture[] = [
-  { draw: 'down', fam: 'Recessed · Trimless', name: 'Trimless Downlight', dia: 'Ø57', bl: 'The studio default. Deep-recessed lens, no visible edge, the mass of the body doing the cooling.' },
-  { draw: 'down', fam: 'Recessed · Trimless', name: 'Trimless Downlight', dia: 'Ø38', bl: 'Same output, smaller aperture — for ceilings that can’t afford another hole.' },
-  { draw: 'adj', fam: 'Recessed · Adjustable', name: 'Adjustable Spot', dia: 'Ø57', bl: 'Tilt and rotation entirely above the ceiling plane.' },
-  { draw: 'wash', fam: 'Wallwash · Trimless', name: 'Trimless Wallwasher', dia: 'Ø74', bl: 'Even vertical gradient, ceiling to skirting.' },
-  { draw: 'lin', fam: 'Linear · Trimless', name: 'Plaster-in Linear', dia: '25mm', bl: 'Continuous run with no dark gaps at the joints.' },
-  { draw: 'trk', fam: 'Track · 48V magnetic', name: 'Magnetic Track', dia: '48V', bl: 'For collections that change. Every head repositions by hand.' },
-  { draw: 'ext', fam: 'Exterior · In-ground', name: 'Marine-grade Uplight', dia: 'Ø90', bl: '316 stainless, fully potted. Specified where the salt actually is.' },
-  { draw: 'drv', fam: 'Control · Driver', name: 'Warm-dim Driver', dia: 'DALI-2', bl: 'Where most residential lighting quietly fails. Dims to 1% without a visible step.' }
+  { id: 'trimless-downlight-57', family: 'Recessed · Trimless', name: 'Trimless Downlight', diameter: 'Ø57', draw: 'down',
+    blurb: 'The studio default. Deep-recessed lens, no visible edge, the mass of the body doing the cooling.', ...PENDING },
+  { id: 'trimless-downlight-38', family: 'Recessed · Trimless', name: 'Trimless Downlight', diameter: 'Ø38', draw: 'down',
+    blurb: 'Same output, smaller aperture — for ceilings that can’t afford another hole.', ...PENDING },
+  { id: 'adjustable-spot', family: 'Recessed · Adjustable', name: 'Adjustable Spot', diameter: 'Ø57', draw: 'adj',
+    blurb: 'Tilt and rotation entirely above the ceiling plane.', ...PENDING },
+  { id: 'trimless-wallwasher', family: 'Wallwash · Trimless', name: 'Trimless Wallwasher', diameter: 'Ø74', draw: 'wash',
+    blurb: 'Even vertical gradient, ceiling to skirting.', ...PENDING },
+  { id: 'plaster-in-linear', family: 'Linear · Trimless', name: 'Plaster-in Linear', diameter: '25mm', draw: 'lin',
+    blurb: 'Continuous run with no dark gaps at the joints.', ...PENDING },
+  { id: 'magnetic-track', family: 'Track · 48V magnetic', name: 'Magnetic Track', diameter: '48V', draw: 'trk',
+    blurb: 'For collections that change. Every head repositions by hand.', ...PENDING },
+  { id: 'marine-uplight', family: 'Exterior · In-ground', name: 'Marine-grade Uplight', diameter: 'Ø90', draw: 'ext',
+    blurb: '316 stainless, fully potted. Specified where the salt actually is.', ...PENDING },
+  { id: 'warm-dim-driver', family: 'Control · Driver', name: 'Warm-dim Driver', diameter: 'DALI-2', draw: 'drv',
+    blurb: 'Where most residential lighting quietly fails. Dims to 1% without a visible step.', ...PENDING }
 ];
