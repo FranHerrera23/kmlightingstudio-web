@@ -18,6 +18,8 @@ import Nav from '@/components/Nav';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import Reveal from '@/components/Reveal';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // v2: Archivo para todo, Fraunces solo italic 300 (la cursiva es acento, una por página).
 const FONTS =
@@ -75,6 +77,10 @@ export default async function LocaleLayout(props: {
           <Footer />
           <Reveal />
         </NextIntlClientProvider>
+        {/* Sin cookies, sin banner de consentimiento — Vercel Analytics no las
+            usa. Speed Insights vigila el LCP cuando entren las fotos reales. */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

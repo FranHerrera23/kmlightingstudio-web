@@ -1,10 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { STUDIO_EMAIL } from '@/content';
+import { Link } from '@/i18n/navigation';
 import MaskLines from './MaskLines';
 
-/** CTA global · v2 (aparece en todas las vistas, antes del footer). */
+/** CTA global · v3 (aparece en todas las vistas, antes del footer).
+ *  Lleva al formulario real de contacto, no a un mailto. */
 export default function CTA() {
   const t = useTranslations('cta');
   const lines = t.raw('titleLines') as string[];
@@ -15,9 +16,9 @@ export default function CTA() {
         <MaskLines lines={lines} />
       </h2>
       <p className="lead">{t('body')}</p>
-      <a className="b" href={`mailto:${STUDIO_EMAIL}`}>
+      <Link className="b" href="/contact">
         {t('button')}
-      </a>
+      </Link>
     </section>
   );
 }

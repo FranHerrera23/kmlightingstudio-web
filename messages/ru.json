@@ -265,6 +265,51 @@
     "body": "",
     "button": ""
   },
+  "contactForm": {
+    "name": "",
+    "email": "",
+    "studio": "",
+    "studioHint": "",
+    "type": "",
+    "stage": "",
+    "message": "",
+    "choose": "",
+    "submit": "",
+    "sending": "",
+    "successTitle": "",
+    "successBody": "",
+    "error": "",
+    "errName": "",
+    "errEmail": "",
+    "errMessage": "",
+    "types": {
+      "residential": "",
+      "multifamily": "",
+      "hospitality": "",
+      "commercial": "",
+      "cultural": "",
+      "aviation": "",
+      "yachts": "",
+      "other": ""
+    },
+    "stages": {
+      "concept": "",
+      "schematic": "",
+      "tender": "",
+      "construction": "",
+      "completed": ""
+    }
+  },
+  "notFound": {
+    "kicker": "",
+    "titleLines": [
+      ""
+    ],
+    "lead": "",
+    "projects": "",
+    "services": "",
+    "contact": ""
+  },
   "footer": {
     "navigate": "",
     "verticals": "",

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Masthead from '@/components/Masthead';
+import ContactForm from '@/components/ContactForm';
 import { OFFICES } from '@/content';
 import { social, localizedPath } from '@/lib/metadata';
 
@@ -31,6 +32,11 @@ export default async function ContactPage(props: {
         lead={t('introLead')}
         note={t('introNote')}
       />
+      <section className="sec-s" style={{ paddingBottom: 0 }}>
+        <div className="cf-wrap">
+          <ContactForm />
+        </div>
+      </section>
       <section className="sec-s">
         <div
           className="firms"

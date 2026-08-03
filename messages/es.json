@@ -221,6 +221,51 @@
     "button": "Escribinos"
   },
 
+  "contactForm": {
+    "name": "Nombre",
+    "email": "Email",
+    "studio": "Estudio",
+    "studioHint": "Estudio de arquitectura o empresa (opcional)",
+    "type": "Tipo de proyecto",
+    "stage": "Etapa",
+    "message": "Mensaje",
+    "choose": "Elegí…",
+    "submit": "Enviar",
+    "sending": "Enviando…",
+    "successTitle": "Gracias.",
+    "successBody": "Te vamos a responder pronto.",
+    "error": "Algo salió mal. Probá de nuevo o escribinos a studio@kmlightingstudio.com.",
+    "errName": "Tu nombre es obligatorio.",
+    "errEmail": "Hace falta un email válido.",
+    "errMessage": "El mensaje es obligatorio.",
+    "types": {
+      "residential": "Residencial",
+      "multifamily": "Multifamiliar",
+      "hospitality": "Hotelería",
+      "commercial": "Comercial",
+      "cultural": "Cultural",
+      "aviation": "Aviación",
+      "yachts": "Yates",
+      "other": "Otro"
+    },
+    "stages": {
+      "concept": "Concepto",
+      "schematic": "Anteproyecto",
+      "tender": "Licitación",
+      "construction": "En obra",
+      "completed": "Terminado"
+    }
+  },
+
+  "notFound": {
+    "kicker": "404",
+    "titleLines": ["Acá no hay nada."],
+    "lead": "La página que buscás no existe o se movió. Volvé al trabajo.",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+
   "footer": {
     "navigate": "Navegación",
     "verticals": "Verticales",
