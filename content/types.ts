@@ -129,6 +129,8 @@ export interface Article {
   /** La pregunta que responde (search / AI). */
   question: string;
   tag: string;
+  /** Etiqueta de idioma visible en la card ('ES' / 'EN'). */
+  lang: 'ES' | 'EN';
   author: string;
   /** Credenciales del autor para el bloque de autor + JSON-LD. */
   credentials: Todoable<string>;

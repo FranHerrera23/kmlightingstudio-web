@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import JsonLd from '@/components/JsonLd';
+import { Link } from '@/i18n/navigation';
 import { articleGraph } from '@/lib/structuredData';
-import { social } from '@/lib/metadata';
+import { social, localizedPath } from '@/lib/metadata';
+import { CONTENT_LOCALES } from '@/i18n/routing';
 import {
   ARTICLES,
   getArticle,
@@ -26,14 +28,14 @@ export function generateStaticParams() {
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { locale, slug } = await props.params;
   const a = getArticle(slug);
   if (!a) return {};
   return {
     ...social({
       title: `${a.title} — ${SITE_NAME}`,
       description: isTodo(a.answer) ? a.question : (a.answer as string),
-      path: `/journal/${a.slug}`, // Journal EN-only, sin prefijo de idioma
+      path: localizedPath(locale, `/contenido/${a.slug}`),
       type: 'article'
     }),
     // Seeds sin contenido → noindex (tampoco entran al sitemap).
@@ -50,8 +52,8 @@ export default async function ArticlePage(props: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await props.params;
-  // Journal EN-only: no hay /es, /pt ni /ru.
-  if (locale !== 'en') notFound();
+  // Contenido editorial ES/EN. PT/RU son solo interfaz → 404.
+  if (!(CONTENT_LOCALES as readonly string[]).includes(locale)) notFound();
   setRequestLocale(locale);
 
   const a: Article | undefined = getArticle(slug);
@@ -68,9 +70,9 @@ export default async function ArticlePage(props: {
       <JsonLd data={articleGraph(a)} />
 
       <header className="arthead">
-        <a className="back" href="/journal">
-          ← Journal
-        </a>
+        <Link className="back" href="/contenido">
+          ← Contenido
+        </Link>
         <div className="micro">{a.tag}</div>
         <h1>{a.title}</h1>
         <div className="artmeta">

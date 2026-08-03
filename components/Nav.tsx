@@ -65,10 +65,13 @@ export default function Nav() {
             <Link className={`lnk${isOn('/about') ? ' on' : ''}`} href="/about">
               {t('about')}
             </Link>
-            {/* Journal: fuera del sistema de idiomas, siempre /journal (EN) */}
-            <a className={`lnk${isOn('/journal') ? ' on' : ''}`} href="/journal">
-              {t('journal')}
-            </a>
+            {/* Contenido: ES/EN (localizado). PT/RU → 404 en la página. */}
+            <Link
+              className={`lnk${isOn('/contenido') ? ' on' : ''}`}
+              href="/contenido"
+            >
+              {t('content')}
+            </Link>
             <Link className="lnk talk" href="/contact">
               {t('letsTalk')}
             </Link>
@@ -92,7 +95,7 @@ export default function Nav() {
         <Link href="/services">{t('services')}</Link>
         <Link href="/products">{t('products')}</Link>
         <Link href="/about">{t('about')}</Link>
-        <a href="/journal">{t('journal')}</a>
+        <Link href="/contenido">{t('content')}</Link>
         <Link href="/contact">{t('contact')}</Link>
       </div>
     </>

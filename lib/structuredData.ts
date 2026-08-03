@@ -136,7 +136,7 @@ export function fixtureProduct(f: Fixture) {
  * los TODO se omiten del JSON-LD (answer, faq sin responder, fecha…). (Brief §6)
  */
 export function articleGraph(a: Article) {
-  const url = `${SITE_URL}/journal/${a.slug}`;
+  const url = `${SITE_URL}/contenido/${a.slug}`;
 
   const article: Record<string, unknown> = {
     '@type': 'Article',

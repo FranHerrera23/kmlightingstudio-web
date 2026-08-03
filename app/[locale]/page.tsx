@@ -156,7 +156,7 @@ export default async function HomePage(props: {
       <section className="sec">
         <div className="shead">
           <div>
-            <div className="micro n rise">{t('tech.micro')}</div>
+            <div className="micro rise">{t('tech.micro')}</div>
             <h2>
               <MaskLines lines={lines('tech.titleLines')} />
             </h2>
@@ -167,17 +167,17 @@ export default async function HomePage(props: {
         </div>
         <div className="tri">
           <div className="rise">
-            <div className="micro n">{t('tech.c1Label')}</div>
+            <div className="micro">{t('tech.c1Label')}</div>
             <h4>{t('tech.c1Title')}</h4>
             <p>{t('tech.c1Body')}</p>
           </div>
           <div className="rise d1">
-            <div className="micro n">{t('tech.c2Label')}</div>
+            <div className="micro">{t('tech.c2Label')}</div>
             <h4>{t('tech.c2Title')}</h4>
             <p>{t('tech.c2Body')}</p>
           </div>
           <div className="rise d2">
-            <div className="micro n">{t('tech.c3Label')}</div>
+            <div className="micro">{t('tech.c3Label')}</div>
             <h4>{t('tech.c3Title')}</h4>
             <p>{t('tech.c3Body')}</p>
           </div>

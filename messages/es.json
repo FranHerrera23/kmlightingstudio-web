@@ -1,300 +1,316 @@
 {
   "meta": {
     "home": {
-      "title": "",
-      "description": ""
+      "title": "KM Lighting Studio — Diseño de iluminación arquitectónica · Lima · Miami · Madrid",
+      "description": "Karen Mannheim Lighting Studio. 33 años, más de 2.500 proyectos, seis países. Iluminación arquitectónica para residencias, multifamiliares, hotelería, aviación y yates."
     },
     "projects": {
-      "title": "",
-      "description": ""
+      "title": "Proyectos — KM Lighting Studio",
+      "description": "Filtrá por tipología, ubicación o estado. Cada proyecto abre como página completa e indexable. Primero las imágenes, siempre."
     },
     "services": {
-      "title": "",
-      "description": ""
+      "title": "Servicios — KM Lighting Studio",
+      "description": "Una disciplina, siete mundos. Diseño de iluminación, gestión del diseño y gestión en obra en cada tipología."
     },
     "products": {
-      "title": "",
-      "description": ""
+      "title": "Lo que especificamos — KM Lighting Studio",
+      "description": "Las luminarias a las que volvemos — porque mantienen su color, sobreviven al aire salino y desaparecen en el cielorraso como la arquitectura lo pensó."
     },
     "about": {
-      "title": "",
-      "description": ""
+      "title": "El estudio — KM Lighting Studio",
+      "description": "33 años haciendo una sola cosa: que la luz le dé sentido a un espacio. Un estudio de más de 80 personas en tres continentes."
     },
     "contact": {
-      "title": "",
-      "description": ""
+      "title": "Contacto — KM Lighting Studio",
+      "description": "No hacemos pitch. Somos socios. Lima · Miami · Madrid."
+    },
+    "content": {
+      "title": "Contenido — KM Lighting Studio",
+      "description": "Todo lo que sabemos sobre la luz — artículos, conversaciones, recorridos y prensa. Escrito y filmado con la gente que diseña los edificios."
     }
   },
+
   "nav": {
-    "projects": "",
-    "services": "",
-    "products": "",
-    "about": "",
-    "journal": "",
-    "contact": "",
-    "letsTalk": ""
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "products": "Productos",
+    "about": "Estudio",
+    "content": "Contenido",
+    "contact": "Contacto",
+    "letsTalk": "Hablemos"
   },
+
   "languages": {
-    "en": "",
-    "es": "",
-    "pt": "",
-    "ru": "",
-    "pending": ""
+    "en": "English",
+    "es": "Español",
+    "pt": "Português",
+    "ru": "Русский",
+    "pending": "pend"
   },
+
   "home": {
     "hero": {
-      "kicker": "",
-      "titleLines": [
-        "",
-        "",
-        ""
-      ],
-      "scroll": ""
+      "kicker": "Diseño de iluminación arquitectónica · Lima · Miami · Madrid",
+      "titleLines": ["La buena arquitectura", "merece una luz", "que la entienda."],
+      "scroll": "Bajá"
     },
     "statement": {
-      "titleLines": [
-        "",
-        ""
-      ],
-      "p1": "",
-      "p2": ""
+      "titleLines": ["Pasas años", "en un espacio."],
+      "p1": "Cada detalle pensado. Y entonces la luz llega al final, como si fuera un accesorio — y la arquitectura desaparece.",
+      "p2": "Nosotros diseñamos luz que revela lo que ya creaste. No luz que se note: luz que hace que el espacio, el material y la persona que vive ahí se sientan <it>inevitables.</it>"
     },
     "philosophy": {
-      "micro": "",
-      "titleLines": [
-        "",
-        "",
-        ""
-      ],
-      "body": "",
-      "sign": ""
+      "micro": "Nuestra filosofía",
+      "titleLines": ["Luz diseñada para", "la arquitectura.", "No para el portafolio."],
+      "body": "Escuchamos qué quiere ser cada espacio y después diseñamos la luz que lo ayuda a serlo. Fuentes únicas e intencionales en vez de ambientes inundados. Zonas de sombra deliberadas que hacen que lo cálido se sienta más cálido.",
+      "sign": "La arquitectura es la visión. La luz la sirve."
     },
     "selected": {
-      "micro": "",
-      "titleLines": [
-        "",
-        ""
-      ],
-      "side": "",
-      "cta": ""
+      "micro": "Obra seleccionada",
+      "titleLines": ["Un portafolio,", "por tipología."],
+      "side": "El mismo estudio que ilumina la casa de un coleccionista ilumina una torre, una casa de playa, un flagship, un jet.",
+      "cta": "Ver todos los proyectos →"
     },
     "range": {
-      "micro": "",
-      "titleLines": [
-        "",
-        ""
-      ],
-      "side": "",
-      "ramsaName": "",
-      "ramsaTitle": "",
-      "ramsaGo": "",
-      "elicyonName": "",
-      "elicyonTitle": "",
-      "elicyonGo": ""
+      "micro": "Nuestro rango",
+      "titleLines": ["Clásica o", "contemporánea."],
+      "side": "Cambia el idioma. La disciplina no.",
+      "ramsaName": "RAMSA",
+      "ramsaTitle": "Tradicional",
+      "ramsaGo": "Luz que honra el patrimonio y el oficio",
+      "elicyonName": "Elicyon London",
+      "elicyonTitle": "Contemporánea",
+      "elicyonGo": "Luz que celebra la línea y la transparencia"
     },
     "partnership": {
-      "micro": "",
-      "titleLines": [
-        "",
-        "",
-        ""
-      ],
-      "p1": "",
-      "p2": ""
+      "micro": "Sociedad",
+      "titleLines": ["Cuando la luz falla,", "el que queda", "expuesto sos vos."],
+      "p1": "Tus clientes esperan perfección desde el primer día. Trabajas con arquitectos que exigen precisión. Y los proyectos internacionales se caen por coordinación — tres continentes, distintos idiomas, distintas normativas, distintos equipos.",
+      "p2": "Hace treinta y tres años que hacemos que eso funcione."
     },
     "tech": {
-      "micro": "",
-      "titleLines": [
-        "",
-        "",
-        ""
-      ],
-      "side": "",
-      "c1Label": "",
-      "c1Title": "",
-      "c1Body": "",
-      "c2Label": "",
-      "c2Title": "",
-      "c2Body": "",
-      "c3Label": "",
-      "c3Title": "",
-      "c3Body": ""
+      "micro": "La tecnología",
+      "titleLines": ["Tú diseñas el espacio.", "Nosotros hacemos que", "la luz desaparezca en él."],
+      "side": "La luz que parece haber estado siempre ahí es la más difícil de construir. Hace falta más control, no menos, para lograr una luz así de calma.",
+      "c1Label": "La luz",
+      "c1Title": "Una luz que baja como una vela.",
+      "c1Body": "La mayoría de los LED mantienen el mismo tono frío hasta el final. El nuestro se entibia al bajar — de blanco limpio al ámbar de una llama, como se apaga la luz del día.",
+      "c2Label": "El sistema",
+      "c2Title": "Una casa que lleva el tiempo del sol.",
+      "c2Body": "La luz cambia sola: fría en la mañana, dorada de noche. Sin interruptores que descifrar, sin resplandor frío a medianoche.",
+      "c3Label": "El control",
+      "c3Title": "Un gesto, y el ambiente entero responde.",
+      "c3Body": "Una capa de control mantiene cada luminaria de acuerdo. Las escenas se componen antes, así el espacio llega completo con un solo toque."
     },
-    "marquee1": "",
-    "marquee2": "",
+    "marquee1": "La buena luz desaparece —",
+    "marquee2": "la arquitectura permanece —",
     "where": {
-      "micro": "",
-      "titleLines": [
-        "",
-        ""
-      ],
-      "side": ""
+      "micro": "Dónde trabajamos",
+      "titleLines": ["Seis países.", "Un estándar."],
+      "side": "Lo residencial necesita control de escenas. La hotelería necesita confiabilidad a escala. Lo comercial necesita adaptabilidad."
     },
     "trusted": {
-      "micro": "",
-      "titleLines": [
-        "",
-        ""
-      ]
+      "micro": "Confían en nosotros",
+      "titleLines": ["Los estudios que", "trabajan con KMLS."]
     }
   },
+
   "projects": {
-    "kicker": "",
-    "titleLines": [
-      ""
-    ],
-    "introLead": "",
-    "introNote": "",
-    "typology": "",
-    "location": "",
-    "status": "",
-    "density": "",
-    "countOne": "",
-    "countOther": "",
-    "empty": ""
+    "kicker": "Proyectos",
+    "titleLines": ["Todos los proyectos."],
+    "introLead": "Filtrá por tipología, ubicación o estado. Los estudios conceptuales están marcados como tales — los mostramos porque definen el alcance del estudio, no porque los presentemos como obra entregada.",
+    "introNote": "Cada proyecto abre como página completa. Primero las imágenes, siempre.",
+    "typology": "Tipología",
+    "location": "Ubicación",
+    "status": "Estado",
+    "density": "Densidad",
+    "countOne": "{count} proyecto",
+    "countOther": "{count} proyectos",
+    "empty": "Ningún proyecto coincide con esta combinación."
   },
+
   "services": {
-    "kicker": "",
-    "titleLines": [
-      "",
-      ""
-    ],
-    "introLead": "",
-    "introNote": "",
-    "projectCountOne": "",
-    "projectCountOther": "",
-    "workProcess": ""
+    "kicker": "Servicios",
+    "titleLines": ["Una disciplina.", "Siete mundos."],
+    "introLead": "Diseñamos la luz, la protegemos durante la obra, y nos quedamos hasta que esté bien. Lo que cambia es lo que cada espacio le exige.",
+    "introNote": "Un jet necesita componentes certificados. Una torre necesita una sola identidad del lobby al penthouse. Un yate necesita sobrevivir a la sal.",
+    "projectCountOne": "{count} proyecto",
+    "projectCountOther": "{count} proyectos",
+    "workProcess": "Proceso de trabajo"
   },
+
   "vertical": {
-    "back": "",
-    "wpMicro": "",
-    "wpTitle1": "",
-    "wpTitle2": "",
-    "stage": "",
-    "dossierMicro": "",
-    "dossierTitle1": "",
-    "dossierTitle2": "",
-    "dossierLead": "",
-    "selectedWork": ""
+    "back": "← Todos los servicios",
+    "wpMicro": "Proceso de trabajo",
+    "wpTitle1": "Tres etapas,",
+    "wpTitle2": "un compromiso.",
+    "stage": "Etapa {n}",
+    "dossierMicro": "Lo que recibís",
+    "dossierTitle1": "Cada plano,",
+    "dossierTitle2": "un solo dossier final.",
+    "dossierLead": "No un conjunto de fragmentos entregados etapa por etapa — un dossier de cierre completo, del que nos podés hacer responsables.",
+    "selectedWork": "Obra en esta vertical"
   },
+
   "products": {
-    "kicker": "",
-    "titleLines": [
-      ""
-    ],
-    "introLead": "",
-    "introNote": "",
-    "family": "",
-    "all": "",
-    "countOne": "",
-    "countOther": "",
-    "backToProducts": "",
-    "whySpecify": "",
-    "addToSpec": "",
-    "addedToSpec": "",
-    "specsHeading": "",
-    "downloadsHeading": "",
-    "accessoriesHeading": "",
-    "finishesHeading": "",
-    "opticsHeading": "",
-    "cctHeading": "",
-    "technicalPending": ""
+    "kicker": "Productos",
+    "titleLines": ["Lo que especificamos."],
+    "introLead": "Cada proyecto se construye con una lista corta y deliberada de instrumentos — luminarias a las que volvemos porque mantienen su color, sobreviven al aire salino y desaparecen en el cielorraso como la arquitectura lo pensó.",
+    "introNote": "No es una tienda. Archivos fotométricos y fichas técnicas disponibles para profesionales que especifican, sin formularios.",
+    "family": "Familia",
+    "all": "Todas",
+    "countOne": "{count} luminaria",
+    "countOther": "{count} luminarias",
+    "backToProducts": "← Todos los productos",
+    "whySpecify": "Por qué la especificamos",
+    "addToSpec": "Agregar a la spec sheet",
+    "addedToSpec": "Agregada a la spec sheet",
+    "specsHeading": "Ficha técnica",
+    "downloadsHeading": "Descargas",
+    "accessoriesHeading": "Accesorios",
+    "finishesHeading": "Terminaciones",
+    "opticsHeading": "Ópticas",
+    "cctHeading": "Temperatura de color",
+    "technicalPending": "A la espera de datos de TRAZZO"
   },
+
   "about": {
-    "kicker": "",
-    "titleLines": [
-      "",
-      ""
-    ],
-    "introLead": "",
-    "introNote": "",
-    "lead": "",
-    "throughline": "",
-    "stat1Num": "",
-    "stat1Sup": "",
-    "stat1Label": "",
-    "stat2Num": "",
-    "stat2Sup": "",
-    "stat2Label": "",
-    "stat3Num": "",
-    "stat3Sup": "",
-    "stat3Label": "",
-    "stat4Num": "",
-    "stat4Sup": "",
-    "stat4Label": "",
-    "founderMicro": "",
-    "founderName": "",
-    "founderRole": "",
-    "founderQuote": "",
-    "founderBody": "",
-    "teamMicro": "",
-    "teamTitle": "",
-    "teamSide": "",
-    "trustedMicro": "",
-    "trustedTitle1": "",
-    "trustedTitle2": ""
+    "kicker": "Estudio",
+    "titleLines": ["33 años", "haciendo una cosa."],
+    "introLead": "KM Lighting Studio hace una sola cosa: que la luz le dé sentido a un espacio.",
+    "introNote": "Lo que empezó con una persona tocando puertas en Lima es hoy un estudio de más de 80 personas en tres continentes.",
+    "lead": "Hemos entregado más de 2.500 proyectos en seis países, trabajando junto a estudios como RAMSA, Oppenheim y Adriana Hoyos. Pero el número que más importa no está en esa lista: es que después de tres décadas y de esa escala, el estudio sigue diseñando cada proyecto como si fuera el único.",
+    "throughline": "Lo que nunca cambió: acá la luz no es decoración. Es el alma de la arquitectura.",
+    "stat1Num": "33", "stat1Sup": "+", "stat1Label": "Años de práctica",
+    "stat2Num": "2.500", "stat2Sup": "+", "stat2Label": "Proyectos entregados",
+    "stat3Num": "80", "stat3Sup": "+", "stat3Label": "Personas en el estudio",
+    "stat4Num": "6", "stat4Sup": "", "stat4Label": "Países · 3 oficinas",
+    "founderMicro": "Quiénes somos",
+    "founderName": "Karen Mannheim.",
+    "founderRole": "Fundadora y Directora Creativa",
+    "founderQuote": "\"No diseño la luz para que se note. La diseño para que el espacio, el material y la persona que vive ahí se sientan inevitables.\"",
+    "founderBody": "Karen lleva más de tres décadas construyendo uno de los pocos estudios de iluminación que trabaja al nivel de los estudios de arquitectura más exigentes del mundo — y conserva el alma de un estudio. Lidera el diseño de cada proyecto que el estudio toma.",
+    "recRecognition": "Reconocimiento",
+    "recRecognitionValue": "Forbes Perú · 50 Mujeres Más Poderosas",
+    "recPractice": "Práctica",
+    "recPracticeValue": "33 años · 2.500+ proyectos",
+    "recReach": "Alcance",
+    "recReachValue": "Seis países · tres oficinas",
+    "socConversations": "Conversaciones →",
+    "teamMicro": "El equipo",
+    "teamTitle": "Liderazgo.",
+    "teamSide": "Una arquitectura así de compleja necesita socios que entiendan lo que está en juego.",
+    "trustedMicro": "Confían en nosotros",
+    "trustedTitle1": "Los estudios que",
+    "trustedTitle2": "trabajan con KMLS."
   },
+
   "contact": {
-    "kicker": "",
-    "titleLines": [
-      "",
-      ""
-    ],
-    "introLead": "",
-    "introNote": "",
-    "officeFallback": "",
-    "addressPending": ""
+    "kicker": "Contacto",
+    "titleLines": ["No hacemos pitch.", "Somos socios."],
+    "introLead": "Sea un edificio catalogado en Londres, un resort en Dubái o un penthouse en São Paulo — nos gustaría colaborar en proyectos que pidan una luz a la altura de la arquitectura.",
+    "introNote": "Tus clientes nunca van a saber nuestro nombre. Simplemente no van a querer irse.",
+    "officeFallback": "Oficina",
+    "addressPending": "Dirección por confirmar"
   },
+
   "cta": {
-    "kicker": "",
-    "titleLines": [
-      "",
-      ""
-    ],
-    "body": "",
-    "button": ""
+    "kicker": "Empecemos",
+    "titleLines": ["Cuéntanos qué", "estás construyendo."],
+    "body": "En la etapa que estés — concepto, licitación, o un cielorraso que ya está cerrado. Te vamos a decir con honestidad si somos el estudio indicado.",
+    "button": "Escribinos"
   },
+
   "footer": {
-    "navigate": "",
-    "verticals": "",
-    "studio": "",
-    "follow": "",
-    "linkedin": "",
-    "instagram": "",
-    "tag": "",
-    "copyright": ""
+    "navigate": "Navegación",
+    "verticals": "Verticales",
+    "studio": "Oficinas",
+    "follow": "Seguinos",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "tag": "La buena luz desaparece. La arquitectura permanece.",
+    "copyright": "© 2026"
   },
+
+  "content": {
+    "kicker": "Contenido",
+    "titleLines": ["Todo lo que sabemos", "sobre la luz."],
+    "introLead": "Treinta y tres años especificando, poniendo en marcha y a veces equivocándonos — escrito, filmado y conversado con la gente que diseña los edificios.",
+    "introNote": "Los artículos responden preguntas concretas. Las conversaciones y los recorridos se graban en obra, casi siempre en español.",
+    "tabWritten": "Artículos",
+    "tabConversations": "Conversaciones",
+    "tabWalkthroughs": "Recorridos",
+    "tabPress": "Prensa",
+    "writtenMicro": "Artículos",
+    "writtenTitle1": "Las preguntas que",
+    "writtenTitle2": "hacen los arquitectos.",
+    "writtenLead": "Cada pieza responde una pregunta, con un número adentro. Nada de reportes de tendencias.",
+    "answers": "Responde",
+    "conversationsMicro": "Conversaciones",
+    "conversationsTitle1": "Con la gente que",
+    "conversationsTitle2": "diseña los edificios.",
+    "conversationsLead": "Karen se sienta con arquitectos e interioristas — grabado en sus estudios, en sus obras, en su idioma.",
+    "guestTBD": "[Invitado por definir]",
+    "studioTBC": "Estudio por confirmar",
+    "walkthroughsMicro": "Recorridos",
+    "walkthroughsTitle1": "Dentro de los proyectos,",
+    "walkthroughsTitle2": "espacio por espacio.",
+    "walkthroughsLead": "Grabados en obra, después de la entrega, a la hora para la que la luz fue diseñada.",
+    "walkLabel": "Recorrido",
+    "projectTBD": "[Proyecto por definir]",
+    "placeTBC": "Por confirmar",
+    "pressMicro": "Prensa",
+    "pressTitle1": "Lo que otros",
+    "pressTitle2": "han escrito.",
+    "pressLead": "Reconocimiento de terceros — el único que no te podés dar a vos mismo.",
+    "featMicro": "Reconocimiento destacado",
+    "featTitle1": "Forbes Perú",
+    "featTitle2": "50 Mujeres Más Poderosas.",
+    "featBody": "Karen Mannheim entre las 50 mujeres más poderosas del Perú — el reconocimiento a tres décadas construyendo un estudio de iluminación que hoy trabaja en seis países.",
+    "featOut": "Leer la nota",
+    "read": "Leer",
+    "outletTBD": "[Medio]",
+    "headlineTBC": "[Titular por confirmar]",
+    "dateTBC": "Fecha",
+    "videoSource": "Instagram",
+    "verticalLabel": "Vertical 9:16",
+    "transcriptHeading": "Transcripción",
+    "watchOn": "Ver en Instagram →",
+    "transcriptTodo": "Transcripción por cargar — el texto completo en el idioma original. Un video no lo indexa nadie; el texto sí.",
+    "backToContent": "← Contenido"
+  },
+
   "project": {
-    "credArchitecture": "",
-    "credInterior": "",
-    "credDeveloper": "",
-    "credLighting": "",
-    "credYear": "",
-    "lightingValue": "",
-    "credPending": "",
-    "conceptMicro": "",
-    "conceptTitleReal": "",
-    "conceptTitleTodo": "",
-    "conceptTodo": "",
-    "challengeMicro": "",
-    "challengeTitle": "",
-    "challengeTodo": "",
-    "pullQuote": "",
-    "pullCite": "",
-    "specMicro": "",
-    "specTypology": "",
-    "specLocation": "",
-    "specArchitecture": "",
-    "specInterior": "",
-    "specDeveloper": "",
-    "specScale": "",
-    "specYear": "",
-    "specStatus": "",
-    "specControl": "",
-    "specPhotography": "",
-    "specPending": "",
-    "nextMicro": "",
-    "viewProject": "",
-    "nameTBD": ""
+    "credArchitecture": "Arquitectura",
+    "credInterior": "Interiorismo",
+    "credDeveloper": "Desarrollador",
+    "credLighting": "Diseño de iluminación",
+    "credYear": "Año",
+    "lightingValue": "KM Lighting Studio",
+    "credPending": "Por confirmar",
+    "conceptMicro": "Concepto",
+    "conceptTitleReal": "La idea",
+    "conceptTitleTodo": "El proyecto",
+    "conceptTodo": "Por escribir — 2 a 3 frases. Qué era el proyecto.",
+    "challengeMicro": "Desafío",
+    "challengeTitle": "Lo que exigía",
+    "challengeTodo": "Por escribir — cuál era el problema técnico y cómo se resolvió. Idealmente con un dato: un CRI, un ángulo, un nivel de lux, un material que obligó a una decisión.",
+    "pullQuote": "La luz más difícil de lograr es la que nunca notas.",
+    "pullCite": "Karen Mannheim · Fundadora",
+    "specMicro": "Ficha técnica",
+    "specTypology": "Tipología",
+    "specLocation": "Ubicación",
+    "specArchitecture": "Arquitectura",
+    "specInterior": "Interiorismo",
+    "specDeveloper": "Desarrollador",
+    "specScale": "Escala",
+    "specYear": "Año",
+    "specStatus": "Estado",
+    "specControl": "Sistema de control",
+    "specPhotography": "Fotografía",
+    "specPending": "Por confirmar",
+    "nextMicro": "Siguiente proyecto",
+    "viewProject": "Ver proyecto",
+    "nameTBD": "[NOMBRE POR DEFINIR]"
   }
 }

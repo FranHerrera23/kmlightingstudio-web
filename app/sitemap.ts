@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/products',
     '/about',
     '/contact',
-    '/journal'
+    '/contenido'
   ];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
@@ -72,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // en TODO quedan afuera hasta que se redacten. (EN-only, sin alternates.)
   for (const a of ARTICLES.filter(isArticleReady)) {
     entries.push({
-      url: `${SITE_URL}/journal/${a.slug}`,
+      url: `${SITE_URL}/contenido/${a.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6

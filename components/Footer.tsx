@@ -43,8 +43,7 @@ export default function Footer() {
           <Link href="/services">{tNav('services')}</Link>
           <Link href="/products">{tNav('products')}</Link>
           <Link href="/about">{tNav('about')}</Link>
-          {/* Journal: fuera del sistema de idiomas, siempre /journal (EN) */}
-          <a href="/journal">{tNav('journal')}</a>
+          <Link href="/contenido">{tNav('content')}</Link>
         </div>
 
         <div className="foot-c">

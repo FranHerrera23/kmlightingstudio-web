@@ -63,10 +63,14 @@ Three projects are confidential: `athlete`, `musician`, `arvida`. The real clien
   node --input-type=module -e 'import fs from "fs";const en=JSON.parse(fs.readFileSync("messages/en.json"));const e=v=>typeof v==="string"?"":Array.isArray(v)?v.map(e):v&&typeof v=="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,e(x)])):v;for(const l of["es","pt","ru"])fs.writeFileSync(`messages/${l}.json`,JSON.stringify(e(en),null,2)+"\n")'
   ```
 
-## i18n
+## i18n — Spanish-first (v3)
 
-- `localePrefix: 'as-needed'` → EN is unprefixed (`/`, `/projects`), ES/PT/RU prefixed (`/es/…`). Switcher armed; ES/PT/RU show a `pend` tag until translated.
-- **Journal is outside the language system**: only `/journal` and `/journal/[slug]` exist (EN). `/es|pt|ru/journal…` → 404 (guarded). No duplicate content.
+- **`defaultLocale: 'es'`**, `localePrefix: 'as-needed'` → **Spanish is the root, unprefixed** (`/`, `/projects`); EN is `/en/…`; PT/RU are `/pt/…` `/ru/…` with empty catalogs. Switcher armed; EN/PT/RU show a `pend` tag until filled.
+- **`messages/es.json` is the complete catalog** (Spanish copy is authored — never machine-translated); `en.json` keeps the English strings; `pt/ru.json` mirror the keys with empty values.
+- **Content hub** lives at `/contenido` and is editorial **ES/EN only** — `/pt/contenido` and `/ru/contenido` return **404** (guarded; PT/RU are interface languages, not content).
+
+> **Why `/contenido` is the segment for *every* locale — including English (`/en/contenido`, not `/en/content`).**
+> next-intl's per-locale `pathnames` (which would give `/en/content`) makes the `Link` href type the set of declared pathname *patterns*. That forces **every dynamic link in the app** — `/projects/[slug]`, `/services/[slug]`, `/products/[slug]`, `/contenido/[slug]` — to be rewritten from the plain string form (`` `/projects/${id}` ``) to the object form (`{ pathname: '/projects/[slug]', params: { slug } }`). That's a churny, error-prone refactor of working routing for one URL segment. So we use a single `/contenido` segment across locales and localize only the **nav label** (Contenido / Content). Don't "fix" this to `pathnames` without re-typing every dynamic `<Link>`.
 
 ## SEO / AEO
 

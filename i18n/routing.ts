@@ -1,18 +1,26 @@
 import { defineRouting } from 'next-intl/routing';
 
 /**
- * i18n para KMLS.
+ * i18n para KMLS · v3 — ESPAÑOL principal.
  *
- *  - EN es el idioma por defecto y va SIN prefijo:  /, /projects, /about ...
- *  - ES / PT / RU van prefijados:  /es/..., /pt/..., /ru/...
- *    Los catálogos de esos idiomas existen pero están vacíos (fase 2).
- *  - El Journal queda FUERA de este sistema: solo existe /journal (EN).
- *    Ver app/[locale]/journal/page.tsx — cualquier /es|pt|ru/journal → 404.
+ *  - ES es el idioma por defecto y va SIN prefijo:  /, /projects, /about ...
+ *  - EN va prefijado:  /en/...  (catálogo completo en inglés).
+ *  - PT / RU van prefijados con los catálogos vacíos (fase 2).
+ *  - El hub editorial vive en /contenido (segmento único para todos los
+ *    locales). Es contenido editorial solo ES/EN: /pt/contenido y /ru/contenido
+ *    devuelven 404 (guard en la página). PT/RU son idiomas de interfaz.
+ *
+ * Nota: el segmento es /contenido en todos los locales (no /content para EN)
+ * para no forzar el `pathnames` de next-intl, que rompería el tipado de todos
+ * los <Link> a rutas dinámicas. El label del nav sí cambia (Contenido/Content).
  */
 export const routing = defineRouting({
-  locales: ['en', 'es', 'pt', 'ru'],
-  defaultLocale: 'en',
+  locales: ['es', 'en', 'pt', 'ru'],
+  defaultLocale: 'es',
   localePrefix: 'as-needed'
 });
 
 export type Locale = (typeof routing.locales)[number];
+
+/** Idiomas con contenido editorial. PT/RU son solo interfaz → /contenido 404. */
+export const CONTENT_LOCALES = ['es', 'en'] as const;

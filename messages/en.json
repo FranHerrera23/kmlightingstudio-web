@@ -17,12 +17,16 @@
       "description": "The instruments we return to — because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended."
     },
     "about": {
-      "title": "About — KM Lighting Studio",
+      "title": "The Studio — KM Lighting Studio",
       "description": "For 33 years, one thing: make light give a space its meaning. A practice of more than 80 people across three continents."
     },
     "contact": {
       "title": "Contact — KM Lighting Studio",
       "description": "We don't pitch. We partner. Lima · Miami · Madrid."
+    },
+    "content": {
+      "title": "Content — KM Lighting Studio",
+      "description": "Everything we know about light — articles, conversations, walkthroughs and press. Written and filmed with the people who design the buildings."
     }
   },
 
@@ -30,8 +34,8 @@
     "projects": "Projects",
     "services": "Services",
     "products": "Products",
-    "about": "About",
-    "journal": "Journal",
+    "about": "The Studio",
+    "content": "Content",
     "contact": "Contact",
     "letsTalk": "Let's talk"
   },
@@ -186,6 +190,13 @@
     "founderRole": "Founder & Creative Director",
     "founderQuote": "\"I don't design light to be noticed. I design it so the room, the material, the person living there all feel inevitable.\"",
     "founderBody": "Karen has spent more than three decades building one of the few lighting practices that works at the level of the world's most demanding architecture firms — and keeps the soul of a studio. She leads the design on every project the studio takes.",
+    "recRecognition": "Recognition",
+    "recRecognitionValue": "Forbes Perú · 50 Most Powerful Women",
+    "recPractice": "Practice",
+    "recPracticeValue": "33 years · 2,500+ projects",
+    "recReach": "Reach",
+    "recReachValue": "Six countries · three offices",
+    "socConversations": "Conversations →",
     "teamMicro": "Our team",
     "teamTitle": "Leadership.",
     "teamSide": "Architecture this complex needs partners who understand the stakes.",
@@ -213,12 +224,60 @@
   "footer": {
     "navigate": "Navigate",
     "verticals": "Verticals",
-    "studio": "Studio",
+    "studio": "Offices",
     "follow": "Follow",
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "tag": "Great lighting disappears. The architecture remains.",
     "copyright": "© 2026"
+  },
+
+  "content": {
+    "kicker": "Content",
+    "titleLines": ["Everything we", "know about light."],
+    "introLead": "Thirty-three years of specifying, commissioning and occasionally getting it wrong — written, filmed and talked through with the people who design the buildings.",
+    "introNote": "The articles answer concrete questions. The conversations and walkthroughs are filmed on site, almost always in Spanish.",
+    "tabWritten": "Articles",
+    "tabConversations": "Conversations",
+    "tabWalkthroughs": "Walkthroughs",
+    "tabPress": "Press",
+    "writtenMicro": "Articles",
+    "writtenTitle1": "The questions",
+    "writtenTitle2": "architects ask.",
+    "writtenLead": "Each piece answers one question, with a number inside. No trend reports.",
+    "answers": "Answers",
+    "conversationsMicro": "Conversations",
+    "conversationsTitle1": "With the people who",
+    "conversationsTitle2": "design the buildings.",
+    "conversationsLead": "Karen sits down with architects and interior designers — filmed in their studios, on their sites, in their language.",
+    "guestTBD": "[Guest to be defined]",
+    "studioTBC": "Studio to be confirmed",
+    "walkthroughsMicro": "Walkthroughs",
+    "walkthroughsTitle1": "Inside the projects,",
+    "walkthroughsTitle2": "room by room.",
+    "walkthroughsLead": "Filmed on site, after handover, at the hour the light was designed for.",
+    "walkLabel": "Walkthrough",
+    "projectTBD": "[Project to be defined]",
+    "placeTBC": "To be confirmed",
+    "pressMicro": "Press",
+    "pressTitle1": "What others",
+    "pressTitle2": "have written.",
+    "pressLead": "Third-party recognition — the only kind you can't give yourself.",
+    "featMicro": "Featured recognition",
+    "featTitle1": "Forbes Perú",
+    "featTitle2": "50 Most Powerful Women.",
+    "featBody": "Karen Mannheim among the 50 most powerful women in Peru — recognition of three decades building a lighting studio that now works across six countries.",
+    "featOut": "Read the piece",
+    "read": "Read",
+    "outletTBD": "[Outlet]",
+    "headlineTBC": "[Headline to be confirmed]",
+    "dateTBC": "Date",
+    "videoSource": "Instagram",
+    "verticalLabel": "Vertical 9:16",
+    "transcriptHeading": "Transcript",
+    "watchOn": "Watch on Instagram →",
+    "transcriptTodo": "Transcript to be added — the full text in the original language. A video is indexed by no one; the text is.",
+    "backToContent": "← Content"
   },
 
   "project": {
