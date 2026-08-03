@@ -69,7 +69,10 @@ export interface Project {
 }
 
 export interface Vertical {
+  /** Clave de tipología (acopla con Project.typ para filtrar la obra). */
   id: Exclude<TypologyKey, 'all'>;
+  /** Slug de URL en español (/servicios/[slug]) — desacoplado del id. */
+  slug: string;
   title: string;
   sub: string;
   intro: string;

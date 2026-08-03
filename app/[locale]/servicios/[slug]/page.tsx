@@ -13,12 +13,14 @@ import {
   type Vertical
 } from '@/content';
 
-function getVertical(id: string): Vertical | undefined {
-  return VERTICALS.find((v) => v.id === id);
+// El slug es en español (desacoplado del id de tipología, que sigue acoplando
+// con Project.typ para filtrar la obra de la vertical).
+function getVertical(slug: string): Vertical | undefined {
+  return VERTICALS.find((v) => v.slug === slug);
 }
 
 export function generateStaticParams() {
-  return VERTICALS.map((v) => ({ slug: v.id }));
+  return VERTICALS.map((v) => ({ slug: v.slug }));
 }
 
 export async function generateMetadata(props: {
@@ -30,7 +32,7 @@ export async function generateMetadata(props: {
   return social({
     title: `${v.title} — ${SITE_NAME}`,
     description: v.sub,
-    path: localizedPath(locale, `/services/${v.id}`)
+    path: localizedPath(locale, `/servicios/${v.slug}`)
   });
 }
 
@@ -56,7 +58,7 @@ export default async function VerticalPage(props: {
       </header>
 
       <section className="sec-s" style={{ paddingBottom: 0 }}>
-        <Link className="back" href="/services">
+        <Link className="back" href="/servicios">
           {t('back')}
         </Link>
         <div className="shead" style={{ marginTop: 'clamp(36px,5vh,60px)' }}>

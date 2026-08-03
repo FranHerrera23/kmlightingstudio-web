@@ -75,10 +75,10 @@ export function organizationGraph() {
 
 /**
  * CreativeWork por proyecto. Solo incluye campos con valor real — los TODO
- * se omiten (no se inventan). Va en cada página /projects/[slug]. (Brief §6)
+ * se omiten (no se inventan). Va en cada página /proyectos/[slug]. (Brief §6)
  */
 export function creativeWork(p: Project) {
-  const url = `${SITE_URL}/projects/${p.id}`;
+  const url = `${SITE_URL}/proyectos/${p.id}`;
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
@@ -111,7 +111,7 @@ export function creativeWork(p: Project) {
  * Los campos técnicos en TODO se omiten (no se inventan). (Brief §6)
  */
 export function fixtureProduct(f: Fixture) {
-  const url = `${SITE_URL}/products/${f.id}`;
+  const url = `${SITE_URL}/productos/${f.id}`;
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Product',

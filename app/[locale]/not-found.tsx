@@ -20,9 +20,9 @@ export default function NotFound() {
         {t('lead')}
       </p>
       <div className="nf-links rise d2">
-        <Link href="/projects">{t('projects')}</Link>
-        <Link href="/services">{t('services')}</Link>
-        <Link href="/contact">{t('contact')}</Link>
+        <Link href="/proyectos">{t('projects')}</Link>
+        <Link href="/servicios">{t('services')}</Link>
+        <Link href="/contacto">{t('contact')}</Link>
       </div>
     </section>
   );

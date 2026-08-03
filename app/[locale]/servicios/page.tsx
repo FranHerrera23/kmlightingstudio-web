@@ -13,7 +13,7 @@ export async function generateMetadata(props: {
   return social({
     title: t('title'),
     description: t('description'),
-    path: localizedPath(locale, '/services')
+    path: localizedPath(locale, '/servicios')
   });
 }
 
@@ -37,7 +37,7 @@ export default async function ServicesPage(props: {
           {VERTICALS.map((v) => {
             const n = PROJECTS.filter((p) => p.typ === v.id).length;
             return (
-              <Link className="vcard rise" href={`/services/${v.id}`} key={v.id}>
+              <Link className="vcard rise" href={`/servicios/${v.slug}`} key={v.id}>
                 <div className="ph" data-l={v.title}></div>
                 <span className="n">
                   {n === 1

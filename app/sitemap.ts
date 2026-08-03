@@ -25,11 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPaths = [
     '',
-    '/projects',
-    '/services',
-    '/products',
-    '/about',
-    '/contact',
+    '/proyectos',
+    '/servicios',
+    '/productos',
+    '/estudio',
+    '/contacto',
     '/contenido'
   ];
 
@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Verticales — todas tienen contenido real.
   for (const v of VERTICALS) {
     entries.push({
-      url: `${SITE_URL}/services/${v.id}`,
+      url: `${SITE_URL}/servicios/${v.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6
@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Proyectos — solo los que tienen contenido suficiente (sin TODO esencial).
   for (const p of PROJECTS.filter(isIndexable)) {
     entries.push({
-      url: `${SITE_URL}/projects/${p.id}`,
+      url: `${SITE_URL}/proyectos/${p.id}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5
@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Productos — todas las luminarias tienen name/family/blurb reales.
   for (const f of FIX) {
     entries.push({
-      url: `${SITE_URL}/products/${f.id}`,
+      url: `${SITE_URL}/productos/${f.id}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5

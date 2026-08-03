@@ -83,7 +83,7 @@ export default async function HomePage(props: {
         <div style={{ marginTop: 'clamp(36px,5vh,60px)' }}>
           <Link
             className="lnk"
-            href="/projects"
+            href="/proyectos"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

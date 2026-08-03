@@ -13,7 +13,7 @@ import ProjectName from './ProjectName';
 
 /**
  * Tarjeta de proyecto · v3. Enlaza a la página propia e indexable
- * /projects/[slug]. El badge usa la etiqueta de estado (taxonomía, en español).
+ * /proyectos/[slug]. El badge usa la etiqueta de estado (taxonomía, en español).
  */
 export default function ProjectCard({ p }: { p: Project }) {
   const badge =
@@ -28,7 +28,7 @@ export default function ProjectCard({ p }: { p: Project }) {
   const partnerSuffix = isTodo(p.partner) ? '' : ' · ' + p.partner;
 
   return (
-    <Link className="card rise" href={`/projects/${p.id}`}>
+    <Link className="card rise" href={`/proyectos/${p.id}`}>
       <div className="iw zin">
         {p.ph > 0 && <SmartImage src={photoUrl(p, 1)} cover />}
         <div className="ph" data-l={dataL}></div>

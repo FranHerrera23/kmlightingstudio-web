@@ -44,33 +44,40 @@ Three projects are confidential: `athlete`, `musician`, `arvida`. The real clien
 - **Next.js 15** (App Router, React 19, static rendering) · **next-intl v4** · no CSS framework — v2 tokens live verbatim in [`app/globals.css`](app/globals.css).
 - **Animation**: three gestures (`.mask` / `.rise` / `.zin`) driven by a single `IntersectionObserver` that `unobserve`s after firing ([`components/Reveal.tsx`](components/Reveal.tsx)). `prefers-reduced-motion` disables all of it.
 
-## Routes
+## Routes (Spanish segments — see the note under i18n)
 
 | Route | Notes |
 | --- | --- |
-| `/` · `/projects` · `/services` · `/products` · `/about` · `/contact` | views |
-| `/projects/[slug]` | one indexable page per project (14-step molde, credits-first) |
-| `/services/[slug]` | vertical + work process |
-| `/products/[slug]` | one page per fixture — filter by family, "add to spec sheet" (UI only, no prices/cart) |
-| `/journal` · `/journal/[slug]` | **EN only, outside i18n** — full AEO molde (answer capsule, takeaways, sectioned body, comparison table, FAQ, author + reviewedBy) |
+| `/` · `/proyectos` · `/servicios` · `/productos` · `/estudio` · `/contacto` | views |
+| `/proyectos/[slug]` | one indexable page per project (14-step molde, credits-first) |
+| `/servicios/[slug]` | vertical + work process. Slug is Spanish (`residencias-privadas`, `multifamiliar`, `hoteleria`, `comercial`, `cultural`, `aviacion`, `yates`) and **decoupled** from the typology key (`Vertical.slug` vs `Vertical.id`) |
+| `/productos/[slug]` | one page per fixture — filter by family, "add to spec sheet" (UI only, no prices/cart) |
+| `/contenido` · `/contenido/[slug]` | editorial hub, **ES/EN only** (`/pt|ru/contenido` → 404). Four tabs via `?tab=`; `[slug]` serves an article (AEO molde) or a video (transcript + `VideoObject`) |
 
 ## Content vs. translations (the split)
 
-- **`/content/`** = the DATA LAYER (English source data, shared across locales in phase 1). Edit real data here.
-- **`/messages/`** = the next-intl catalog: page prose + UI chrome. `en.json` is complete; `es/pt/ru.json` have **identical keys with empty strings**. Regenerate the empty shells from EN:
+- **`/content/`** = the DATA LAYER (**Spanish** source data, shared across locales; EN content localization is future). Edit real data here — adding a project / fixture / article / video is one file edit + assets.
+- **`/messages/`** = the next-intl catalog: page prose + UI chrome. **`es.json` is complete**, `en.json` keeps the English strings, `pt/ru.json` mirror the keys with **empty strings**. Regenerate the empty shells from `es.json`:
 
   ```bash
-  node --input-type=module -e 'import fs from "fs";const en=JSON.parse(fs.readFileSync("messages/en.json"));const e=v=>typeof v==="string"?"":Array.isArray(v)?v.map(e):v&&typeof v=="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,e(x)])):v;for(const l of["es","pt","ru"])fs.writeFileSync(`messages/${l}.json`,JSON.stringify(e(en),null,2)+"\n")'
+  node --input-type=module -e 'import fs from "fs";const es=JSON.parse(fs.readFileSync("messages/es.json"));const e=v=>typeof v==="string"?"":Array.isArray(v)?v.map(e):v&&typeof v=="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,e(x)])):v;for(const l of["pt","ru"])fs.writeFileSync(`messages/${l}.json`,JSON.stringify(e(es),null,2)+"\n")'
   ```
+
+## Fase-1 closure
+
+- **Contact form** ([`components/ContactForm.tsx`](components/ContactForm.tsx) + [`app/api/contact/route.ts`](app/api/contact/route.ts)): client + server validation, honeypot, per-IP rate limit, no captcha; logs `referrer`+`pathname`. Sends via **Resend** behind `RESEND_API_KEY` — set it in `.env.local` / Vercel (see [`.env.example`](.env.example)); without it, the endpoint logs the lead and returns ok.
+- **Analytics**: `@vercel/analytics` + `@vercel/speed-insights` in the root layout (no cookies/consent).
+- **Domain redirects**: **301** map in [`config/legacy-redirects.ts`](config/legacy-redirects.ts) (wired by [`next.config.ts`](next.config.ts)) — old `karenmannheim.com` `projectXX.html` → the new `/proyectos/…`; unmapped fall back to `/proyectos`. `.html` is outside the i18n middleware, so `next.config` handles it.
 
 ## i18n — Spanish-first (v3)
 
-- **`defaultLocale: 'es'`**, `localePrefix: 'as-needed'` → **Spanish is the root, unprefixed** (`/`, `/projects`); EN is `/en/…`; PT/RU are `/pt/…` `/ru/…` with empty catalogs. Switcher armed; EN/PT/RU show a `pend` tag until filled.
+- **`defaultLocale: 'es'`**, `localePrefix: 'as-needed'`, **`localeDetection: false`** → **Spanish is the root, unprefixed** and `/` **always opens in Spanish** (no Accept-Language auto-redirect); EN is `/en/…`; PT/RU are `/pt/…` `/ru/…` with empty catalogs. Switcher armed; EN/PT/RU show a `pend` tag until filled.
 - **`messages/es.json` is the complete catalog** (Spanish copy is authored — never machine-translated); `en.json` keeps the English strings; `pt/ru.json` mirror the keys with empty values.
-- **Content hub** lives at `/contenido` and is editorial **ES/EN only** — `/pt/contenido` and `/ru/contenido` return **404** (guarded; PT/RU are interface languages, not content).
+- **Content hub** (`/contenido`) is editorial **ES/EN only** — `/pt/contenido` and `/ru/contenido` return **404** (PT/RU are interface languages, not content).
 
-> **Why `/contenido` is the segment for *every* locale — including English (`/en/contenido`, not `/en/content`).**
-> next-intl's per-locale `pathnames` (which would give `/en/content`) makes the `Link` href type the set of declared pathname *patterns*. That forces **every dynamic link in the app** — `/projects/[slug]`, `/services/[slug]`, `/products/[slug]`, `/contenido/[slug]` — to be rewritten from the plain string form (`` `/projects/${id}` ``) to the object form (`{ pathname: '/projects/[slug]', params: { slug } }`). That's a churny, error-prone refactor of working routing for one URL segment. So we use a single `/contenido` segment across locales and localize only the **nav label** (Contenido / Content). Don't "fix" this to `pathnames` without re-typing every dynamic `<Link>`.
+> **Why the route segments are Spanish for *every* locale — including English (`/en/proyectos`, not `/en/projects`).**
+> The URL segments are Spanish (`/proyectos`, `/servicios`, `/productos`, `/estudio`, `/contacto`, `/contenido`) and used **as-is across all locales** — English only localizes the **nav label**, not the segment.
+> The alternative, next-intl's per-locale `pathnames`, makes the `Link` href type the set of declared pathname *patterns* — which forces **every dynamic link** (`` `/proyectos/${id}` ``) to be rewritten to the object form (`{ pathname: '/proyectos/[slug]', params: { slug } }`), a churny, error-prone refactor of working routing. So we keep one Spanish segment per route across locales. **Don't "fix" this to `pathnames`** without re-typing every dynamic `<Link>`.
 
 ## SEO / AEO
 

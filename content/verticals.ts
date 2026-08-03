@@ -3,7 +3,7 @@ import type { Vertical } from './types';
 /* ── Verticales (Servicios) · v3 ── (portado tal cual, en español) */
 export const VERTICALS: Vertical[] = [
   {
-    id: 'residences', title: 'Residencias privadas',
+    id: 'residences', slug: 'residencias-privadas', title: 'Residencias privadas',
     sub: 'No son solo casas: son retratos en piedra, vidrio y luz.',
     intro: 'Una casa es el único proyecto donde el cliente vive dentro del resultado todos los días. Acá el control de escenas no es un extra: es el punto.',
     narr: {
@@ -13,7 +13,7 @@ export const VERTICALS: Vertical[] = [
     }
   },
   {
-    id: 'multifamily', title: 'Multifamiliar',
+    id: 'multifamily', slug: 'multifamiliar', title: 'Multifamiliar',
     sub: 'Del lobby al penthouse — una identidad, sostenida en cada espacio común.',
     intro: 'Una torre se compra en la entrada. Lobby, hall de ascensores, piso de amenidades y depto piloto tienen que hablar un solo idioma, y entregarse a tiempo.',
     narr: {
@@ -23,7 +23,7 @@ export const VERTICALS: Vertical[] = [
     }
   },
   {
-    id: 'hospitality', title: 'Hotelería',
+    id: 'hospitality', slug: 'hoteleria', title: 'Hotelería',
     sub: 'Confiabilidad a escala — igual en la noche cuatrocientos que en la primera.',
     intro: 'Consistencia en decenas de habitaciones idénticas y un momento con firma en cada espacio público. Las dos cosas a la vez, con el presupuesto de mantenimiento de un operador.',
     narr: {
@@ -33,7 +33,7 @@ export const VERTICALS: Vertical[] = [
     }
   },
   {
-    id: 'commercial', title: 'Comercial',
+    id: 'commercial', slug: 'comercial', title: 'Comercial',
     sub: 'Adaptabilidad — espacios que cambian de función entre que abren y cierran.',
     intro: 'La luz de retail tiene que mostrar el producto con honestidad y favorecer la arquitectura al mismo tiempo. Sobre una superficie reflectante, esos dos objetivos pelean.',
     narr: {
@@ -43,7 +43,7 @@ export const VERTICALS: Vertical[] = [
     }
   },
   {
-    id: 'cultural', title: 'Cultural y venues',
+    id: 'cultural', slug: 'cultural', title: 'Cultural y venues',
     sub: 'Llegada, circulación y atmósfera — todo lo que rodea al espectáculo.',
     intro: 'Un venue se ilumina para el movimiento y para el momento en que empieza el programa. La arquitectura tiene que ser legible a escala, y después dar un paso al costado.',
     narr: {
@@ -53,7 +53,7 @@ export const VERTICALS: Vertical[] = [
     }
   },
   {
-    id: 'aviation', title: 'Aviación',
+    id: 'aviation', slug: 'aviacion', title: 'Aviación',
     sub: 'De tierra al cielo — un ambiente personal a doce mil metros.',
     intro: 'En diseño aeronáutico la certificación es un factor clave. Cada componente necesita número de parte certificado y documentación completa, y todos los materiales deben cumplir normativa estricta de seguridad contra incendios.',
     narr: {
@@ -63,7 +63,7 @@ export const VERTICALS: Vertical[] = [
     }
   },
   {
-    id: 'yachts', title: 'Yates',
+    id: 'yachts', slug: 'yates', title: 'Yates',
     sub: 'Sal, movimiento, y cero tolerancia al reflejo sobre el vidrio de noche.',
     intro: 'Un yate es una casa que se mueve por el ambiente más corrosivo del planeta. Todo lo que está cerca del mar abierto falla en algún momento: la pregunta es si falla en el año dos o en el doce.',
     narr: {

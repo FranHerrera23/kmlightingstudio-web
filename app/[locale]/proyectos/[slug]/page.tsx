@@ -51,7 +51,7 @@ export async function generateMetadata(props: {
     ...social({
       title: `${name} — ${SITE_NAME}`,
       description,
-      path: localizedPath(locale, `/projects/${p.id}`),
+      path: localizedPath(locale, `/proyectos/${p.id}`),
       image: projectOg({ title: name, eyebrow: typ, photo }),
       type: 'article'
     }),
@@ -237,7 +237,7 @@ export default async function ProjectPage(props: {
       </section>
 
       {/* 14 · SIGUIENTE PROYECTO */}
-      <Link className="pnext" href={`/projects/${nx.id}`}>
+      <Link className="pnext" href={`/proyectos/${nx.id}`}>
         <div className="ph" data-l="Siguiente proyecto"></div>
         <div className="micro">{t('nextMicro')}</div>
         <h3>

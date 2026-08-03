@@ -11,7 +11,7 @@ import {
 } from '@/content';
 import ProjectCard from './ProjectCard';
 
-type Filters = { typ: string; loc: string; sta: string };
+export type Filters = { typ: string; loc: string; sta: string };
 
 function FilterRow({
   legend,
@@ -42,9 +42,18 @@ function FilterRow({
   );
 }
 
-export default function ProjectFilters() {
+export default function ProjectFilters({
+  initial
+}: {
+  // Estado inicial desde el query de la página (server), para que los redirects
+  // del dominio viejo (/proyectos?typ=residences) filtren y el grid quede en el
+  // HTML del servidor (indexable).
+  initial?: Filters;
+}) {
   const t = useTranslations('projects');
-  const [f, setF] = useState<Filters>({ typ: 'all', loc: 'all', sta: 'all' });
+  const [f, setF] = useState<Filters>(
+    initial ?? { typ: 'all', loc: 'all', sta: 'all' }
+  );
   const [dens, setDens] = useState<'2' | '4'>('4');
 
   const list = useMemo(

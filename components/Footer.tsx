@@ -39,10 +39,10 @@ export default function Footer() {
       <div className="foot-t">
         <div className="foot-c">
           <h5>{t('navigate')}</h5>
-          <Link href="/projects">{tNav('projects')}</Link>
-          <Link href="/services">{tNav('services')}</Link>
-          <Link href="/products">{tNav('products')}</Link>
-          <Link href="/about">{tNav('about')}</Link>
+          <Link href="/proyectos">{tNav('projects')}</Link>
+          <Link href="/servicios">{tNav('services')}</Link>
+          <Link href="/productos">{tNav('products')}</Link>
+          <Link href="/estudio">{tNav('about')}</Link>
           <Link href="/contenido">{tNav('content')}</Link>
         </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
           <h5>{t('verticals')}</h5>
           <div>
             {VERTICALS.map((v) => (
-              <Link key={v.id} href={`/services/${v.id}`}>
+              <Link key={v.id} href={`/servicios/${v.slug}`}>
                 {v.title}
               </Link>
             ))}

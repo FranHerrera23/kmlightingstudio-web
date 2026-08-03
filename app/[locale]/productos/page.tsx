@@ -13,7 +13,7 @@ export async function generateMetadata(props: {
   return social({
     title: t('title'),
     description: t('description'),
-    path: localizedPath(locale, '/products')
+    path: localizedPath(locale, '/productos')
   });
 }
 

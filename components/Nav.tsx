@@ -8,7 +8,7 @@ import LangSwitcher from './LangSwitcher';
 /** Rutas con hero oscuro: la nav arranca transparente y se vuelve sólida al
  *  scrollear. Home, detalle de servicio y detalle de proyecto. */
 function hasDarkHero(pathname: string) {
-  return pathname === '/' || /^\/(projects|services)\/[^/]+$/.test(pathname);
+  return pathname === '/' || /^\/(proyectos|servicios)\/[^/]+$/.test(pathname);
 }
 
 export default function Nav() {
@@ -38,13 +38,13 @@ export default function Nav() {
 
   const links = (
     <>
-      <Link className={`lnk${isOn('/projects') ? ' on' : ''}`} href="/projects">
+      <Link className={`lnk${isOn('/proyectos') ? ' on' : ''}`} href="/proyectos">
         {t('projects')}
       </Link>
-      <Link className={`lnk${isOn('/services') ? ' on' : ''}`} href="/services">
+      <Link className={`lnk${isOn('/servicios') ? ' on' : ''}`} href="/servicios">
         {t('services')}
       </Link>
-      <Link className={`lnk${isOn('/products') ? ' on' : ''}`} href="/products">
+      <Link className={`lnk${isOn('/productos') ? ' on' : ''}`} href="/productos">
         {t('products')}
       </Link>
     </>
@@ -62,7 +62,7 @@ export default function Nav() {
           </Link>
 
           <div className="nav-r">
-            <Link className={`lnk${isOn('/about') ? ' on' : ''}`} href="/about">
+            <Link className={`lnk${isOn('/estudio') ? ' on' : ''}`} href="/estudio">
               {t('about')}
             </Link>
             {/* Contenido: ES/EN (localizado). PT/RU → 404 en la página. */}
@@ -72,7 +72,7 @@ export default function Nav() {
             >
               {t('content')}
             </Link>
-            <Link className="lnk talk" href="/contact">
+            <Link className="lnk talk" href="/contacto">
               {t('letsTalk')}
             </Link>
             <LangSwitcher />
@@ -91,12 +91,12 @@ export default function Nav() {
       </nav>
 
       <div className={`mm${menuOpen ? ' open' : ''}`}>
-        <Link href="/projects">{t('projects')}</Link>
-        <Link href="/services">{t('services')}</Link>
-        <Link href="/products">{t('products')}</Link>
-        <Link href="/about">{t('about')}</Link>
+        <Link href="/proyectos">{t('projects')}</Link>
+        <Link href="/servicios">{t('services')}</Link>
+        <Link href="/productos">{t('products')}</Link>
+        <Link href="/estudio">{t('about')}</Link>
         <Link href="/contenido">{t('content')}</Link>
-        <Link href="/contact">{t('contact')}</Link>
+        <Link href="/contacto">{t('contact')}</Link>
       </div>
     </>
   );

@@ -16,7 +16,7 @@ export default function CTA() {
         <MaskLines lines={lines} />
       </h2>
       <p className="lead">{t('body')}</p>
-      <Link className="b" href="/contact">
+      <Link className="b" href="/contacto">
         {t('button')}
       </Link>
     </section>
