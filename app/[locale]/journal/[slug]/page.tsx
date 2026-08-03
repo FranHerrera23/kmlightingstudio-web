@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import JsonLd from '@/components/JsonLd';
 import { articleGraph } from '@/lib/structuredData';
+import { social } from '@/lib/metadata';
 import {
   ARTICLES,
   getArticle,
@@ -29,8 +30,12 @@ export async function generateMetadata(props: {
   const a = getArticle(slug);
   if (!a) return {};
   return {
-    title: `${a.title} — ${SITE_NAME}`,
-    description: isTodo(a.answer) ? a.question : (a.answer as string),
+    ...social({
+      title: `${a.title} — ${SITE_NAME}`,
+      description: isTodo(a.answer) ? a.question : (a.answer as string),
+      path: `/journal/${a.slug}`, // Journal EN-only, sin prefijo de idioma
+      type: 'article'
+    }),
     // Seeds sin contenido → noindex (tampoco entran al sitemap).
     robots: isArticleReady(a) ? undefined : { index: false, follow: true }
   };

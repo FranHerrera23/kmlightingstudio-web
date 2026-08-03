@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import ProjectCard from '@/components/ProjectCard';
+import { social, localizedPath } from '@/lib/metadata';
 import {
   VERTICALS,
   PROJECTS,
@@ -23,10 +24,14 @@ export function generateStaticParams() {
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { locale, slug } = await props.params;
   const v = getVertical(slug);
   if (!v) return {};
-  return { title: `${v.title} — ${SITE_NAME}`, description: v.sub };
+  return social({
+    title: `${v.title} — ${SITE_NAME}`,
+    description: v.sub,
+    path: localizedPath(locale, `/services/${v.id}`)
+  });
 }
 
 export default async function VerticalPage(props: {

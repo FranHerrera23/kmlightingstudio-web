@@ -3,13 +3,18 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Masthead from '@/components/Masthead';
 import BuildNote from '@/components/BuildNote';
 import ProductFilters from '@/components/ProductFilters';
+import { social, localizedPath } from '@/lib/metadata';
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'meta.products' });
-  return { title: t('title'), description: t('description') };
+  return social({
+    title: t('title'),
+    description: t('description'),
+    path: localizedPath(locale, '/products')
+  });
 }
 
 export default async function ProductsPage(props: {

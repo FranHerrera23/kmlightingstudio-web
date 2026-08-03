@@ -7,6 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import ProjectName from '@/components/ProjectName';
 import SmartImage from '@/components/SmartImage';
 import { creativeWork } from '@/lib/structuredData';
+import { social, localizedPath, projectOg } from '@/lib/metadata';
 import {
   PROJECTS,
   getProject,
@@ -33,13 +34,27 @@ export function generateStaticParams() {
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { locale, slug } = await props.params;
   const p = getProject(slug);
   if (!p) return {};
   const name = isTodo(p.name) ? 'Project' : (p.name as string);
+  const typ = typologyLabel(p.typ);
+  const place = isTodo(p.place) ? '' : (p.place as string);
+  // Descripción específica: concepto si está escrito, si no tipología · lugar.
+  const description = isTodo(p.concept)
+    ? `${typ}${place ? ` · ${place}` : ''} — architectural lighting by ${SITE_NAME}.`
+    : (p.concept as string);
+  // og:image = primera foto de galería, recortada a 1200×630 (o marca si 404).
+  const photo = p.ph > 0 ? photoUrl(p, 1) : null;
+
   return {
-    title: `${name} — ${SITE_NAME}`,
-    description: isTodo(p.concept) ? undefined : (p.concept as string),
+    ...social({
+      title: `${name} — ${SITE_NAME}`,
+      description,
+      path: localizedPath(locale, `/projects/${p.id}`),
+      image: projectOg({ title: name, eyebrow: typ, photo }),
+      type: 'article'
+    }),
     // TODO esenciales → noindex (tampoco entran al sitemap).
     robots: isIndexable(p) ? undefined : { index: false, follow: true }
   };

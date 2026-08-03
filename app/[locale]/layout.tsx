@@ -9,6 +9,7 @@ import {
 } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/content';
+import { social, localizedPath } from '@/lib/metadata';
 import { organizationGraph } from '@/lib/structuredData';
 import JsonLd from '@/components/JsonLd';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -31,10 +32,15 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'meta.home' });
+  // Home + default. Cada página hija setea su propio social() (openGraph se
+  // reemplaza por completo en el hijo, no se hereda campo por campo).
   return {
     metadataBase: new URL(SITE_URL),
-    title: t('title'),
-    description: t('description')
+    ...social({
+      title: t('title'),
+      description: t('description'),
+      path: localizedPath(locale, '/')
+    })
   };
 }
 

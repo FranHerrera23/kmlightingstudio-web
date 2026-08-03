@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import MaskLines from '@/components/MaskLines';
 import BuildNote from '@/components/BuildNote';
+import { social } from '@/lib/metadata';
 import { ARTICLES, isTodo, SITE_NAME } from '@/content';
 
 /**
@@ -11,11 +12,12 @@ import { ARTICLES, isTodo, SITE_NAME } from '@/content';
  * Los strings van en inglés hardcodeados, no pasan por el catálogo i18n.
  * Los artículos se escriben en fase 3.
  */
-export const metadata: Metadata = {
+export const metadata: Metadata = social({
   title: `Journal — ${SITE_NAME}`,
   description:
-    'Everything we know about light. Thirty-three years of specifying and commissioning, written down — the questions architects and interior designers actually ask us.'
-};
+    'Everything we know about light. Thirty-three years of specifying and commissioning, written down — the questions architects and interior designers actually ask us.',
+  path: '/journal'
+});
 
 export default async function JournalPage(props: {
   params: Promise<{ locale: string }>;

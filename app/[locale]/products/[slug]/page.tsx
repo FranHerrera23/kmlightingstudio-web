@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import JsonLd from '@/components/JsonLd';
 import AddToSpec from '@/components/AddToSpec';
 import { fixtureProduct } from '@/lib/structuredData';
+import { social, localizedPath } from '@/lib/metadata';
 import { FIX, DRAW, getFixture, isTodo, SITE_NAME, type Fixture } from '@/content';
 
 export function generateStaticParams() {
@@ -15,10 +16,14 @@ export function generateStaticParams() {
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { locale, slug } = await props.params;
   const f = getFixture(slug);
   if (!f) return {};
-  return { title: `${f.name} — ${SITE_NAME}`, description: f.blurb };
+  return social({
+    title: `${f.name} — ${SITE_NAME}`,
+    description: f.blurb,
+    path: localizedPath(locale, `/products/${f.id}`)
+  });
 }
 
 /** Sección técnica: si el dato está en TODO muestra el flag "Awaiting TRAZZO". */

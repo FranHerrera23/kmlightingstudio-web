@@ -2,13 +2,18 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Masthead from '@/components/Masthead';
 import { OFFICES } from '@/content';
+import { social, localizedPath } from '@/lib/metadata';
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'meta.contact' });
-  return { title: t('title'), description: t('description') };
+  return social({
+    title: t('title'),
+    description: t('description'),
+    path: localizedPath(locale, '/contact')
+  });
 }
 
 export default async function ContactPage(props: {
