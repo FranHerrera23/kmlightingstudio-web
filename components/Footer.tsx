@@ -41,7 +41,7 @@ export default function Footer() {
           <h5>{t('navigate')}</h5>
           <Link href="/proyectos">{tNav('projects')}</Link>
           <Link href="/servicios">{tNav('services')}</Link>
-          <Link href="/productos">{tNav('products')}</Link>
+          <Link href="/tecnologia">{tNav('products')}</Link>
           <Link href="/estudio">{tNav('about')}</Link>
           <Link href="/contenido">{tNav('content')}</Link>
         </div>

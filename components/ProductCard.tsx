@@ -3,10 +3,10 @@
 import { Link } from '@/i18n/navigation';
 import { DRAW, type Fixture } from '@/content';
 
-/** Tarjeta de luminaria · enlaza a la página propia /productos/[slug]. */
+/** Tarjeta de luminaria · enlaza a la página propia /tecnologia/[slug]. */
 export default function ProductCard({ f }: { f: Fixture }) {
   return (
-    <Link className="lc rise" href={`/productos/${f.id}`}>
+    <Link className="lc rise" href={`/tecnologia/${f.id}`}>
       <div className="st" dangerouslySetInnerHTML={{ __html: DRAW[f.draw] }} />
       <div className="b">
         <span className="fam">{f.family}</span>

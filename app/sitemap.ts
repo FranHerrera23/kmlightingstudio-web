@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/proyectos',
     '/servicios',
-    '/productos',
+    '/tecnologia',
     '/estudio',
     '/contacto',
     '/contenido'
@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Productos — todas las luminarias tienen name/family/blurb reales.
   for (const f of FIX) {
     entries.push({
-      url: `${SITE_URL}/productos/${f.id}`,
+      url: `${SITE_URL}/tecnologia/${f.id}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5

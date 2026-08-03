@@ -44,7 +44,7 @@ export default function Nav() {
       <Link className={`lnk${isOn('/servicios') ? ' on' : ''}`} href="/servicios">
         {t('services')}
       </Link>
-      <Link className={`lnk${isOn('/productos') ? ' on' : ''}`} href="/productos">
+      <Link className={`lnk${isOn('/tecnologia') ? ' on' : ''}`} href="/tecnologia">
         {t('products')}
       </Link>
     </>
@@ -93,7 +93,7 @@ export default function Nav() {
       <div className={`mm${menuOpen ? ' open' : ''}`}>
         <Link href="/proyectos">{t('projects')}</Link>
         <Link href="/servicios">{t('services')}</Link>
-        <Link href="/productos">{t('products')}</Link>
+        <Link href="/tecnologia">{t('products')}</Link>
         <Link href="/estudio">{t('about')}</Link>
         <Link href="/contenido">{t('content')}</Link>
         <Link href="/contacto">{t('contact')}</Link>

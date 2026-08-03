@@ -30,7 +30,7 @@ const PENDING = {
 export const FIX: Fixture[] = [
   { id: 'trimless-downlight-57', family: 'Embutida · Sin marco', name: 'Downlight trimless', diameter: 'Ø57', draw: 'down',
     blurb: 'La de referencia del estudio. Lente profundamente embutido, sin borde visible, y la masa del cuerpo haciendo de disipador.', ...PENDING },
-  { id: 'trimless-downlight-38', family: 'Embutida · Sin marco', name: 'Downlight trimless', diameter: 'Ø38', draw: 'down',
+  { id: 'trimless-downlight-38', family: 'Embutida · Sin marco', name: 'Downlight trimless compacto', diameter: 'Ø38', draw: 'down',
     blurb: 'Mismo rendimiento, apertura menor — para cielorrasos que no pueden con otro agujero.', ...PENDING },
   { id: 'adjustable-spot', family: 'Embutida · Orientable', name: 'Spot orientable', diameter: 'Ø57', draw: 'adj',
     blurb: 'Inclinación y giro enteramente por encima del plano del cielorraso.', ...PENDING },

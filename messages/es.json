@@ -33,7 +33,7 @@
   "nav": {
     "projects": "Proyectos",
     "services": "Servicios",
-    "products": "Productos",
+    "products": "Tecnología",
     "about": "Estudio",
     "content": "Contenido",
     "contact": "Contacto",
@@ -155,10 +155,12 @@
   },
 
   "products": {
-    "kicker": "Productos",
+    "kicker": "Tecnología",
     "titleLines": ["Lo que especificamos."],
     "introLead": "Cada proyecto se construye con una lista corta y deliberada de instrumentos — luminarias a las que volvemos porque mantienen su color, sobreviven al aire salino y desaparecen en el cielorraso como la arquitectura lo pensó.",
     "introNote": "No es una tienda. Archivos fotométricos y fichas técnicas disponibles para profesionales que especifican, sin formularios.",
+    "indepTitle": "No vendemos luminarias ni representamos marcas.",
+    "indepBody": "Especificamos lo que el proyecto necesita. Si mañana aparece algo mejor, especificamos eso.",
     "family": "Familia",
     "all": "Todas",
     "countOne": "{count} luminaria",

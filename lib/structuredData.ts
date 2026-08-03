@@ -117,7 +117,7 @@ export function creativeWork(p: Project) {
  * Los campos técnicos en TODO se omiten (no se inventan). (Brief §6)
  */
 export function fixtureProduct(f: Fixture) {
-  const url = `${SITE_URL}/productos/${f.id}`;
+  const url = `${SITE_URL}/tecnologia/${f.id}`;
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Product',

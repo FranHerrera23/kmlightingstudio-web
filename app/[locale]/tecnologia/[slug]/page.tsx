@@ -22,7 +22,7 @@ export async function generateMetadata(props: {
   return social({
     title: `${f.name} — ${SITE_NAME}`,
     description: f.blurb,
-    path: localizedPath(locale, `/productos/${f.id}`)
+    path: localizedPath(locale, `/tecnologia/${f.id}`)
   });
 }
 
@@ -70,7 +70,7 @@ export default async function ProductPage(props: {
       <JsonLd data={fixtureProduct(f)} />
 
       <section className="prodhead">
-        <Link className="back" href="/productos">
+        <Link className="back" href="/tecnologia">
           {t('backToProducts')}
         </Link>
         <div className="micro">{f.family}</div>

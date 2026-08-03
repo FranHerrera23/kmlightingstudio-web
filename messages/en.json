@@ -33,7 +33,7 @@
   "nav": {
     "projects": "Projects",
     "services": "Services",
-    "products": "Products",
+    "products": "Technology",
     "about": "The Studio",
     "content": "Content",
     "contact": "Contact",
@@ -155,10 +155,12 @@
   },
 
   "products": {
-    "kicker": "Products",
+    "kicker": "Technology",
     "titleLines": ["What we specify."],
     "introLead": "Every project is built from a short, deliberate list of instruments — fixtures we return to because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended.",
     "introNote": "Not a shop. Photometric files and spec sheets available to specifying professionals, ungated.",
+    "indepTitle": "We don't sell fixtures or represent brands.",
+    "indepBody": "We specify what the project needs. If something better shows up tomorrow, we specify that.",
     "family": "Family",
     "all": "All",
     "countOne": "{count} fixture",

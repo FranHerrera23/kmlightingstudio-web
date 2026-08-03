@@ -13,7 +13,7 @@ export async function generateMetadata(props: {
   return social({
     title: t('title'),
     description: t('description'),
-    path: localizedPath(locale, '/productos')
+    path: localizedPath(locale, '/tecnologia')
   });
 }
 
@@ -43,7 +43,13 @@ export default async function ProductsPage(props: {
         </BuildNote>
       </Masthead>
 
-      <section className="sec-s">
+      {/* §B.2 · declaración de independencia comercial — arriba de la grilla */}
+      <section className="indep sec-s">
+        <h2 className="indep-t">{t('indepTitle')}</h2>
+        <p className="indep-b">{t('indepBody')}</p>
+      </section>
+
+      <section className="sec-s" style={{ paddingTop: 0 }}>
         <ProductFilters />
       </section>
     </div>

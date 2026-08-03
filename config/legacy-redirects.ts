@@ -12,6 +12,10 @@ export interface LegacyRedirect {
 }
 
 export const LEGACY_REDIRECTS: LegacyRedirect[] = [
+  // Rename interno /productos → /tecnologia (§2.1). 301 real (no 308).
+  { source: '/productos', destination: '/tecnologia' },
+  { source: '/productos/:slug', destination: '/tecnologia/:slug' },
+
   // Índices y filtros (el valor del filtro es la clave de taxonomía, en inglés)
   { source: '/project.html', destination: '/proyectos' },
   { source: '/projectBaseResidential.html', destination: '/proyectos?typ=residences' },

@@ -560,3 +560,7 @@ p{line-height:1.75;color:var(--ink-2)}
 h2.sm{font-size:var(--t2);letter-spacing:-.03em;line-height:1.02}
 /* §4.4 · rótulo de obra pre-2023 (TRAZZO) en /estudio */
 .trazzo-note{margin-top:clamp(28px,4vh,44px);font-size:12.5px;color:var(--ink-3);letter-spacing:.01em;max-width:62ch}
+/* §B.2 · declaración de independencia comercial (Tecnología) */
+.indep{border-bottom:1px solid var(--rule)}
+.indep-t{font-size:var(--t2);text-transform:none;letter-spacing:-.025em;line-height:1.05;max-width:20ch}
+.indep-b{margin-top:18px;font-size:var(--t3);color:var(--ink-2);max-width:50ch}
