@@ -38,34 +38,40 @@ export function organizationGraph() {
     '@context': 'https://schema.org',
     '@graph': [
       {
+        // El track record es de Karen (33 años, 2.500+, Forbes). Se conserva.
         '@type': 'Person',
         '@id': PERSON_ID,
         name: 'Karen Mannheim',
-        jobTitle: 'Founder & Creative Director',
+        jobTitle: 'Fundadora y Directora Creativa',
         worksFor: { '@id': ORG_ID },
+        award: 'Forbes Perú · 50 Mujeres Más Poderosas',
         knowsAbout: [
-          'architectural lighting design',
-          'luxury residential lighting',
-          'hospitality lighting',
-          'photometric calculation',
-          'glare control',
-          'lighting controls'
+          'diseño de iluminación arquitectónica',
+          'iluminación residencial de lujo',
+          'iluminación hotelera',
+          'cálculo fotométrico',
+          'control de deslumbramiento'
         ]
       },
       {
+        // KMLS es el estudio desde donde Karen trabaja HOY: fundado en 2023.
+        // Sin numberOfEmployees (esos 80 son de TRAZZO, no de KMLS).
         '@type': ['Organization', 'LocalBusiness'],
         '@id': ORG_ID,
         name: 'Karen Mannheim Lighting Studio',
         alternateName: 'KM Lighting Studio',
         url: SITE_URL,
         email: STUDIO_EMAIL,
-        foundingDate: '1993',
+        inLanguage: 'es',
+        foundingDate: '2023',
         founder: { '@id': PERSON_ID },
-        numberOfEmployees: 80,
         areaServed: [
-          { '@type': 'Place', name: 'Lima' },
-          { '@type': 'Place', name: 'Miami' },
-          { '@type': 'Place', name: 'Madrid' }
+          { '@type': 'Country', name: 'Perú' },
+          { '@type': 'Country', name: 'Estados Unidos' },
+          { '@type': 'Country', name: 'España' },
+          { '@type': 'Country', name: 'Emiratos Árabes Unidos' },
+          { '@type': 'Country', name: 'Aruba' },
+          { '@type': 'Country', name: 'República Dominicana' }
         ]
       },
       ...offices

@@ -36,6 +36,12 @@ export default async function HomePage(props: {
         </div>
       </header>
 
+      {/* ═══ ATRIBUCIÓN (§4.3) — track record de Karen, KMLS fundado 2023 ═══ */}
+      <section className="databand">
+        <span className="do">{t('dataOrg')}</span>
+        <span className="dk">{t('dataKaren')}</span>
+      </section>
+
       {/* ═══ STATEMENT — una sola idea, la única cursiva de la página ═══ */}
       <section className="stmt">
         <h2>
@@ -109,7 +115,7 @@ export default async function HomePage(props: {
         <div className="shead">
           <div>
             <div className="micro rise">{t('range.micro')}</div>
-            <h2>
+            <h2 className="sm">
               <MaskLines lines={lines('range.titleLines')} />
             </h2>
           </div>
@@ -184,13 +190,10 @@ export default async function HomePage(props: {
         </div>
       </section>
 
-      {/* ═══ MARQUEE — pares planos: nth-child(even) traza el contorno ═══ */}
+      {/* ═══ STATEMENT LINE (§7.2) — estático, sin scroll horizontal ═══ */}
       <div className="marq-w">
-        <div className="marq">
-          {[0, 1, 2].map((i) => [
-            <span key={`a${i}`}>{t('marquee1')}</span>,
-            <span key={`b${i}`}>{t('marquee2')}</span>
-          ])}
+        <div className="marq-static">
+          {t('marquee1')} {t('marquee2')}
         </div>
       </div>
 
@@ -199,7 +202,7 @@ export default async function HomePage(props: {
         <div className="shead">
           <div>
             <div className="micro rise">{t('where.micro')}</div>
-            <h2>
+            <h2 className="sm">
               <MaskLines lines={lines('where.titleLines')} />
             </h2>
           </div>
@@ -220,10 +223,11 @@ export default async function HomePage(props: {
           }}
         >
           <BuildNote title="Mapa mundial · fase 2">
-            Ciudades con obra entregada sobre proyección con grilla. Confirmadas:
-            Lima · Miami · Madrid · Marbella · Abu Dhabi · Palm Beach · Golden
-            Beach · Coral Gables · Key Biscayne · Fisher Island · Aruba. Falta
-            cerrar los 6 países.
+            Ciudades con obra entregada sobre proyección con grilla. Siete países
+            con obra: Perú · Estados Unidos · España · EAU · Aruba · República
+            Dominicana. Ciudades: Lima · Miami · Madrid · Marbella · Abu Dhabi ·
+            Palm Beach · Golden Beach · Coral Gables · Key Biscayne · Fisher
+            Island · Aruba.
           </BuildNote>
         </div>
       </section>

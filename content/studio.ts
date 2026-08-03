@@ -24,8 +24,11 @@ export const TEAM: TeamMember[] = [
   ['Leonett Marcano', 'Ingeniero y especialista en integración lumínica']
 ];
 
+// Oficinas: Lima · Miami · Marbella (§4.5). Madrid sale del listado de sedes
+// (sin equipo ni oficina) y queda solo como ubicación de proyectos. Marbella
+// comparte timezone con Madrid.
 export const OFFICES: Office[] = [
   ['Lima', 'Casa matriz', 'America/Lima'],
   ['Miami', '', 'America/New_York'],
-  ['Madrid', '', 'Europe/Madrid']
+  ['Marbella', '', 'Europe/Madrid']
 ];

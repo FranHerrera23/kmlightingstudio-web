@@ -63,6 +63,8 @@ export default async function AboutPage(props: {
             </div>
           ))}
         </div>
+        {/* §4.4 · atribución de la obra pre-2023 (KMLS fundado en 2023) */}
+        <p className="trazzo-note rise d1">{t('trazzoNote')}</p>
       </section>
 
       <section className="founder">

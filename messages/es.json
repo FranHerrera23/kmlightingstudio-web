@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "KM Lighting Studio — Diseño de iluminación arquitectónica · Lima · Miami · Madrid",
-      "description": "Karen Mannheim Lighting Studio. 33 años, más de 2.500 proyectos, seis países. Iluminación arquitectónica para residencias, multifamiliares, hotelería, aviación y yates."
+      "description": "Karen Mannheim Lighting Studio. 33 años, más de 2.500 proyectos, siete países. Iluminación arquitectónica para residencias, multifamiliares, hotelería, aviación y yates."
     },
     "projects": {
       "title": "Proyectos — KM Lighting Studio",
-      "description": "Filtrá por tipología, ubicación o estado. Cada proyecto abre como página completa e indexable. Primero las imágenes, siempre."
+      "description": "Filtra por tipología, ubicación o estado. Cada proyecto abre como página completa e indexable. Primero las imágenes, siempre."
     },
     "services": {
       "title": "Servicios — KM Lighting Studio",
@@ -52,8 +52,10 @@
     "hero": {
       "kicker": "Diseño de iluminación arquitectónica · Lima · Miami · Madrid",
       "titleLines": ["La buena arquitectura", "merece una luz", "que la entienda."],
-      "scroll": "Bajá"
+      "scroll": "Baja"
     },
+    "dataOrg": "KM Lighting Studio · fundado en 2023",
+    "dataKaren": "Karen Mannheim · 33 años · 2.500+ proyectos · 7 países",
     "statement": {
       "titleLines": ["Pasas años", "en un espacio."],
       "p1": "Cada detalle pensado. Y entonces la luz llega al final, como si fuera un accesorio — y la arquitectura desaparece.",
@@ -84,7 +86,7 @@
     },
     "partnership": {
       "micro": "Sociedad",
-      "titleLines": ["Cuando la luz falla,", "el que queda", "expuesto sos vos."],
+      "titleLines": ["Cuando la luz falla,", "el que queda", "expuesto eres tú."],
       "p1": "Tus clientes esperan perfección desde el primer día. Trabajas con arquitectos que exigen precisión. Y los proyectos internacionales se caen por coordinación — tres continentes, distintos idiomas, distintas normativas, distintos equipos.",
       "p2": "Hace treinta y tres años que hacemos que eso funcione."
     },
@@ -106,7 +108,7 @@
     "marquee2": "la arquitectura permanece —",
     "where": {
       "micro": "Dónde trabajamos",
-      "titleLines": ["Seis países.", "Un estándar."],
+      "titleLines": ["Siete países.", "Un estándar."],
       "side": "Lo residencial necesita control de escenas. La hotelería necesita confiabilidad a escala. Lo comercial necesita adaptabilidad."
     },
     "trusted": {
@@ -118,7 +120,7 @@
   "projects": {
     "kicker": "Proyectos",
     "titleLines": ["Todos los proyectos."],
-    "introLead": "Filtrá por tipología, ubicación o estado. Los estudios conceptuales están marcados como tales — los mostramos porque definen el alcance del estudio, no porque los presentemos como obra entregada.",
+    "introLead": "Filtra por tipología, ubicación o estado. Los estudios conceptuales están marcados como tales — los mostramos porque definen el alcance del estudio, no porque los presentemos como obra entregada.",
     "introNote": "Cada proyecto abre como página completa. Primero las imágenes, siempre.",
     "typology": "Tipología",
     "location": "Ubicación",
@@ -145,10 +147,10 @@
     "wpTitle1": "Tres etapas,",
     "wpTitle2": "un compromiso.",
     "stage": "Etapa {n}",
-    "dossierMicro": "Lo que recibís",
+    "dossierMicro": "Lo que recibes",
     "dossierTitle1": "Cada plano,",
     "dossierTitle2": "un solo dossier final.",
-    "dossierLead": "No un conjunto de fragmentos entregados etapa por etapa — un dossier de cierre completo, del que nos podés hacer responsables.",
+    "dossierLead": "No un conjunto de fragmentos entregados etapa por etapa — un dossier de cierre completo, del que nos puedes hacer responsables.",
     "selectedWork": "Obra en esta vertical"
   },
 
@@ -179,7 +181,7 @@
     "titleLines": ["33 años", "haciendo una cosa."],
     "introLead": "KM Lighting Studio hace una sola cosa: que la luz le dé sentido a un espacio.",
     "introNote": "Lo que empezó con una persona tocando puertas en Lima es hoy un estudio de más de 80 personas en tres continentes.",
-    "lead": "Hemos entregado más de 2.500 proyectos en seis países, trabajando junto a estudios como RAMSA, Oppenheim y Adriana Hoyos. Pero el número que más importa no está en esa lista: es que después de tres décadas y de esa escala, el estudio sigue diseñando cada proyecto como si fuera el único.",
+    "lead": "Hemos entregado más de 2.500 proyectos en siete países, trabajando junto a estudios como RAMSA, Oppenheim y Adriana Hoyos. Pero el número que más importa no está en esa lista: es que después de tres décadas y de esa escala, el estudio sigue diseñando cada proyecto como si fuera el único.",
     "throughline": "Lo que nunca cambió: acá la luz no es decoración. Es el alma de la arquitectura.",
     "stat1Num": "33", "stat1Sup": "+", "stat1Label": "Años de práctica",
     "stat2Num": "2.500", "stat2Sup": "+", "stat2Label": "Proyectos entregados",
@@ -195,14 +197,15 @@
     "recPractice": "Práctica",
     "recPracticeValue": "33 años · 2.500+ proyectos",
     "recReach": "Alcance",
-    "recReachValue": "Seis países · tres oficinas",
+    "recReachValue": "Siete países · tres oficinas",
     "socConversations": "Conversaciones →",
     "teamMicro": "El equipo",
     "teamTitle": "Liderazgo.",
     "teamSide": "Una arquitectura así de compleja necesita socios que entiendan lo que está en juego.",
     "trustedMicro": "Confían en nosotros",
     "trustedTitle1": "Los estudios que",
-    "trustedTitle2": "trabajan con KMLS."
+    "trustedTitle2": "trabajan con KMLS.",
+    "trazzoNote": "Obra anterior a 2023 entregada bajo TRAZZO Lighting, bajo dirección de Karen Mannheim."
   },
 
   "contact": {
@@ -218,7 +221,7 @@
     "kicker": "Empecemos",
     "titleLines": ["Cuéntanos qué", "estás construyendo."],
     "body": "En la etapa que estés — concepto, licitación, o un cielorraso que ya está cerrado. Te vamos a decir con honestidad si somos el estudio indicado.",
-    "button": "Escribinos"
+    "button": "Escríbenos"
   },
 
   "contactForm": {
@@ -229,12 +232,12 @@
     "type": "Tipo de proyecto",
     "stage": "Etapa",
     "message": "Mensaje",
-    "choose": "Elegí…",
+    "choose": "Elige…",
     "submit": "Enviar",
     "sending": "Enviando…",
     "successTitle": "Gracias.",
     "successBody": "Te vamos a responder pronto.",
-    "error": "Algo salió mal. Probá de nuevo o escribinos a studio@kmlightingstudio.com.",
+    "error": "Algo salió mal. Prueba de nuevo o escríbenos a studio@kmlightingstudio.com.",
     "errName": "Tu nombre es obligatorio.",
     "errEmail": "Hace falta un email válido.",
     "errMessage": "El mensaje es obligatorio.",
@@ -307,11 +310,11 @@
     "pressMicro": "Prensa",
     "pressTitle1": "Lo que otros",
     "pressTitle2": "han escrito.",
-    "pressLead": "Reconocimiento de terceros — el único que no te podés dar a vos mismo.",
+    "pressLead": "Reconocimiento de terceros — el único que no te puedes dar a ti mismo.",
     "featMicro": "Reconocimiento destacado",
     "featTitle1": "Forbes Perú",
     "featTitle2": "50 Mujeres Más Poderosas.",
-    "featBody": "Karen Mannheim entre las 50 mujeres más poderosas del Perú — el reconocimiento a tres décadas construyendo un estudio de iluminación que hoy trabaja en seis países.",
+    "featBody": "Karen Mannheim entre las 50 mujeres más poderosas del Perú — el reconocimiento a tres décadas construyendo un estudio de iluminación que hoy trabaja en siete países.",
     "featOut": "Leer la nota",
     "read": "Leer",
     "outletTBD": "[Medio]",

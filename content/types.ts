@@ -62,6 +62,12 @@ export interface Project {
   concept: Todoable<string>;
   challenge: Todoable<string>;
   /**
+   * §4.4 · Obra anterior a 2023 (KMLS se fundó en 2023) → entregada bajo TRAZZO,
+   * bajo dirección de Karen. Campo opcional hasta saber cuántos proyectos son
+   * pre-2023 (pendiente de Fran). Cuando esté, el molde de ficha muestra el rótulo.
+   */
+  preTrazzo?: boolean;
+  /**
    * Secuencia de fotos con su ratio. Fase 1: usa el molde por defecto
    * (ver DEFAULT_GALLERY). Fase 2: cada proyecto trae su propia lista.
    */

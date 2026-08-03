@@ -548,3 +548,15 @@ p{line-height:1.75;color:var(--ink-2)}
 .nf-links{margin-top:clamp(30px,5vh,48px);display:flex;gap:10px;flex-wrap:wrap}
 .nf-links a{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--rule);border-radius:100px;padding:14px 26px;transition:.35s var(--e)}
 .nf-links a:hover{border-color:var(--gold);color:var(--ink)}
+
+/* ═══ HOME · atribución + ajustes de arte (brief home) ═══ */
+/* §4.3 · banda de datos: KMLS 2023 / track record de Karen */
+.databand{padding:clamp(26px,3.6vh,44px) var(--pad);display:flex;flex-wrap:wrap;gap:8px 30px;align-items:baseline;border-bottom:1px solid var(--rule)}
+.databand .do{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.databand .dk{font-size:13.5px;color:var(--ink-2);letter-spacing:.01em}
+/* §7.2 · statement line estático (reemplaza el marquee animado) */
+.marq-static{text-align:center;font-weight:800;font-size:clamp(22px,3.6vw,52px);letter-spacing:-.03em;text-transform:uppercase;line-height:1.12;color:var(--ink);padding:0 var(--pad);max-width:26ch;margin:0 auto}
+/* §7.1 · titulares degradados a --t2 (range / where) */
+h2.sm{font-size:var(--t2);letter-spacing:-.03em;line-height:1.02}
+/* §4.4 · rótulo de obra pre-2023 (TRAZZO) en /estudio */
+.trazzo-note{margin-top:clamp(28px,4vh,44px);font-size:12.5px;color:var(--ink-3);letter-spacing:.01em;max-width:62ch}

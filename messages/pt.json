@@ -55,6 +55,8 @@
       ],
       "scroll": ""
     },
+    "dataOrg": "",
+    "dataKaren": "",
     "statement": {
       "titleLines": [
         "",
@@ -243,7 +245,8 @@
     "teamSide": "",
     "trustedMicro": "",
     "trustedTitle1": "",
-    "trustedTitle2": ""
+    "trustedTitle2": "",
+    "trazzoNote": ""
   },
   "contact": {
     "kicker": "",
