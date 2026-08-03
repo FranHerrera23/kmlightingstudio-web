@@ -1,31 +1,31 @@
 import type { TypologyKey, LocationKey, StatusKey } from './types';
 
-/* ── Taxonomía ── (portada tal cual de la maqueta) */
+/* ── Taxonomía · v3 ── (portada tal cual de la maqueta, en español) */
 
 export const TYPOLOGIES: Array<[TypologyKey, string]> = [
-  ['all', 'All'],
-  ['multifamily', 'Multifamily'],
-  ['residences', 'Private Residences'],
-  ['hospitality', 'Hospitality'],
-  ['commercial', 'Commercial'],
+  ['all', 'Todas'],
+  ['multifamily', 'Multifamiliar'],
+  ['residences', 'Residencias privadas'],
+  ['hospitality', 'Hotelería'],
+  ['commercial', 'Comercial'],
   ['cultural', 'Cultural'],
-  ['aviation', 'Aviation'],
-  ['yachts', 'Yachts']
+  ['aviation', 'Aviación'],
+  ['yachts', 'Yates']
 ];
 
 export const LOCATIONS: Array<[LocationKey, string]> = [
-  ['all', 'All'],
-  ['peru', 'Peru'],
-  ['usa', 'United States'],
-  ['spain', 'Spain'],
-  ['middle-east', 'Middle East'],
-  ['caribbean', 'Caribbean'],
-  ['confidential', 'Confidential']
+  ['all', 'Todas'],
+  ['peru', 'Perú'],
+  ['usa', 'Estados Unidos'],
+  ['spain', 'España'],
+  ['middle-east', 'Medio Oriente'],
+  ['caribbean', 'Caribe'],
+  ['confidential', 'Confidencial']
 ];
 
 export const STATUSES: Array<[StatusKey, string]> = [
-  ['all', 'All'],
-  ['completed', 'Completed'],
-  ['progress', 'In Progress'],
-  ['concept', 'Concept']
+  ['all', 'Todos'],
+  ['completed', 'Entregado'],
+  ['progress', 'En proceso'],
+  ['concept', 'Concepto']
 ];

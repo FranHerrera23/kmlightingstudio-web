@@ -102,7 +102,11 @@ p{line-height:1.75;color:var(--ink-2)}
 .hero .ph{z-index:-2}
 .hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,16,19,.5) 0%,rgba(14,16,19,.06) 40%,rgba(14,16,19,.82) 100%)}
 .hero .micro{color:var(--gold-lt);margin-bottom:clamp(26px,4vh,44px)}
-.hero h1{max-width:none}
+/* Quiebre fijo: 3 líneas mask. En español la línea más larga ("La buena
+   arquitectura") no entra a 38px en mobile y wrapea → rompería el máximo de
+   3 líneas. Bajamos el piso solo del hero para que cada línea entre entera;
+   el desktop queda igual (escala hasta 104px). */
+.hero h1{max-width:none;font-size:clamp(20px,6vw,104px)}
 .hero-b{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:clamp(44px,8vh,96px)}
 .verts{display:flex;flex-wrap:wrap;gap:9px 26px;max-width:64ch}
 .verts span{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,250,248,.34);transition:color .6s var(--e)}

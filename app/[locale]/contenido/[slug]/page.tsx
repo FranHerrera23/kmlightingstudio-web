@@ -3,62 +3,90 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import JsonLd from '@/components/JsonLd';
 import { Link } from '@/i18n/navigation';
-import { articleGraph } from '@/lib/structuredData';
+import { articleGraph, videoObject } from '@/lib/structuredData';
 import { social, localizedPath } from '@/lib/metadata';
 import { CONTENT_LOCALES } from '@/i18n/routing';
 import {
   ARTICLES,
-  getArticle,
+  allVideos,
+  getContentItem,
   isTodo,
   isArticleReady,
+  isVideoReady,
   displayValue,
   SITE_NAME,
-  type Article
+  type Article,
+  type Video
 } from '@/content';
 
 /**
- * ARTÍCULO DEL JOURNAL · molde AEO — SOLO EN, fuera del sistema de idiomas.
- * Los tres seeds tienen la estructura llena y el contenido en TODO: se
- * escriben editando content/articles.ts, sin tocar este componente.
+ * DETALLE DE CONTENIDO · /contenido/[slug] — artículo (molde AEO) o video
+ * (transcripción + VideoObject). Editorial ES/EN; PT/RU → 404.
+ * Los seeds tienen la estructura llena y el contenido en TODO: se escriben
+ * editando content/*.ts, sin tocar este componente. Copy en español.
  */
 export function generateStaticParams() {
-  return ARTICLES.map((a) => ({ slug: a.slug }));
+  return [
+    ...ARTICLES.map((a) => ({ slug: a.slug })),
+    ...allVideos().map((v) => ({ slug: v.id }))
+  ];
 }
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await props.params;
-  const a = getArticle(slug);
-  if (!a) return {};
+  const item = getContentItem(slug);
+  if (!item) return {};
+  if (item.type === 'article') {
+    const a = item.article;
+    return {
+      ...social({
+        title: `${a.title} — ${SITE_NAME}`,
+        description: isTodo(a.answer) ? a.question : (a.answer as string),
+        path: localizedPath(locale, `/contenido/${a.slug}`),
+        type: 'article'
+      }),
+      robots: isArticleReady(a) ? undefined : { index: false, follow: true }
+    };
+  }
+  const v = item.video;
+  const title = isTodo(v.title) ? 'Video' : (v.title as string);
   return {
     ...social({
-      title: `${a.title} — ${SITE_NAME}`,
-      description: isTodo(a.answer) ? a.question : (a.answer as string),
-      path: localizedPath(locale, `/contenido/${a.slug}`),
+      title: `${title} — ${SITE_NAME}`,
+      description: isTodo(v.transcript) ? v.topic : (v.transcript as string),
+      path: localizedPath(locale, `/contenido/${v.id}`),
       type: 'article'
     }),
-    // Seeds sin contenido → noindex (tampoco entran al sitemap).
-    robots: isArticleReady(a) ? undefined : { index: false, follow: true }
+    robots: isVideoReady(v) ? undefined : { index: false, follow: true }
   };
 }
 
-/** Placeholder rojo de contenido pendiente (mismo criterio que los proyectos). */
+/** Placeholder rojo de contenido pendiente. */
 function Pending({ children }: { children: string }) {
   return <span className="flag">{children}</span>;
 }
 
-export default async function ArticlePage(props: {
+export default async function ContentDetailPage(props: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await props.params;
-  // Contenido editorial ES/EN. PT/RU son solo interfaz → 404.
   if (!(CONTENT_LOCALES as readonly string[]).includes(locale)) notFound();
   setRequestLocale(locale);
 
-  const a: Article | undefined = getArticle(slug);
-  if (!a) notFound();
+  const item = getContentItem(slug);
+  if (!item) notFound();
 
+  return item.type === 'article' ? (
+    <ArticleView a={item.article} />
+  ) : (
+    <VideoView v={item.video} />
+  );
+}
+
+/* ══════════ ARTÍCULO (molde AEO) ══════════ */
+function ArticleView({ a }: { a: Article }) {
   const read = displayValue(a.read);
   const published = displayValue(a.published);
   const takeaways = displayValue(a.takeaways);
@@ -76,21 +104,21 @@ export default async function ArticlePage(props: {
         <div className="micro">{a.tag}</div>
         <h1>{a.title}</h1>
         <div className="artmeta">
-          <span>By {a.author}</span>
-          <span>Reviewed by {a.reviewedBy}</span>
-          {read && <span>{read} read</span>}
+          <span>Por {a.author}</span>
+          <span>Revisado por {a.reviewedBy}</span>
+          {read && <span>{read} de lectura</span>}
           {published && <span>{published}</span>}
         </div>
       </header>
 
-      {/* Answer capsule — el bloque que la IA levanta */}
+      {/* En corto — el bloque que la IA levanta */}
       <section className="capsule">
-        <div className="micro">Answer</div>
+        <div className="micro">En corto</div>
         <p>
           {isTodo(a.answer) ? (
             <Pending>
-              Answer capsule — 2 to 3 self-contained sentences that answer the
-              question directly. This is the block an AI assistant lifts.
+              Por escribir — 2 a 3 frases autocontenidas con el número adentro.
+              Es el fragmento que ChatGPT y Perplexity citan textual.
             </Pending>
           ) : (
             (a.answer as string)
@@ -98,9 +126,9 @@ export default async function ArticlePage(props: {
         </p>
       </section>
 
-      {/* Key takeaways — tres */}
+      {/* Lo que importa — tres */}
       <section className="takeaways">
-        <div className="micro">Key takeaways</div>
+        <div className="micro">Lo que importa</div>
         {takeaways ? (
           <ul>
             {takeaways.map((x, i) => (
@@ -110,36 +138,32 @@ export default async function ArticlePage(props: {
         ) : (
           <ul>
             <li>
-              <Pending>Takeaway 1 — the single most useful line.</Pending>
+              <Pending>Dato citable 1 — con un número adentro.</Pending>
             </li>
             <li>
-              <Pending>Takeaway 2.</Pending>
+              <Pending>Dato citable 2.</Pending>
             </li>
             <li>
-              <Pending>Takeaway 3.</Pending>
+              <Pending>Dato citable 3.</Pending>
             </li>
           </ul>
         )}
       </section>
 
-      {/* Cuerpo en secciones · subheaders-afirmación */}
+      {/* Cuerpo · subheaders-afirmación */}
       <div className="artbody">
         {a.sections.map((s, i) => (
           <section className="artsec" key={i}>
             <h3>
               {isTodo(s.heading) ? (
-                <Pending>
-                  Section heading — write it as an assertion, not a label.
-                </Pending>
+                <Pending>Subtítulo — una afirmación, no una etiqueta.</Pending>
               ) : (
                 (s.heading as string)
               )}
             </h3>
             <p>
               {isTodo(s.body) ? (
-                <Pending>
-                  Section body — needs the technical data we don’t have yet.
-                </Pending>
+                <Pending>Cuerpo — necesita el dato técnico que todavía no tenemos.</Pending>
               ) : (
                 (s.body as string)
               )}
@@ -149,7 +173,7 @@ export default async function ArticlePage(props: {
 
         {/* Tabla comparativa */}
         <section className="artsec">
-          <h3>At a glance</h3>
+          <h3>De un vistazo</h3>
           {table ? (
             <div className="arttable-wrap">
               <table className="arttable">
@@ -177,24 +201,24 @@ export default async function ArticlePage(props: {
           ) : (
             <p>
               <Pending>
-                Comparison table — the two or three options side by side, with
-                the numbers that decide between them.
+                Tabla comparativa — la pieza más citable. Las opciones lado a
+                lado, con los números que deciden entre ellas.
               </Pending>
             </p>
           )}
         </section>
       </div>
 
-      {/* FAQ */}
+      {/* Preguntas frecuentes */}
       <section className="faq">
-        <div className="micro">Frequently asked</div>
+        <div className="micro">Preguntas frecuentes</div>
         <dl>
           {a.faq.map((item, i) => (
             <div className="faq-q" key={i}>
               <dt>{item.q}</dt>
               <dd>
                 {isTodo(item.a) ? (
-                  <Pending>Answer to be written.</Pending>
+                  <Pending>Respuesta por escribir.</Pending>
                 ) : (
                   (item.a as string)
                 )}
@@ -204,21 +228,122 @@ export default async function ArticlePage(props: {
         </dl>
       </section>
 
-      {/* Bloque de autor */}
+      {/* Autor */}
       <section className="author">
-        <div className="micro">Written by</div>
+        <div className="micro">Escrito por</div>
         <h4>{a.author}</h4>
         <p>
           {credentials ?? (
             <Pending>
-              Author credentials — years in practice, the projects behind the
-              expertise.
+              Credenciales del autor — años de práctica, los proyectos detrás.
             </Pending>
           )}
         </p>
         <div className="reviewed">
-          Reviewed by <strong>{a.reviewedBy}</strong>
+          Revisado por <strong>{a.reviewedBy}</strong>
         </div>
+      </section>
+    </article>
+  );
+}
+
+/* ══════════ VIDEO (transcripción + VideoObject) ══════════ */
+function VideoView({ v }: { v: Video }) {
+  const isConv = v.kind === 'conversation';
+  const eyebrow = isConv
+    ? v.topic
+    : isTodo(v.partner)
+      ? 'Recorrido'
+      : (v.partner as string);
+  const title = isConv
+    ? isTodo(v.guest)
+      ? '[Invitado por definir]'
+      : (v.guest as string)
+    : isTodo(v.project)
+      ? '[Proyecto por definir]'
+      : (v.project as string);
+
+  const rows: Array<[string, string | null]> = isConv
+    ? [
+        ['Invitado', displayValue(v.guest) ?? null],
+        ['Estudio', displayValue(v.studio) ?? null],
+        ['Tema', v.topic],
+        ['Duración', displayValue(v.duration)]
+      ]
+    : [
+        ['Proyecto', displayValue(v.project) ?? null],
+        ['Estudio', displayValue(v.partner) ?? null],
+        ['Lugar', displayValue(v.place) ?? null],
+        ['Duración', displayValue(v.duration)]
+      ];
+
+  return (
+    <article className="varticle">
+      <JsonLd data={videoObject(v)} />
+
+      <header className="vhd">
+        <Link className="back" href="/contenido">
+          ← Contenido
+        </Link>
+        <div className="micro">{eyebrow}</div>
+        <h1>{title}</h1>
+        <div className="sub">
+          {isConv
+            ? isTodo(v.studio)
+              ? ''
+              : (v.studio as string)
+            : isTodo(v.place)
+              ? ''
+              : (v.place as string)}
+        </div>
+      </header>
+
+      <div className="vstage">
+        <div className="fr">
+          <div className="ph" data-l="Vertical 9:16"></div>
+        </div>
+        <div className="vinfo">
+          <span className="lang-tag">{v.lang}</span>
+          <dl>
+            {rows.map(([k, val]) => (
+              <div className="r" key={k}>
+                <dt>{k}</dt>
+                {val === null ? (
+                  <dd>
+                    <Pending>Por confirmar</Pending>
+                  </dd>
+                ) : (
+                  <dd>{val}</dd>
+                )}
+              </div>
+            ))}
+          </dl>
+          {!isTodo(v.url) && (
+            <a
+              className="watch"
+              href={v.url as string}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver en Instagram →
+            </a>
+          )}
+        </div>
+      </div>
+
+      {/* La transcripción va en la página — el texto es lo que se indexa */}
+      <section className="transcript">
+        <div className="micro">Transcripción</div>
+        {isTodo(v.transcript) ? (
+          <p>
+            <Pending>
+              Transcripción por cargar — el texto completo en el idioma original.
+              Un video no lo indexa nadie; el texto sí.
+            </Pending>
+          </p>
+        ) : (
+          <p>{v.transcript as string}</p>
+        )}
       </section>
     </article>
   );

@@ -1,75 +1,75 @@
 import type { Vertical } from './types';
 
-/* ── Verticales (Services) · v2 ── (portado tal cual del array VERT) */
+/* ── Verticales (Servicios) · v3 ── (portado tal cual, en español) */
 export const VERTICALS: Vertical[] = [
   {
-    id: 'residences', title: 'Private Residences',
-    sub: 'Not just homes — portraits in stone, glass and light.',
-    intro: 'A home is the only project where the client lives inside the result every day. Scene control is not a feature here; it is the whole point.',
+    id: 'residences', title: 'Residencias privadas',
+    sub: 'No son solo casas: son retratos en piedra, vidrio y luz.',
+    intro: 'Una casa es el único proyecto donde el cliente vive dentro del resultado todos los días. Acá el control de escenas no es un extra: es el punto.',
     narr: {
-      1: 'We read the house before we light it: the material palette, the daylight it receives, the hours each room is actually used.',
-      2: 'Residential drawings change constantly as the client lives with the idea. We hold the lighting intent steady through every revision.',
-      3: 'A house is commissioned at night, dimmed to the level people really use.'
+      1: 'Leemos la casa antes de iluminarla: la paleta de materiales, la luz natural que recibe, las horas en que cada ambiente se usa de verdad.',
+      2: 'Los planos residenciales cambian todo el tiempo, porque el cliente convive con la idea. Nosotros sostenemos la intención de luz en cada revisión.',
+      3: 'Una casa se pone en marcha de noche, atenuada al nivel que la gente realmente usa.'
     }
   },
   {
-    id: 'multifamily', title: 'Multifamily',
-    sub: 'From lobby to penthouse — one identity, held across every shared space.',
-    intro: 'A tower is bought on the way in. Lobby, lift lobby, amenity floor and model unit have to speak one language, delivered on programme.',
+    id: 'multifamily', title: 'Multifamiliar',
+    sub: 'Del lobby al penthouse — una identidad, sostenida en cada espacio común.',
+    intro: 'Una torre se compra en la entrada. Lobby, hall de ascensores, piso de amenidades y depto piloto tienen que hablar un solo idioma, y entregarse a tiempo.',
     narr: {
-      1: 'We set a single lighting identity and prove it holds from the entrance canopy to the top-floor terrace.',
-      2: 'Multifamily runs on coordination — architecture, interiors, MEP, façade. Change management is most of the work.',
-      3: 'Common areas are commissioned before handover to sales, because the lobby is the sales tool.'
+      1: 'Fijamos una identidad de luz para el edificio y probamos que se sostiene desde la marquesina hasta la terraza del último piso.',
+      2: 'Lo multifamiliar vive de la coordinación: arquitectura, interiorismo, instalaciones, fachada. La gestión de cambios es la mayor parte del trabajo.',
+      3: 'Los espacios comunes se ponen en marcha antes de la entrega a ventas, porque el lobby es la herramienta de venta.'
     }
   },
   {
-    id: 'hospitality', title: 'Hospitality',
-    sub: 'Reliability at scale — the same on night four hundred as on night one.',
-    intro: 'Consistency across dozens of identical rooms and a signature moment in every public space. Both at once, on an operator’s maintenance budget.',
+    id: 'hospitality', title: 'Hotelería',
+    sub: 'Confiabilidad a escala — igual en la noche cuatrocientos que en la primera.',
+    intro: 'Consistencia en decenas de habitaciones idénticas y un momento con firma en cada espacio público. Las dos cosas a la vez, con el presupuesto de mantenimiento de un operador.',
     narr: {
-      1: 'We design the guest journey as a sequence of atmospheres, and design the room type once so it repeats perfectly.',
-      2: 'Operators change FF&E mid-build. We keep the lighting scheme intact through it.',
-      3: 'We commission with the operations team present, so staff can hold the scheme after we leave.'
+      1: 'Diseñamos el recorrido del huésped como una secuencia de atmósferas, y el tipo de habitación una sola vez para que se repita perfecto.',
+      2: 'Los operadores cambian el mobiliario a mitad de obra. Nosotros mantenemos el esquema de luz intacto.',
+      3: 'Ponemos en marcha con el equipo de operaciones presente, para que el personal pueda sostener el esquema cuando nos vamos.'
     }
   },
   {
-    id: 'commercial', title: 'Commercial',
-    sub: 'Adaptability — spaces that change function between opening and closing.',
-    intro: 'Retail lighting has to render product honestly and flatter the architecture at once. On a reflective surface, those two goals fight each other.',
+    id: 'commercial', title: 'Comercial',
+    sub: 'Adaptabilidad — espacios que cambian de función entre que abren y cierran.',
+    intro: 'La luz de retail tiene que mostrar el producto con honestidad y favorecer la arquitectura al mismo tiempo. Sobre una superficie reflectante, esos dos objetivos pelean.',
     narr: {
-      1: 'We start from what the product does to light — a car body reflects, textile absorbs, glass transmits — and design backwards.',
-      2: 'Brand standards and local regulation both apply. We reconcile them before they reach site.',
-      3: 'We calibrate on the real merchandise, not on an empty floor.'
+      1: 'Partimos de lo que el producto le hace a la luz — una carrocería refleja, un textil absorbe, el vidrio transmite — y diseñamos hacia atrás.',
+      2: 'Los estándares de marca y la normativa local aplican a la vez. Los reconciliamos antes de que lleguen a obra.',
+      3: 'Calibramos sobre la mercadería real, no sobre un piso vacío.'
     }
   },
   {
-    id: 'cultural', title: 'Cultural & Venues',
-    sub: 'Arrival, circulation and atmosphere — everything around the performance.',
-    intro: 'A venue is lit for movement and for the moment the programme begins. The architecture has to be legible at scale, then step back completely.',
+    id: 'cultural', title: 'Cultural y venues',
+    sub: 'Llegada, circulación y atmósfera — todo lo que rodea al espectáculo.',
+    intro: 'Un venue se ilumina para el movimiento y para el momento en que empieza el programa. La arquitectura tiene que ser legible a escala, y después dar un paso al costado.',
     narr: {
-      1: 'We plan the venue as a sequence: approach, entry, circulation, the space itself, the exit at night.',
-      2: 'Programming changes late and often. The scheme has to absorb it.',
-      3: 'We are on site through load-in and through the first event.'
+      1: 'Planificamos el venue como una secuencia: aproximación, ingreso, circulación, el espacio mismo, la salida de noche.',
+      2: 'La programación cambia tarde y seguido. El esquema tiene que absorberlo.',
+      3: 'Estamos en obra durante el montaje y durante el primer evento.'
     }
   },
   {
-    id: 'aviation', title: 'Aviation',
-    sub: 'From the ground to the skies — a personal environment at forty thousand feet.',
-    intro: 'In aviation design, certification is a key factor. Every component must carry a certified part number and full documentation, and all materials must comply with strict fire safety regulation.',
+    id: 'aviation', title: 'Aviación',
+    sub: 'De tierra al cielo — un ambiente personal a doce mil metros.',
+    intro: 'En diseño aeronáutico la certificación es un factor clave. Cada componente necesita número de parte certificado y documentación completa, y todos los materiales deben cumplir normativa estricta de seguridad contra incendios.',
     narr: {
-      1: 'We specify within the certification envelope from the first sketch — weight, flammability, part numbers.',
-      2: 'Every element is checked and approved by an aviation expert before it enters the cabin.',
-      3: 'Cabin commissioning happens on the aircraft, tuned for altitude and time zones.'
+      1: 'Especificamos dentro del marco de certificación desde el primer boceto: peso, inflamabilidad, números de parte.',
+      2: 'Cada elemento lo revisa y aprueba un experto en aviación antes de entrar a la cabina.',
+      3: 'La puesta en marcha se hace sobre la aeronave, ajustada a la altura y a los husos horarios.'
     }
   },
   {
-    id: 'yachts', title: 'Yachts',
-    sub: 'Salt, movement, and no tolerance for glare on glass at night.',
-    intro: 'A yacht is a house that moves through the most corrosive environment on earth. Everything near open water fails eventually — the question is year two or year twelve.',
+    id: 'yachts', title: 'Yates',
+    sub: 'Sal, movimiento, y cero tolerancia al reflejo sobre el vidrio de noche.',
+    intro: 'Un yate es una casa que se mueve por el ambiente más corrosivo del planeta. Todo lo que está cerca del mar abierto falla en algún momento: la pregunta es si falla en el año dos o en el doce.',
     narr: {
-      1: 'We specify marine-grade throughout and design for the fact that every surface is glass, gloss or water at night.',
-      2: 'Yard schedules move. The lighting package has to be ready when the yard is.',
-      3: 'Commissioning happens at sea, at night, with the vessel in motion.'
+      1: 'Especificamos grado marino en todo y diseñamos asumiendo que de noche cada superficie es vidrio, brillo o agua.',
+      2: 'Los cronogramas de astillero se mueven. El paquete de luz tiene que estar cuando el astillero está.',
+      3: 'La puesta en marcha se hace en el mar, de noche, con la embarcación en movimiento.'
     }
   }
 ];

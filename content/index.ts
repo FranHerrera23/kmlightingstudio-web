@@ -6,8 +6,10 @@ import { TYPOLOGIES, LOCATIONS, STATUSES } from './taxonomy';
 import { PROJECTS, DEFAULT_GALLERY } from './projects';
 import { FIX } from './products';
 import { ARTICLES } from './articles';
+import { CONVERSACIONES } from './conversaciones';
+import { RECORRIDOS } from './recorridos';
 import { ASSET } from './site';
-import type { Fixture, Article } from './types';
+import type { Fixture, Article, Video } from './types';
 
 export * from './types';
 export * from './taxonomy';
@@ -18,6 +20,9 @@ export * from './scope';
 export * from './studio';
 export * from './products';
 export * from './articles';
+export * from './conversaciones';
+export * from './recorridos';
+export * from './prensa';
 export * from './site';
 
 /** ¿El campo está pendiente (TODO / undefined / null)? */
@@ -111,4 +116,27 @@ export function getArticle(slug: string): Article | undefined {
  *  menos el answer capsule escrito. Los seeds (todo TODO) van noindex. */
 export function isArticleReady(a: Article): boolean {
   return !isTodo(a.answer);
+}
+
+/* ── Contenido · Videos ── */
+export function allVideos(): Video[] {
+  return [...CONVERSACIONES, ...RECORRIDOS];
+}
+export function getVideo(id: string): Video | undefined {
+  return allVideos().find((v) => v.id === id);
+}
+/** ¿El video tiene contenido real? Necesita título + transcripción (el texto
+ *  es lo que se indexa). Los seeds (todo TODO) van noindex. */
+export function isVideoReady(v: Video): boolean {
+  return !isTodo(v.title) && !isTodo(v.transcript);
+}
+/** Un item de /contenido/[slug] es un artículo o un video. */
+export function getContentItem(
+  slug: string
+): { type: 'article'; article: Article } | { type: 'video'; video: Video } | null {
+  const a = getArticle(slug);
+  if (a) return { type: 'article', article: a };
+  const v = getVideo(slug);
+  if (v) return { type: 'video', video: v };
+  return null;
 }

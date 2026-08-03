@@ -146,6 +146,48 @@ export interface Article {
   faq: FaqItem[];
 }
 
+/* ── Contenido · Video ──
+   Conversaciones (entrevistas) y Recorridos (walkthroughs). 9 de cada 10 en ES.
+   SIN embeds de Instagram: thumbnail propio + link afuera. La transcripción va
+   en la página (un video no lo indexa nadie; el texto sí). Hosting fase 2: Mux
+   o Cloudflare Stream (videoSrc), no YouTube embebido. */
+export type VideoKind = 'conversation' | 'walkthrough';
+export interface Video {
+  id: string;
+  kind: VideoKind;
+  title: Todoable<string>;
+  /** Conversaciones: invitado + su estudio. */
+  guest?: Todoable<string>;
+  studio?: Todoable<string>;
+  /** Recorridos: proyecto + partner + lugar. */
+  project?: Todoable<string>;
+  partner?: Todoable<string>;
+  place?: Todoable<string>;
+  topic: string;
+  lang: 'ES' | 'EN';
+  /** Duración ISO 8601 · PT4M12S (para VideoObject). */
+  duration: Todoable<string>;
+  /** Miniatura 9:16 propia. */
+  thumb: Todoable<string>;
+  /** Link a Instagram (afuera). */
+  url: Todoable<string>;
+  /** Mux / Cloudflare Stream · fase 2. */
+  videoSrc?: Todoable<string>;
+  /** Transcripción completa, en el idioma original — va en la página. */
+  transcript: Todoable<string>;
+  /** VTT en inglés para los ES. */
+  subtitles?: Todoable<string>;
+}
+
+/** Prensa: mención de un medio. [medio, sección, titular, fecha, url]. */
+export interface PressItem {
+  outlet: Todoable<string>;
+  section: Todoable<string>;
+  headline: Todoable<string>;
+  date: Todoable<string>;
+  url?: Todoable<string>;
+}
+
 /** Oficina: [ciudad, etiqueta, timezone]. La dirección se confirma en fase 2. */
 export type Office = [city: string, tag: string, tz: string];
 

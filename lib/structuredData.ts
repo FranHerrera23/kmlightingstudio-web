@@ -7,7 +7,8 @@ import {
   statusLabel,
   type Project,
   type Fixture,
-  type Article
+  type Article,
+  type Video
 } from '@/content';
 
 const ORG_ID = `${SITE_URL}/#org`;
@@ -168,4 +169,28 @@ export function articleGraph(a: Article) {
   }
 
   return { '@context': 'https://schema.org', '@graph': graph };
+}
+
+/**
+ * VideoObject por conversación / recorrido. `inLanguage`, `transcript` y
+ * `duration` (ISO 8601) son los campos que hacen que un video sin embed siga
+ * siendo indexable. Los TODO se omiten (un schema con placeholders es peor que
+ * ninguno). (Brief §3)
+ */
+export function videoObject(v: Video) {
+  const url = `${SITE_URL}/contenido/${v.id}`;
+  const data: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    '@id': `${url}#video`,
+    url,
+    inLanguage: v.lang === 'EN' ? 'en' : 'es',
+    publisher: { '@id': ORG_ID }
+  };
+  if (!isTodo(v.title)) data.name = v.title;
+  if (!isTodo(v.transcript)) data.transcript = v.transcript;
+  if (!isTodo(v.duration)) data.duration = v.duration;
+  if (!isTodo(v.thumb)) data.thumbnailUrl = v.thumb;
+  if (!isTodo(v.url)) data.contentUrl = v.url;
+  return data;
 }

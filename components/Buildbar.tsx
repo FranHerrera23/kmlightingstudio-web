@@ -6,12 +6,13 @@ export default function Buildbar() {
   return (
     <div className="bb">
       <span>
-        <span className="dot"></span>Maqueta v2
+        <span className="dot"></span>Maqueta v3
       </span>
-      <span>Fondo blanco roto · oro + navy</span>
-      <span>EN</span>
+      <span>Español principal</span>
+      <span>Sin navy</span>
       <span className="r">
-        Rojo = pendiente de fase 2. Las fotos son placeholders.
+        Rojo = pendiente de fase 2. Los textos en español están escritos, no se
+        traducen.
       </span>
     </div>
   );

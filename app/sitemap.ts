@@ -5,8 +5,10 @@ import {
   VERTICALS,
   FIX,
   ARTICLES,
+  allVideos,
   isIndexable,
-  isArticleReady
+  isArticleReady,
+  isVideoReady
 } from '@/content';
 
 /**
@@ -76,6 +78,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6
+    });
+  }
+
+  // Videos con transcripción escrita (el texto es lo indexable). Seeds → afuera.
+  for (const v of allVideos().filter(isVideoReady)) {
+    entries.push({
+      url: `${SITE_URL}/contenido/${v.id}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5
     });
   }
 

@@ -17,7 +17,10 @@ import { defineRouting } from 'next-intl/routing';
 export const routing = defineRouting({
   locales: ['es', 'en', 'pt', 'ru'],
   defaultLocale: 'es',
-  localePrefix: 'as-needed'
+  localePrefix: 'as-needed',
+  // El sitio abre SIEMPRE en español en la raíz (acceptance): sin auto-redirect
+  // por Accept-Language. El inglés es opt-in (switcher / prefijo /en).
+  localeDetection: false
 });
 
 export type Locale = (typeof routing.locales)[number];

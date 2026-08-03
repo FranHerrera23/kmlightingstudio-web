@@ -28,20 +28,20 @@ const PENDING = {
 } as const;
 
 export const FIX: Fixture[] = [
-  { id: 'trimless-downlight-57', family: 'Recessed · Trimless', name: 'Trimless Downlight', diameter: 'Ø57', draw: 'down',
-    blurb: 'The studio default. Deep-recessed lens, no visible edge, the mass of the body doing the cooling.', ...PENDING },
-  { id: 'trimless-downlight-38', family: 'Recessed · Trimless', name: 'Trimless Downlight', diameter: 'Ø38', draw: 'down',
-    blurb: 'Same output, smaller aperture — for ceilings that can’t afford another hole.', ...PENDING },
-  { id: 'adjustable-spot', family: 'Recessed · Adjustable', name: 'Adjustable Spot', diameter: 'Ø57', draw: 'adj',
-    blurb: 'Tilt and rotation entirely above the ceiling plane.', ...PENDING },
-  { id: 'trimless-wallwasher', family: 'Wallwash · Trimless', name: 'Trimless Wallwasher', diameter: 'Ø74', draw: 'wash',
-    blurb: 'Even vertical gradient, ceiling to skirting.', ...PENDING },
-  { id: 'plaster-in-linear', family: 'Linear · Trimless', name: 'Plaster-in Linear', diameter: '25mm', draw: 'lin',
-    blurb: 'Continuous run with no dark gaps at the joints.', ...PENDING },
-  { id: 'magnetic-track', family: 'Track · 48V magnetic', name: 'Magnetic Track', diameter: '48V', draw: 'trk',
-    blurb: 'For collections that change. Every head repositions by hand.', ...PENDING },
-  { id: 'marine-uplight', family: 'Exterior · In-ground', name: 'Marine-grade Uplight', diameter: 'Ø90', draw: 'ext',
-    blurb: '316 stainless, fully potted. Specified where the salt actually is.', ...PENDING },
-  { id: 'warm-dim-driver', family: 'Control · Driver', name: 'Warm-dim Driver', diameter: 'DALI-2', draw: 'drv',
-    blurb: 'Where most residential lighting quietly fails. Dims to 1% without a visible step.', ...PENDING }
+  { id: 'trimless-downlight-57', family: 'Embutida · Sin marco', name: 'Downlight trimless', diameter: 'Ø57', draw: 'down',
+    blurb: 'La de referencia del estudio. Lente profundamente embutido, sin borde visible, y la masa del cuerpo haciendo de disipador.', ...PENDING },
+  { id: 'trimless-downlight-38', family: 'Embutida · Sin marco', name: 'Downlight trimless', diameter: 'Ø38', draw: 'down',
+    blurb: 'Mismo rendimiento, apertura menor — para cielorrasos que no pueden con otro agujero.', ...PENDING },
+  { id: 'adjustable-spot', family: 'Embutida · Orientable', name: 'Spot orientable', diameter: 'Ø57', draw: 'adj',
+    blurb: 'Inclinación y giro enteramente por encima del plano del cielorraso.', ...PENDING },
+  { id: 'trimless-wallwasher', family: 'Bañador · Sin marco', name: 'Bañador de pared', diameter: 'Ø74', draw: 'wash',
+    blurb: 'Gradiente vertical parejo, del cielorraso al zócalo.', ...PENDING },
+  { id: 'plaster-in-linear', family: 'Lineal · Sin marco', name: 'Lineal plaster-in', diameter: '25mm', draw: 'lin',
+    blurb: 'Corrida continua sin cortes oscuros en las uniones.', ...PENDING },
+  { id: 'magnetic-track', family: 'Riel · Magnético 48V', name: 'Riel magnético', diameter: '48V', draw: 'trk',
+    blurb: 'Para colecciones que cambian. Cada cabezal se reubica a mano.', ...PENDING },
+  { id: 'marine-uplight', family: 'Exterior · Empotrada', name: 'Uplight grado marino', diameter: 'Ø90', draw: 'ext',
+    blurb: 'Acero inoxidable 316, encapsulada. Especificada donde la sal está de verdad.', ...PENDING },
+  { id: 'warm-dim-driver', family: 'Control · Driver', name: 'Driver warm-dim', diameter: 'DALI-2', draw: 'drv',
+    blurb: 'Donde falla en silencio la mayoría de la iluminación residencial. Atenúa al 1% sin salto visible.', ...PENDING }
 ];

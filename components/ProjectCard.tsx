@@ -1,20 +1,26 @@
 'use client';
 
 import { Link } from '@/i18n/navigation';
-import { isTodo, typologyLabel, photoUrl, type Project } from '@/content';
+import {
+  isTodo,
+  typologyLabel,
+  statusLabel,
+  photoUrl,
+  type Project
+} from '@/content';
 import SmartImage from './SmartImage';
 import ProjectName from './ProjectName';
 
 /**
- * Tarjeta de proyecto · v2. En la maqueta abría un lightbox; ahora es un <Link>
- * a la página propia e indexable /projects/[slug]. Replica card() de la maqueta.
+ * Tarjeta de proyecto · v3. Enlaza a la página propia e indexable
+ * /projects/[slug]. El badge usa la etiqueta de estado (taxonomía, en español).
  */
 export default function ProjectCard({ p }: { p: Project }) {
   const badge =
     p.sta === 'progress' ? (
-      <span className="badge pr">In progress</span>
+      <span className="badge pr">{statusLabel(p.sta)}</span>
     ) : p.sta === 'concept' ? (
-      <span className="badge co">Concept</span>
+      <span className="badge co">{statusLabel(p.sta)}</span>
     ) : null;
 
   const dataL = isTodo(p.name) ? p.hint || '' : (p.name as string);
