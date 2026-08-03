@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "KM Lighting Studio — Architectural Lighting Design · Lima · Miami · Madrid",
-      "description": "Karen Mannheim Lighting Studio. 33 years, 2,500+ projects, seven countries. Architectural lighting for residences, multifamily, hospitality, aviation and yachts."
+      "title": "KM Lighting Studio — Architectural Lighting Design · Lima · Miami · Marbella",
+      "description": "Karen Mannheim Lighting Studio. 33 years, 2,500+ projects, six countries. Architectural lighting for residences, multifamily, hospitality, aviation and yachts."
     },
     "projects": {
       "title": "Projects — KM Lighting Studio",
@@ -18,11 +18,11 @@
     },
     "about": {
       "title": "The Studio — KM Lighting Studio",
-      "description": "For 33 years, one thing: make light give a space its meaning. A practice of more than 80 people across three continents."
+      "description": "For 33 years, one thing: make light give a space its meaning."
     },
     "contact": {
       "title": "Contact — KM Lighting Studio",
-      "description": "We don't pitch. We partner. Lima · Miami · Madrid."
+      "description": "We don't pitch. We partner. Lima · Miami · Marbella."
     },
     "content": {
       "title": "Content — KM Lighting Studio",
@@ -50,12 +50,12 @@
 
   "home": {
     "hero": {
-      "kicker": "Architectural Lighting Design · Lima · Miami · Madrid",
+      "kicker": "Architectural Lighting Design · Lima · Miami · Marbella",
       "titleLines": ["Great architecture", "deserves lighting", "that understands."],
       "scroll": "Scroll"
     },
     "dataOrg": "KM Lighting Studio · founded in 2023",
-    "dataKaren": "Karen Mannheim · 33 years · 2,500+ projects · 7 countries",
+    "dataKaren": "Karen Mannheim · 33 years · 2,500+ projects · 6 countries",
     "statement": {
       "titleLines": ["You spend years", "on a space."],
       "p1": "Every detail considered. Then lighting becomes an afterthought — and the architecture disappears.",
@@ -108,7 +108,7 @@
     "marquee2": "the architecture remains —",
     "where": {
       "micro": "Where we work",
-      "titleLines": ["Seven countries.", "One standard."],
+      "titleLines": ["Six countries.", "One standard."],
       "side": "Residential needs scene control. Hospitality needs reliability at scale. Commercial needs adaptability."
     },
     "trusted": {
@@ -182,8 +182,8 @@
     "kicker": "About",
     "titleLines": ["For 33 years,", "one thing."],
     "introLead": "Karen Mannheim Lighting Studio has done one thing: make light give a space its meaning.",
-    "introNote": "What began as one person knocking on doors in Lima is now a practice of more than 80 people across three continents.",
-    "lead": "We've delivered more than 2,500 projects across seven countries, working alongside firms like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on this list: after three decades and that much scale, the studio still designs each project as if it were the only one.",
+    "introNote": "What began as one person knocking on doors in Lima is now a practice.",
+    "lead": "We've delivered more than 2,500 projects across six countries, working alongside firms like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on this list: after three decades and that much scale, the studio still designs each project as if it were the only one.",
     "throughline": "The throughline never changed — light, here, is never decoration. It's the soul of the architecture.",
     "stat1Num": "33", "stat1Sup": "+", "stat1Label": "Years of practice",
     "stat2Num": "2,500", "stat2Sup": "+", "stat2Label": "Projects delivered",
@@ -199,7 +199,7 @@
     "recPractice": "Practice",
     "recPracticeValue": "33 years · 2,500+ projects",
     "recReach": "Reach",
-    "recReachValue": "Seven countries · three offices",
+    "recReachValue": "Six countries · three offices",
     "socConversations": "Conversations →",
     "teamMicro": "Our team",
     "teamTitle": "Leadership.",
@@ -316,7 +316,7 @@
     "featMicro": "Featured recognition",
     "featTitle1": "Forbes Perú",
     "featTitle2": "50 Most Powerful Women.",
-    "featBody": "Karen Mannheim among the 50 most powerful women in Peru — recognition of three decades building a lighting studio that now works across seven countries.",
+    "featBody": "Karen Mannheim among the 50 most powerful women in Peru — recognition of three decades building a lighting studio that now works across six countries.",
     "featOut": "Read the piece",
     "read": "Read",
     "outletTBD": "[Outlet]",

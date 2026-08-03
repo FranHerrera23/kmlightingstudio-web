@@ -24,10 +24,10 @@ export default async function AboutPage(props: {
   setRequestLocale(locale);
   const t = await getTranslations('about');
 
+  // §4.2/§D · sin "80+ personas" (es dato de TRAZZO, no de KMLS): se omite stat3.
   const stats = [
     { n: t('stat1Num'), sup: t('stat1Sup'), l: t('stat1Label') },
     { n: t('stat2Num'), sup: t('stat2Sup'), l: t('stat2Label') },
-    { n: t('stat3Num'), sup: t('stat3Sup'), l: t('stat3Label') },
     { n: t('stat4Num'), sup: t('stat4Sup'), l: t('stat4Label') }
   ];
 
@@ -50,7 +50,7 @@ export default async function AboutPage(props: {
           </div>
         </div>
         <div
-          className="stats rise d1"
+          className="stats n3 rise d1"
           style={{ marginTop: 'clamp(44px,7vh,88px)' }}
         >
           {stats.map((s, i) => (

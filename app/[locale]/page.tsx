@@ -223,7 +223,7 @@ export default async function HomePage(props: {
           }}
         >
           <BuildNote title="Mapa mundial · fase 2">
-            Ciudades con obra entregada sobre proyección con grilla. Siete países
+            Ciudades con obra entregada sobre proyección con grilla. Seis países
             con obra: Perú · Estados Unidos · España · EAU · Aruba · República
             Dominicana. Ciudades: Lima · Miami · Madrid · Marbella · Abu Dhabi ·
             Palm Beach · Golden Beach · Coral Gables · Key Biscayne · Fisher
