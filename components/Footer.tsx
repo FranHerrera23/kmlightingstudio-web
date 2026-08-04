@@ -69,8 +69,9 @@ export default function Footer() {
 
         <div className="foot-c">
           <h5>{t('follow')}</h5>
-          <a href="#">{t('linkedin')}</a>
-          <a href="#">{t('instagram')}</a>
+          {/* §9 brief 06 · LinkedIn/Instagram apuntaban a '#' en las 300+ páginas.
+              Hasta que Fran dé las URLs reales, no se renderizan — un link muerto
+              es peor que su ausencia. Queda el email. */}
           <a href={`mailto:${STUDIO_EMAIL}`}>{STUDIO_EMAIL}</a>
         </div>
       </div>

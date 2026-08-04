@@ -199,6 +199,27 @@ export default async function HomePage(props: {
             <p>{t('tech.c3Body')}</p>
           </div>
         </div>
+        {/* §4 brief 06 · la home ahora sí linkea a /tecnologia */}
+        <div style={{ marginTop: 'clamp(30px,4vh,52px)' }}>
+          <Link
+            className="lnk"
+            href="/tecnologia"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 12,
+              fontSize: 10.5,
+              fontWeight: 600,
+              letterSpacing: '.16em',
+              textTransform: 'uppercase',
+              border: '1px solid var(--rule)',
+              borderRadius: 100,
+              padding: '16px 30px'
+            }}
+          >
+            {t('tech.link')}
+          </Link>
+        </div>
       </section>
 
       {/* ═══ STATEMENT LINE (§7.2) — estático, sin scroll horizontal ═══ */}
