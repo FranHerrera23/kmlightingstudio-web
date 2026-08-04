@@ -27,14 +27,16 @@ const DRAFT = {
 
 export const ARTICLES: Article[] = [
   {
-    slug: 'what-lighting-costs-per-square-metre',
+    slug: 'cuanto-cuesta-un-proyecto-de-iluminacion',
     title: 'Cuánto cuesta realmente un proyecto de iluminación, por metro cuadrado',
     question: 'cuánto cuesta un proyecto de iluminación arquitectónica',
     tag: 'Costo y valor',
     lang: 'ES',
     author: 'Karen Mannheim',
     reviewedBy: 'Karen Mannheim',
-    read: '11 min',
+    // B.5 · el tiempo de lectura sale del texto real, que aún no existe (DRAFT).
+    // TODO hasta que el artículo se escriba — no se inventa un número.
+    read: TODO,
     ...DRAFT,
     faq: [
       { q: '¿Cuánto cuesta el diseño de iluminación por metro cuadrado?', a: TODO },
@@ -50,7 +52,7 @@ export const ARTICLES: Article[] = [
     lang: 'ES',
     author: 'Karen Mannheim',
     reviewedBy: 'Karen Mannheim',
-    read: '8 min',
+    read: TODO,
     ...DRAFT,
     faq: [
       { q: '¿No puede mi electricista diseñar la iluminación?', a: TODO },
@@ -64,9 +66,12 @@ export const ARTICLES: Article[] = [
     question: 'qué grado IP necesito para iluminación costera',
     tag: 'Clima',
     lang: 'ES',
-    author: '[Diseñador de iluminación]',
+    // B.4 · antes renderizaba el placeholder "[Diseñador de iluminación]" en
+    // negro, indistinguible de un dato real. Karen es autora como en los otros
+    // dos (opción autorizada en brief 04 §B.4).
+    author: 'Karen Mannheim',
     reviewedBy: 'Karen Mannheim',
-    read: '13 min',
+    read: TODO,
     ...DRAFT,
     faq: [
       { q: '¿Qué grado IP necesito para iluminación exterior costera?', a: TODO },

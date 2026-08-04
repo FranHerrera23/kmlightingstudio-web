@@ -31,7 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tecnologia',
     '/estudio',
     '/contacto',
-    '/contenido'
+    // Hub editorial: el índice (= Artículos) y las tres pestañas en ruta real
+    // (brief 05 §A.1). Cada una tiene canonical propio.
+    '/contenido',
+    '/contenido/conversaciones',
+    '/contenido/recorridos',
+    '/contenido/prensa'
   ];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({

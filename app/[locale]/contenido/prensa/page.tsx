@@ -4,23 +4,20 @@ import { setRequestLocale } from 'next-intl/server';
 import { CONTENT_LOCALES } from '@/i18n/routing';
 import ContentHub, { contentMeta } from '@/components/ContentHub';
 
-/**
- * /contenido — índice del hub editorial. Muestra Artículos por defecto (el motor
- * comercial, brief 05 §A.2). Los otros tres estados viven en rutas hermanas
- * (/contenido/conversaciones · /recorridos · /prensa), todas indexables.
- */
+// Ruta real e indexable del tab "prensa" (brief 05 §A.1). Reemplaza a
+// /contenido?tab=prensa, que llega por 301 desde next.config.
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await props.params;
-  return contentMeta(locale, 'articulos');
+  return contentMeta(locale, 'prensa');
 }
 
-export default async function ContentPage(props: {
+export default async function Page(props: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await props.params;
   if (!(CONTENT_LOCALES as readonly string[]).includes(locale)) notFound();
   setRequestLocale(locale);
-  return <ContentHub active="articulos" />;
+  return <ContentHub active="prensa" />;
 }

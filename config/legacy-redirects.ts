@@ -16,6 +16,17 @@ export const LEGACY_REDIRECTS: LegacyRedirect[] = [
   { source: '/productos', destination: '/tecnologia' },
   { source: '/productos/:slug', destination: '/tecnologia/:slug' },
 
+  // Slug del artículo 1 a español (brief 04 §B.3): el inglés contradecía la
+  // decisión de segmentos en español. 301 desde el slug viejo (es y /en).
+  {
+    source: '/contenido/what-lighting-costs-per-square-metre',
+    destination: '/contenido/cuanto-cuesta-un-proyecto-de-iluminacion'
+  },
+  {
+    source: '/en/contenido/what-lighting-costs-per-square-metre',
+    destination: '/en/contenido/cuanto-cuesta-un-proyecto-de-iluminacion'
+  },
+
   // Índices y filtros (el valor del filtro es la clave de taxonomía, en inglés)
   { source: '/project.html', destination: '/proyectos' },
   { source: '/projectBaseResidential.html', destination: '/proyectos?typ=residences' },
