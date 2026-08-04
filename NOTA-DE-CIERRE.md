@@ -21,10 +21,23 @@ hasta que se cargue `RESEND_API_KEY` (+ `CONTACT_FROM` con dominio verificado).
 | `60e56a7` | **Tecnología** (brief 02 §B): apertura B.1, grilla a --t2 con la única cursiva, filtros a 3 grupos, quita BuildNote TRAZZO de prod |
 | `b9e549a` | **Contacto** §C.4 (bajada Lima/Florida/Marbella) + **Contenido** §B.1/§B.2 (sujeto Karen) |
 
-**Auditoría de cierre — limpia:** cero voseo · cero "80 personas"/"tres continentes" en copy ·
-Madrid solo como ubicación de proyecto · `foundingDate 2023` · SEIS PAÍSES intacto ·
-`TODO`/`[DATO]` en rojo y fuera del sitemap · build limpio en cada commit · gate NDA limpio
-(`projects.ts` nunca tocado) · ningún dato inferido.
+### Brief 06 — auditoría de producción (todo committeado y pusheado)
+
+| Commit | Qué |
+|---|---|
+| `3ec425e` | §3/§4/§9: `Seguinos`→`Síguenos`, regla de sujeto en home tech (`el nuestro`→`las fuentes que especificamos`) + link a /tecnologia, footer sin links muertos |
+| `00ed3c6` | §1/§2 CRÍTICO: canonical/og:url a **www sin prefijo /es** (localizedPath estaba invertido) + hreflang; meta-description de /estudio corregida. Verificado: 3 canónicas dan 200 |
+| `6aaec89` | §5/§8: slugs ES de artículos 2 y 3 + 301; tile confidencial fuera de la fila destacada |
+| `709bd8f` | §6: índice de Contenido como hub (Artículos + 3 teasers), no acumulado; ruta /contenido/articulos; sin URLs duplicadas |
+| `ee07665` | §7: grilla de estudios — 4 pares en home, links en /estudio, deep-link `/proyectos?estudio=` (server) |
+
+**Auditoría de cierre (brief 05 §D + brief 06) — limpia:** cero voseo (incl. messages/aria/alt/metadata) ·
+cero "80 personas"/"tres continentes" en copy · cero posesivos sobre el equipo · cero `href="#"` ·
+Madrid solo como ubicación de proyecto · `foundingDate 2023` · SEIS PAÍSES · canonical www sin `/es`
+(200, no redirect) · los 4 tabs de Contenido en ruta propia sin listados duplicados ·
+`TODO`/`[DATO]` en rojo y fuera del sitemap · build limpio · gate NDA limpio · ningún dato inferido.
+
+**Decisión de host cerrada por Fran:** `www` es la canónica.
 
 ---
 
@@ -42,13 +55,13 @@ Madrid solo como ubicación de proyecto · `foundingDate 2023` · SEIS PAÍSES i
 - B.9 bugs: `SIGUIENTE PROYECTO` doble render (el de colisión con nav ya lo arregla el nav sólido)
 
 **Contenido:**
-- A.5 bloque de captura al pie de cada artículo (copy EN/ES ya está en kmls-copy-en.md §5 A.5)
-- A.2 jerarquía entre pestañas (Artículos arriba, los otros tres como fila de acceso)
+- A.5 bloque de captura al pie de cada artículo (copy EN/ES ya está en kmls-copy-en.md §5 A.5) — pendiente
+- A.2 jerarquía entre pestañas → resuelto por §6 (hub con Artículos primero + bloques de acceso)
 - A.3 transcripciones de video (bloqueante para AEO, pero es trabajo de transcripción externo)
 
 **Infra — §C/§D:**
-- Gatear las BuildNote restantes fuera de producción (home mapa, contenido) — cuidando que
-  no queden cajas vacías
+- Gatear las BuildNote restantes fuera de producción (home mapa) — cuidando que no quede caja vacía
+  (la de /tecnologia ya salió; la de conversaciones queda como nota de fase 2)
 - BreadcrumbList en fichas de proyecto y artículos (no existe)
 
 ---
