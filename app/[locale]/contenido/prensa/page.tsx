@@ -19,5 +19,5 @@ export default async function Page(props: {
   const { locale } = await props.params;
   if (!(CONTENT_LOCALES as readonly string[]).includes(locale)) notFound();
   setRequestLocale(locale);
-  return <ContentHub active="prensa" />;
+  return <ContentHub view="prensa" />;
 }

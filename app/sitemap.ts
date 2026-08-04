@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Hub editorial: el índice (= Artículos) y las tres pestañas en ruta real
     // (brief 05 §A.1). Cada una tiene canonical propio.
     '/contenido',
+    '/contenido/articulos',
     '/contenido/conversaciones',
     '/contenido/recorridos',
     '/contenido/prensa'
