@@ -230,7 +230,7 @@
   "contact": {
     "kicker": "Contact",
     "titleLines": ["We don't pitch.", "We partner."],
-    "introLead": "Whether it's a listed building in London, a resort in Dubai, or a penthouse in São Paulo — we'd love to collaborate on projects that demand lighting worthy of the architecture.",
+    "introLead": "Whether it's a tower in Lima, an oceanfront house in Florida or a project in Marbella — we'd like to work on projects that ask for light worthy of the architecture.",
     "introNote": "Your clients will never know our name. They'll just never want to leave.",
     "officeFallback": "Office",
     "addressPending": "Address to be confirmed"
@@ -304,7 +304,7 @@
   "content": {
     "kicker": "Content",
     "titleLines": ["Everything we", "know about light."],
-    "introLead": "Thirty-three years of specifying, commissioning and occasionally getting it wrong — written, filmed and talked through with the people who design the buildings.",
+    "introLead": "Thirty-three years of Karen specifying, commissioning and sometimes getting it wrong — written, filmed and talked through with the people who design the buildings.",
     "introNote": "The articles answer concrete questions. The conversations and walkthroughs are filmed on site, almost always in Spanish.",
     "tabWritten": "Articles",
     "tabConversations": "Conversations",
@@ -331,7 +331,7 @@
     "pressMicro": "Press",
     "pressTitle1": "What others",
     "pressTitle2": "have written.",
-    "pressLead": "Third-party recognition — the only kind you can't give yourself.",
+    "pressLead": "Third-party recognition — the one kind you can't give yourself.",
     "featMicro": "Featured recognition",
     "featTitle1": "Forbes Perú",
     "featTitle2": "50 Most Powerful Women.",
