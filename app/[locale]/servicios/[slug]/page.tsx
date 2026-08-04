@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import ProjectCard from '@/components/ProjectCard';
+import DatoText from '@/components/DatoText';
 import { social, localizedPath } from '@/lib/metadata';
 import {
   VERTICALS,
@@ -10,6 +11,7 @@ import {
   SCOPE,
   DOSSIER,
   SITE_NAME,
+  verticalHasDato,
   type Vertical
 } from '@/content';
 
@@ -29,11 +31,16 @@ export async function generateMetadata(props: {
   const { locale, slug } = await props.params;
   const v = getVertical(slug);
   if (!v) return {};
-  return social({
-    title: `${v.title} — ${SITE_NAME}`,
-    description: v.sub,
-    path: localizedPath(locale, `/servicios/${v.slug}`)
-  });
+  return {
+    ...social({
+      title: `${v.title} — ${SITE_NAME}`,
+      description: v.sub,
+      path: localizedPath(locale, `/servicios/${v.slug}`)
+    }),
+    // A.4 · si la narrativa tiene algún `[DATO]` sin confirmar → noindex
+    // (tampoco entra al sitemap). El texto que rodea al dato sí se publica.
+    robots: verticalHasDato(v) ? { index: false, follow: true } : undefined
+  };
 }
 
 export default async function VerticalPage(props: {
@@ -56,6 +63,18 @@ export default async function VerticalPage(props: {
           <p className="lead">{v.sub}</p>
         </div>
       </header>
+
+      {/* A.4 · narrativa de la vertical — EN JUEGO → EL OBSTÁCULO → LO QUE
+          CAMBIA (los rótulos no aparecen). Copy literal del brief 02. */}
+      <section className="sec-s" style={{ paddingBottom: 0 }}>
+        <div className="vnarr rise">
+          {v.story.map((p, i) => (
+            <p key={i}>
+              <DatoText text={p} />
+            </p>
+          ))}
+        </div>
+      </section>
 
       <section className="sec-s" style={{ paddingBottom: 0 }}>
         <Link className="back" href="/servicios">

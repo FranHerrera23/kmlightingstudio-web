@@ -143,20 +143,9 @@ export default async function HomePage(props: {
         </div>
       </section>
 
-      {/* ═══ PARTNERSHIP ═══ */}
-      <section className="split rev dark">
-        <div className="img zin">
-          <div className="ph" data-l="Terraza o rooftop nocturno"></div>
-        </div>
-        <div className="txt">
-          <div className="micro rise">{t('partnership.micro')}</div>
-          <h3>
-            <MaskLines lines={lines('partnership.titleLines')} />
-          </h3>
-          <p className="rise d2">{t('partnership.p1')}</p>
-          <p className="rise d3">{t('partnership.p2')}</p>
-        </div>
-      </section>
+      {/* La sección "Sociedad"/PARTNERSHIP se eliminó (brief 02 §A.6): su capa
+          emocional se trasladó a la apertura de /servicios, donde el arquitecto
+          la lee con intención de contratar. No se duplica. */}
 
       {/* ═══ TECHNOLOGY ═══ */}
       <section className="sec">

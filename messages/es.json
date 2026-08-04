@@ -84,12 +84,6 @@
       "elicyonTitle": "Contemporánea",
       "elicyonGo": "Luz que celebra la línea y la transparencia"
     },
-    "partnership": {
-      "micro": "Sociedad",
-      "titleLines": ["Cuando la luz falla,", "el que queda", "expuesto eres tú."],
-      "p1": "Tus clientes esperan perfección desde el primer día. Trabajas con arquitectos que exigen precisión. Y los proyectos internacionales se caen por coordinación — tres continentes, distintos idiomas, distintas normativas, distintos equipos.",
-      "p2": "Hace treinta y tres años que hacemos que eso funcione."
-    },
     "tech": {
       "micro": "La tecnología",
       "titleLines": ["Tú diseñas el espacio.", "Nosotros hacemos que", "la luz desaparezca en él."],
@@ -133,9 +127,22 @@
 
   "services": {
     "kicker": "Servicios",
+    "openTitleLines": ["Tu cliente nunca va a ver el plano.", "Va a ver el espacio a las ocho de la noche."],
+    "openBody1": "Pasas meses en la planta, en los materiales, en la proporción. Y el día de la entrega nada de eso se juzga con luz de mediodía. Se juzga con la luz encendida.",
+    "openBody2": "Si esa luz no entiende lo que dibujaste, el que queda expuesto no es el proveedor. Eres tú.",
     "titleLines": ["Una disciplina.", "Siete mundos."],
     "introLead": "Diseñamos la luz, la protegemos durante la obra, y nos quedamos hasta que esté bien. Lo que cambia es lo que cada espacio le exige.",
     "introNote": "Un jet necesita componentes certificados. Una torre necesita una sola identidad del lobby al penthouse. Un yate necesita sobrevivir a la sal.",
+    "scopeMicro": "Cómo trabajamos",
+    "scopeTitleLines": ["Tres etapas.", "Un solo dossier."],
+    "scopeBody": "Las tres etapas son iguales en las siete tipologías. Lo que cambia es lo que cada espacio te exige.",
+    "scopeSteps": [
+      ["Etapa 1", "Diseño de iluminación", "15 días hábiles · 6 pasos"],
+      ["Etapa 2", "Gestión del diseño", ""],
+      ["Etapa 3", "Gestión en obra", "según cronograma"],
+      ["—", "Dossier final", ""]
+    ],
+    "scopeClose": "Cada plano, un solo dossier de cierre. No un conjunto de fragmentos entregados etapa por etapa — un dossier completo, del que nos puedes hacer responsables.",
     "projectCountOne": "{count} proyecto",
     "projectCountOther": "{count} proyectos",
     "workProcess": "Proceso de trabajo"
@@ -223,6 +230,8 @@
     "kicker": "Empecemos",
     "titleLines": ["Cuéntanos qué", "estás construyendo."],
     "body": "En la etapa que estés — concepto, licitación, o un cielorraso que ya está cerrado. Te vamos a decir con honestidad si somos el estudio indicado.",
+    "bodyServices": "Cuéntanos qué tipología, en qué etapa, y con qué equipo. Si no somos el estudio indicado para ese proyecto, te lo decimos en la primera llamada.",
+    "bodyTech": "Si estás especificando y necesitas fotometrías, escríbenos. Y si todavía no sabes qué especificar, mejor — esa conversación es más corta al principio del proyecto que al final.",
     "button": "Escríbenos"
   },
 

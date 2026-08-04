@@ -83,6 +83,14 @@ export interface Vertical {
   sub: string;
   intro: string;
   narr: Record<1 | 2 | 3, string>;
+  /**
+   * A.4 · narrativa de la vertical: 3 párrafos EN JUEGO → EL OBSTÁCULO → LO QUE
+   * CAMBIA (los rótulos no aparecen en pantalla). Puede contener marcadores
+   * `[DATO — …]` que se renderizan en rojo (patrón TODO) y excluyen la página
+   * del sitemap hasta que Karen los complete. El texto alrededor sí se publica.
+   * Cada entrada es un párrafo (o una línea `[DATO — …]` suelta).
+   */
+  story: string[];
 }
 
 export interface ScopeStage {

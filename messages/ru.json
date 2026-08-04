@@ -98,16 +98,6 @@
       "elicyonTitle": "",
       "elicyonGo": ""
     },
-    "partnership": {
-      "micro": "",
-      "titleLines": [
-        "",
-        "",
-        ""
-      ],
-      "p1": "",
-      "p2": ""
-    },
     "tech": {
       "micro": "",
       "titleLines": [
@@ -161,12 +151,26 @@
   },
   "services": {
     "kicker": "",
+    "openTitleLines": [
+      "",
+      ""
+    ],
+    "openBody1": "",
+    "openBody2": "",
     "titleLines": [
       "",
       ""
     ],
     "introLead": "",
     "introNote": "",
+    "scopeMicro": "",
+    "scopeTitleLines": [
+      "",
+      ""
+    ],
+    "scopeBody": "",
+    "scopeSteps": [],
+    "scopeClose": "",
     "projectCountOne": "",
     "projectCountOther": "",
     "workProcess": ""
@@ -268,6 +272,8 @@
       ""
     ],
     "body": "",
+    "bodyServices": "",
+    "bodyTech": "",
     "button": ""
   },
   "contactForm": {

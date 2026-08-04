@@ -108,6 +108,13 @@ export function fixtureFamilies(): string[] {
   return [...new Set(FIX.map((f) => f.family))];
 }
 
+/* ── Verticales ── */
+/** ¿La narrativa de la vertical tiene algún `[DATO — …]` sin completar?
+ *  Si sí, la página va noindex y fuera del sitemap hasta que Karen lo dé. */
+export function verticalHasDato(v: { story: string[] }): boolean {
+  return v.story.some((s) => s.includes('[DATO'));
+}
+
 /* ── Journal ── */
 export function getArticle(slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug === slug);

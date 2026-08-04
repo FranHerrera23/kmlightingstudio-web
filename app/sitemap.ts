@@ -8,7 +8,8 @@ import {
   allVideos,
   isIndexable,
   isArticleReady,
-  isVideoReady
+  isVideoReady,
+  verticalHasDato
 } from '@/content';
 
 /**
@@ -40,8 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === '' ? 1 : 0.7
   }));
 
-  // Verticales — todas tienen contenido real.
-  for (const v of VERTICALS) {
+  // Verticales — solo las que no tienen `[DATO]` sin confirmar en su narrativa
+  // (las que sí lo tienen van noindex hasta que Karen complete el dato).
+  for (const v of VERTICALS.filter((v) => !verticalHasDato(v))) {
     entries.push({
       url: `${SITE_URL}/servicios/${v.slug}`,
       lastModified: now,
