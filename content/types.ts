@@ -91,6 +91,12 @@ export interface Vertical {
    * Cada entrada es un párrafo (o una línea `[DATO — …]` suelta).
    */
   story: string[];
+  /**
+   * Variante EN de `story` (kmls-copy-en.md §2). El destinatario de estas
+   * narrativas es un arquitecto que puede leer en inglés. Los marcadores
+   * `[DATO — …]` son idénticos a los del ES y siguen disparando `noindex`.
+   */
+  storyEn: string[];
 }
 
 export interface ScopeStage {

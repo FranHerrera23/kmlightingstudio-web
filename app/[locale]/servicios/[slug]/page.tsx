@@ -53,6 +53,9 @@ export default async function VerticalPage(props: {
 
   const t = await getTranslations('vertical');
   const projects = PROJECTS.filter((p) => p.typ === v.id);
+  // A.4 · narrativa en el idioma del lector (EN para el arquitecto de afuera).
+  // Los `[DATO]` son idénticos en ambas, así que verticalHasDato sigue valiendo.
+  const story = locale === 'en' ? v.storyEn : v.story;
 
   return (
     <div>
@@ -68,7 +71,7 @@ export default async function VerticalPage(props: {
           CAMBIA (los rótulos no aparecen). Copy literal del brief 02. */}
       <section className="sec-s" style={{ paddingBottom: 0 }}>
         <div className="vnarr rise">
-          {v.story.map((p, i) => (
+          {story.map((p, i) => (
             <p key={i}>
               <DatoText text={p} />
             </p>

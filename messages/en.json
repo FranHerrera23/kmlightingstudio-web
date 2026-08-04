@@ -127,9 +127,9 @@
 
   "services": {
     "kicker": "Services",
-    "openTitleLines": ["Your client will never see the plan.", "They'll see the space at eight at night."],
-    "openBody1": "You spend months on the layout, the materials, the proportion. And on handover day none of it is judged in midday light. It's judged with the lights on.",
-    "openBody2": "If that light doesn't understand what you drew, the one left exposed isn't the supplier. It's you.",
+    "openTitleLines": ["Your client will never see the drawing.", "They'll see the room at eight at night."],
+    "openBody1": "You spend months on the plan, the materials, the proportion. And on handover day none of it gets judged in midday light. It gets judged with the lights on.",
+    "openBody2": "If that light doesn't understand what you drew, the one exposed isn't the supplier. It's you.",
     "titleLines": ["One discipline.", "Seven worlds."],
     "introLead": "We design the light, we protect it through construction, and we stay until it's right. What changes is what the space demands of it.",
     "introNote": "A jet needs certified components. A tower needs one identity from lobby to penthouse. A yacht needs to survive salt.",
@@ -137,12 +137,12 @@
     "scopeTitleLines": ["Three stages.", "One dossier."],
     "scopeBody": "The three stages are the same across all seven typologies. What changes is what each space demands of you.",
     "scopeSteps": [
-      ["Stage 1", "Lighting design", "15 working days · 6 steps"],
+      ["Stage 1", "Lighting design", "15 business days · 6 steps"],
       ["Stage 2", "Design management", ""],
       ["Stage 3", "On-site management", "per schedule"],
       ["—", "Final dossier", ""]
     ],
-    "scopeClose": "Every drawing, a single closing dossier. Not a set of fragments delivered stage by stage — one complete dossier you can hold us accountable to.",
+    "scopeClose": "Every drawing, one closing dossier. Not a set of fragments handed over stage by stage — one complete dossier you can hold us to.",
     "projectCountOne": "{count} project",
     "projectCountOther": "{count} projects",
     "workProcess": "Work process"
@@ -233,12 +233,12 @@
   },
 
   "cta": {
-    "kicker": "Start here",
+    "kicker": "Let's begin",
     "titleLines": ["Tell us what", "you're building."],
-    "body": "Whatever stage you're at — concept, tender, or a ceiling that's already closed. We'll tell you honestly whether we're the right studio for it.",
-    "bodyServices": "Tell us the typology, the stage, and the team. If we're not the right studio for that project, we'll tell you on the first call.",
-    "bodyTech": "If you're specifying and need photometrics, write to us. And if you don't yet know what to specify, even better — that conversation is shorter at the start of a project than at the end.",
-    "button": "Write to the studio"
+    "body": "Whatever stage you're in — concept, tender, or a ceiling that's already closed. We'll tell you honestly if we're the right studio.",
+    "bodyServices": "Tell us the typology, the stage, and who's on the team. If we're not the right studio for that project, we'll say so on the first call.",
+    "bodyTech": "If you're specifying and need photometrics, write to us. And if you don't know what to specify yet, even better — that conversation is shorter at the start of a project than at the end.",
+    "button": "Write to us"
   },
 
   "contactForm": {
