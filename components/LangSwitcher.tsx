@@ -1,50 +1,40 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
 
 /**
- * Switcher de idioma · v2 (.lang-b / .lang-m). Está armado: cambia el locale
- * conservando la ruta. EN activo; ES/PT/RU marcados "pend" (strings vacíos).
+ * Switcher de idioma · v3 (brief 01 §1.4). Toggle explícito ES / EN, sin menú
+ * desplegable: el locale activo va en peso 700, el otro en --ink-3. Conserva la
+ * ruta al cambiar. PT/RU siguen accesibles por URL (interfaz fase 2), pero el
+ * toggle expone solo los dos mercados con contenido.
  */
 export default function LangSwitcher() {
-  const t = useTranslations('languages');
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+
+  const to = (loc: 'es' | 'en') => {
+    if (loc !== locale) router.replace(pathname, { locale: loc });
+  };
 
   return (
-    <div className="lang">
+    <div className="lang-toggle">
       <button
-        className="lang-b"
-        aria-haspopup="true"
-        aria-expanded={open}
-        onClick={(e) => {
-          e.stopPropagation();
-          setOpen((v) => !v);
-        }}
+        className={`lang-o${locale === 'es' ? ' on' : ''}`}
+        aria-current={locale === 'es'}
+        onClick={() => to('es')}
       >
-        {locale.toUpperCase()}
+        ES
       </button>
-      <div className={`lang-m${open ? ' open' : ''}`}>
-        {routing.locales.map((loc) => (
-          <button
-            key={loc}
-            className={loc === locale ? 'on' : ''}
-            onClick={(e) => {
-              e.stopPropagation();
-              setOpen(false);
-              router.replace(pathname, { locale: loc });
-            }}
-          >
-            {t(loc)}
-            {loc !== 'en' && <i>{t('pending')}</i>}
-          </button>
-        ))}
-      </div>
+      <span className="lang-sep">/</span>
+      <button
+        className={`lang-o${locale === 'en' ? ' on' : ''}`}
+        aria-current={locale === 'en'}
+        onClick={() => to('en')}
+      >
+        EN
+      </button>
     </div>
   );
 }
