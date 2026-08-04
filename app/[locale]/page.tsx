@@ -108,6 +108,28 @@ export default async function HomePage(props: {
         </div>
       </section>
 
+      {/* ═══ TRUSTED BY ═══ (§6.1) — sube junto a Obra seleccionada: el arquitecto
+           que valida quiere ver a sus pares antes de leer filosofía. Título a --t2
+           (§7.1). Los pares estudio+proyecto con foto y link son §6.3 (assets). */}
+      <section className="sec">
+        <div className="shead">
+          <div>
+            <div className="micro rise">{t('trusted.micro')}</div>
+            <h2 className="sm">
+              <MaskLines lines={lines('trusted.titleLines')} />
+            </h2>
+          </div>
+        </div>
+        <div className="firms">
+          {FIRMS.map(([name, descriptor]) => (
+            <div className="rise" key={name}>
+              <div className="nm">{name}</div>
+              <div className="ty">{descriptor}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className="rule"></div>
 
       {/* ═══ RANGE ═══ */}
@@ -221,27 +243,6 @@ export default async function HomePage(props: {
         </div>
       </section>
 
-      <div className="rule"></div>
-
-      {/* ═══ TRUSTED BY ═══ */}
-      <section className="sec">
-        <div className="shead">
-          <div>
-            <div className="micro rise">{t('trusted.micro')}</div>
-            <h2>
-              <MaskLines lines={lines('trusted.titleLines')} />
-            </h2>
-          </div>
-        </div>
-        <div className="firms">
-          {FIRMS.map(([name, descriptor]) => (
-            <div className="rise" key={name}>
-              <div className="nm">{name}</div>
-              <div className="ty">{descriptor}</div>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
