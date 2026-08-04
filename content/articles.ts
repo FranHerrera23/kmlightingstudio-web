@@ -45,7 +45,7 @@ export const ARTICLES: Article[] = [
     ]
   },
   {
-    slug: 'lighting-designer-or-electrician',
+    slug: 'disenador-de-iluminacion-o-electricista',
     title: 'Diseñador de iluminación o electricista: qué compra esa diferencia',
     question: 'diferencia entre un diseñador de iluminación y un electricista',
     tag: 'Costo y valor',
@@ -61,7 +61,7 @@ export const ARTICLES: Article[] = [
     ]
   },
   {
-    slug: 'why-exterior-lighting-fails-in-florida',
+    slug: 'por-que-falla-la-iluminacion-exterior-en-florida',
     title: 'Por qué la iluminación exterior falla en Florida — y qué sobrevive',
     question: 'qué grado IP necesito para iluminación costera',
     tag: 'Clima',

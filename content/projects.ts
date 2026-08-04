@@ -106,4 +106,8 @@ export const PROJECTS: Project[] = [
 ];
 
 /* ── Home: proyectos destacados ── */
-export const FEATURED = ['pezet3', 'golden', 'arvida', 'saadiyat'];
+// §8 brief 06 · 'arvida' es confidencial (nombre 'Confidencial', fotos 404) — un
+// rectángulo negro en la fila destacada. Sale de "Obra seleccionada" hasta que
+// haya foto de detalle aprobada; se reemplaza por Four Seasons Brickell (un
+// destacado de §7). Sigue en el índice, donde el placeholder es legítimo.
+export const FEATURED = ['pezet3', 'golden', 'fourseasons', 'saadiyat'];

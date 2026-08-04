@@ -26,6 +26,23 @@ export const LEGACY_REDIRECTS: LegacyRedirect[] = [
     source: '/en/contenido/what-lighting-costs-per-square-metre',
     destination: '/en/contenido/cuanto-cuesta-un-proyecto-de-iluminacion'
   },
+  // Slugs artículos 2 y 3 a español (brief 06 §5), con 301 (es y /en).
+  {
+    source: '/contenido/lighting-designer-or-electrician',
+    destination: '/contenido/disenador-de-iluminacion-o-electricista'
+  },
+  {
+    source: '/en/contenido/lighting-designer-or-electrician',
+    destination: '/en/contenido/disenador-de-iluminacion-o-electricista'
+  },
+  {
+    source: '/contenido/why-exterior-lighting-fails-in-florida',
+    destination: '/contenido/por-que-falla-la-iluminacion-exterior-en-florida'
+  },
+  {
+    source: '/en/contenido/why-exterior-lighting-fails-in-florida',
+    destination: '/en/contenido/por-que-falla-la-iluminacion-exterior-en-florida'
+  },
 
   // Índices y filtros (el valor del filtro es la clave de taxonomía, en inglés)
   { source: '/project.html', destination: '/proyectos' },
