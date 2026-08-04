@@ -113,8 +113,14 @@ export interface ScopeStage {
  */
 export interface Fixture {
   id: string;
-  /** Familia — se usa como faceta de filtro (valores únicos) y como label. */
+  /** Familia específica — se muestra como label en la card. */
   family: string;
+  /**
+   * Grupo de filtro (§B.5 brief 02): siete familias para ocho luminarias dejan
+   * cada filtro con 1-2 resultados. Se agrupan en tres —Embutida · Lineal y riel
+   * · Exterior y control— que es lo que usa la faceta del filtro.
+   */
+  group: string;
   name: string;
   diameter: string;
   blurb: string;

@@ -103,9 +103,13 @@ export function displayValue<T>(v: Todoable<T>): T | null {
 export function getFixture(id: string): Fixture | undefined {
   return FIX.find((f) => f.id === id);
 }
-/** Familias únicas, en orden de aparición — para la faceta de filtro. */
+/** Familias únicas, en orden de aparición — label específico de cada card. */
 export function fixtureFamilies(): string[] {
   return [...new Set(FIX.map((f) => f.family))];
+}
+/** Grupos de filtro (§B.5): tres facetas en vez de siete familias de 1-2. */
+export function fixtureGroups(): string[] {
+  return [...new Set(FIX.map((f) => f.group))];
 }
 
 /* ── Verticales ── */

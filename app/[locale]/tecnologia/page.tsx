@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import Masthead from '@/components/Masthead';
-import BuildNote from '@/components/BuildNote';
+import MaskLines from '@/components/MaskLines';
+import { richTags } from '@/components/rich';
 import ProductFilters from '@/components/ProductFilters';
 import { social, localizedPath } from '@/lib/metadata';
 
@@ -26,31 +26,44 @@ export default async function ProductsPage(props: {
 
   return (
     <div>
-      <Masthead
-        kicker={t('kicker')}
-        titleLines={t.raw('titleLines') as string[]}
-        lead={t('introLead')}
-        note={t('introNote')}
-      >
-        <BuildNote
-          title="Decisión abierta · TRAZZO vs KMLS"
-          style={{ marginTop: 'clamp(28px,4vh,44px)' }}
-        >
-          Si son dos marcas, un catálogo con códigos de parte pertenece a TRAZZO.
-          Esta sección está armada como &laquo;qué especificamos y por qué&raquo;
-          — sin SKUs ni precios — para que funcione bajo KMLS. Los campos técnicos
-          quedan en TODO hasta que TRAZZO entregue los datos.
-        </BuildNote>
-      </Masthead>
+      {/* B.1 · apertura — lo que se pierde (capa emocional, va primero) */}
+      <header className="mast">
+        <div className="micro rise">{t('kicker')}</div>
+        <h1>
+          <MaskLines lines={t.raw('openTitleLines') as string[]} />
+        </h1>
+        <div className="mast-intro">
+          <div className="lead rise d1">
+            <p>{t('openBody1')}</p>
+            <p style={{ marginTop: 14 }}>{t('openBody2')}</p>
+          </div>
+          <div className="note rise d2">{t('openBody3')}</div>
+        </div>
+      </header>
 
-      {/* §B.2 · declaración de independencia comercial — arriba de la grilla */}
+      {/* B.2 · declaración de independencia comercial + nota operativa */}
       <section className="indep sec-s">
         <h2 className="indep-t">{t('indepTitle')}</h2>
         <p className="indep-b">{t('indepBody')}</p>
+        <p className="indep-note">{t('introNote')}</p>
       </section>
 
+      {/* B.4 · la grilla — el titular baja a rótulo de sección (--t2); la única
+          cursiva de la página va en la bajada ('pensó' / 'intended') */}
       <section className="sec-s" style={{ paddingTop: 0 }}>
-        <ProductFilters />
+        <div className="shead">
+          <div>
+            <h2 className="sm">
+              <MaskLines lines={t.raw('titleLines') as string[]} />
+            </h2>
+          </div>
+          <div className="side">
+            <p className="lead rise d1">{t.rich('introLead', richTags)}</p>
+          </div>
+        </div>
+        <div style={{ marginTop: 'clamp(40px,6vh,80px)' }}>
+          <ProductFilters />
+        </div>
       </section>
     </div>
   );

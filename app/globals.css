@@ -599,6 +599,7 @@ h2.sm{font-size:var(--t2);letter-spacing:-.03em;line-height:1.02}
 .indep{border-bottom:1px solid var(--rule)}
 .indep-t{font-size:var(--t2);text-transform:none;letter-spacing:-.025em;line-height:1.05;max-width:20ch}
 .indep-b{margin-top:18px;font-size:var(--t3);color:var(--ink-2);max-width:50ch}
+.indep-note{margin-top:22px;font-size:13.5px;line-height:1.7;color:var(--ink-3);max-width:56ch}
 /* §D · /estudio sin el stat de "80 personas": la banda queda en 3 columnas */
 .stats.n3{grid-template-columns:repeat(3,1fr)}
 @media(max-width:760px){.stats.n3{grid-template-columns:1fr 1fr}}

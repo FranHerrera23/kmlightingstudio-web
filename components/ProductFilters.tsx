@@ -2,17 +2,17 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { FIX, fixtureFamilies } from '@/content';
+import { FIX, fixtureGroups } from '@/content';
 import ProductCard from './ProductCard';
 
-/** Filtro de productos por familia — misma UX que el de proyectos. */
+/** Filtro de productos por grupo (§B.5: tres facetas) — misma UX que proyectos. */
 export default function ProductFilters() {
   const t = useTranslations('products');
-  const families = fixtureFamilies();
+  const groups = fixtureGroups();
   const [fam, setFam] = useState('all');
 
   const list = useMemo(
-    () => (fam === 'all' ? FIX : FIX.filter((f) => f.family === fam)),
+    () => (fam === 'all' ? FIX : FIX.filter((f) => f.group === fam)),
     [fam]
   );
   const count =
@@ -32,13 +32,13 @@ export default function ProductFilters() {
             >
               {t('all')}
             </button>
-            {families.map((f) => (
+            {groups.map((g) => (
               <button
-                key={f}
-                className={fam === f ? 'on' : ''}
-                onClick={() => setFam(f)}
+                key={g}
+                className={fam === g ? 'on' : ''}
+                onClick={() => setFam(g)}
               >
-                {f}
+                {g}
               </button>
             ))}
           </div>

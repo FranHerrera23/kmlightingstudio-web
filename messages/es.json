@@ -163,8 +163,12 @@
 
   "products": {
     "kicker": "Tecnología",
+    "openTitleLines": ["Elegiste ese material durante meses.", "A las ocho de la noche deja de existir."],
+    "openBody1": "La mayoría de los LED bajan de intensidad sin bajar de temperatura. Al veinte por ciento siguen en el mismo blanco que al cien.",
+    "openBody2": "La piedra se aplana. La madera se apaga. El color que elegiste con luz de día no es el color que tu cliente ve en la cena.",
+    "openBody3": "No es un problema del material. Es un problema de especificación.",
     "titleLines": ["Lo que especificamos."],
-    "introLead": "Cada proyecto se construye con una lista corta y deliberada de instrumentos — luminarias a las que volvemos porque mantienen su color, sobreviven al aire salino y desaparecen en el cielorraso como la arquitectura lo pensó.",
+    "introLead": "Cada proyecto se construye con una lista corta y deliberada de instrumentos — luminarias a las que volvemos porque mantienen su color, sobreviven al aire salino y desaparecen en el cielorraso como la arquitectura lo <it>pensó.</it>",
     "introNote": "No es una tienda. Archivos fotométricos y fichas técnicas disponibles para profesionales que especifican, sin formularios.",
     "indepTitle": "No vendemos luminarias ni representamos marcas.",
     "indepBody": "Especificamos lo que el proyecto necesita. Si mañana aparece algo mejor, especificamos eso.",

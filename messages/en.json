@@ -163,8 +163,12 @@
 
   "products": {
     "kicker": "Technology",
+    "openTitleLines": ["You chose that material over months.", "At eight at night it stops existing."],
+    "openBody1": "Most LEDs dim without warming. At twenty percent they hold the same white they had at a hundred.",
+    "openBody2": "Stone flattens. Wood goes dull. The color you chose in daylight isn't the color your client sees at dinner.",
+    "openBody3": "It isn't a material problem. It's a specification problem.",
     "titleLines": ["What we specify."],
-    "introLead": "Every project is built from a short, deliberate list of instruments — fixtures we return to because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended.",
+    "introLead": "Every project is built from a short, deliberate list of instruments — fixtures we come back to because they hold their color, survive salt air, and disappear into the ceiling the way the architecture <it>intended.</it>",
     "introNote": "Not a shop. Photometric files and spec sheets available to specifying professionals, ungated.",
     "indepTitle": "We don't sell fixtures or represent brands.",
     "indepBody": "We specify what the project needs. If something better shows up tomorrow, we specify that.",

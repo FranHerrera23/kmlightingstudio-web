@@ -189,6 +189,13 @@
   },
   "products": {
     "kicker": "",
+    "openTitleLines": [
+      "",
+      ""
+    ],
+    "openBody1": "",
+    "openBody2": "",
+    "openBody3": "",
     "titleLines": [
       ""
     ],

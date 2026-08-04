@@ -28,20 +28,20 @@ const PENDING = {
 } as const;
 
 export const FIX: Fixture[] = [
-  { id: 'trimless-downlight-57', family: 'Embutida · Sin marco', name: 'Downlight trimless', diameter: 'Ø57', draw: 'down',
+  { id: 'trimless-downlight-57', family: 'Embutida · Sin marco', group: 'Embutida', name: 'Downlight trimless', diameter: 'Ø57', draw: 'down',
     blurb: 'La de referencia del estudio. Lente profundamente embutido, sin borde visible, y la masa del cuerpo haciendo de disipador.', ...PENDING },
-  { id: 'trimless-downlight-38', family: 'Embutida · Sin marco', name: 'Downlight trimless compacto', diameter: 'Ø38', draw: 'down',
+  { id: 'trimless-downlight-38', family: 'Embutida · Sin marco', group: 'Embutida', name: 'Downlight trimless compacto', diameter: 'Ø38', draw: 'down',
     blurb: 'Mismo rendimiento, apertura menor — para cielorrasos que no pueden con otro agujero.', ...PENDING },
-  { id: 'adjustable-spot', family: 'Embutida · Orientable', name: 'Spot orientable', diameter: 'Ø57', draw: 'adj',
+  { id: 'adjustable-spot', family: 'Embutida · Orientable', group: 'Embutida', name: 'Spot orientable', diameter: 'Ø57', draw: 'adj',
     blurb: 'Inclinación y giro enteramente por encima del plano del cielorraso.', ...PENDING },
-  { id: 'trimless-wallwasher', family: 'Bañador · Sin marco', name: 'Bañador de pared', diameter: 'Ø74', draw: 'wash',
+  { id: 'trimless-wallwasher', family: 'Bañador · Sin marco', group: 'Embutida', name: 'Bañador de pared', diameter: 'Ø74', draw: 'wash',
     blurb: 'Gradiente vertical parejo, del cielorraso al zócalo.', ...PENDING },
-  { id: 'plaster-in-linear', family: 'Lineal · Sin marco', name: 'Lineal plaster-in', diameter: '25mm', draw: 'lin',
+  { id: 'plaster-in-linear', family: 'Lineal · Sin marco', group: 'Lineal y riel', name: 'Lineal plaster-in', diameter: '25mm', draw: 'lin',
     blurb: 'Corrida continua sin cortes oscuros en las uniones.', ...PENDING },
-  { id: 'magnetic-track', family: 'Riel · Magnético 48V', name: 'Riel magnético', diameter: '48V', draw: 'trk',
+  { id: 'magnetic-track', family: 'Riel · Magnético 48V', group: 'Lineal y riel', name: 'Riel magnético', diameter: '48V', draw: 'trk',
     blurb: 'Para colecciones que cambian. Cada cabezal se reubica a mano.', ...PENDING },
-  { id: 'marine-uplight', family: 'Exterior · Empotrada', name: 'Uplight grado marino', diameter: 'Ø90', draw: 'ext',
+  { id: 'marine-uplight', family: 'Exterior · Empotrada', group: 'Exterior y control', name: 'Uplight grado marino', diameter: 'Ø90', draw: 'ext',
     blurb: 'Acero inoxidable 316, encapsulada. Especificada donde la sal está de verdad.', ...PENDING },
-  { id: 'warm-dim-driver', family: 'Control · Driver', name: 'Driver warm-dim', diameter: 'DALI-2', draw: 'drv',
+  { id: 'warm-dim-driver', family: 'Control · Driver', group: 'Exterior y control', name: 'Driver warm-dim', diameter: 'DALI-2', draw: 'drv',
     blurb: 'Donde falla en silencio la mayoría de la iluminación residencial. Atenúa al 1% sin salto visible.', ...PENDING }
 ];
