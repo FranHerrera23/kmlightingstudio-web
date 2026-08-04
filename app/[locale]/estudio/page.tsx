@@ -24,11 +24,11 @@ export default async function AboutPage(props: {
   setRequestLocale(locale);
   const t = await getTranslations('about');
 
-  // §4.2/§D · sin "80+ personas" (es dato de TRAZZO, no de KMLS): se omite stat3.
-  const stats = [
-    { n: t('stat1Num'), sup: t('stat1Sup'), l: t('stat1Label') },
-    { n: t('stat2Num'), sup: t('stat2Sup'), l: t('stat2Label') },
-    { n: t('stat4Num'), sup: t('stat4Sup'), l: t('stat4Label') }
+  // §A.3 · barra de datos en dos bloques con sujeto explícito. El de "80+
+  // personas" (dato de TRAZZO, no de KMLS) queda eliminado del modelo.
+  const statBlocks = [
+    { label: t('statsKarenLabel'), rows: t.raw('statsKaren') as string[][] },
+    { label: t('statsStudioLabel'), rows: t.raw('statsStudio') as string[][] }
   ];
 
   return (
@@ -40,6 +40,27 @@ export default async function AboutPage(props: {
         note={t('introNote')}
       />
 
+      {/* §B.2 · el origen — la capa emocional que a la página le faltaba */}
+      <section className="sec-s">
+        <div className="shead">
+          <div>
+            <div className="micro rise">{t('originMicro')}</div>
+            <h2 className="rise d1">
+              <MaskLines lines={[t('originTitle')]} />
+            </h2>
+          </div>
+          <div className="side">
+            <p className="lead rise d1">{t('originBody1')}</p>
+            <p className="rise d2" style={{ marginTop: 16 }}>
+              {t('originBody2')}
+            </p>
+            <p className="rise d3" style={{ marginTop: 16 }}>
+              {t('originBody3')}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="sec-s">
         <div className="shead">
           <div>
@@ -50,16 +71,28 @@ export default async function AboutPage(props: {
           </div>
         </div>
         <div
-          className="stats n3 rise d1"
+          className="statblocks rise d1"
           style={{ marginTop: 'clamp(44px,7vh,88px)' }}
         >
-          {stats.map((s, i) => (
-            <div className="stat" key={i}>
-              <div className="n">
-                {s.n}
-                {s.sup && <sup>{s.sup}</sup>}
+          {statBlocks.map((block, bi) => (
+            <div className="statblock" key={bi}>
+              <div className="micro">{block.label}</div>
+              <div
+                className="stats"
+                style={{
+                  gridTemplateColumns: `repeat(${Math.max(block.rows.length, 1)}, 1fr)`
+                }}
+              >
+                {block.rows.map(([n, sup, l], i) => (
+                  <div className="stat" key={i}>
+                    <div className="n">
+                      {n}
+                      {sup && <sup>{sup}</sup>}
+                    </div>
+                    <div className="l">{l}</div>
+                  </div>
+                ))}
               </div>
-              <div className="l">{s.l}</div>
             </div>
           ))}
         </div>
@@ -75,6 +108,8 @@ export default async function AboutPage(props: {
           <div className="micro rise">{t('founderMicro')}</div>
           <h3 className="rise d1">{t('founderName')}</h3>
           <div className="role rise d1">{t('founderRole')}</div>
+          {/* §A.4 · Forbes va pegado al nombre de Karen, nunca suelto */}
+          <div className="award rise d1">{t('founderAward')}</div>
           <p className="q rise d2">{t('founderQuote')}</p>
           <p className="rise d3">{t('founderBody')}</p>
         </div>

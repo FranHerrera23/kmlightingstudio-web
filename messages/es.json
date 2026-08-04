@@ -107,7 +107,7 @@
     },
     "trusted": {
       "micro": "Confían en nosotros",
-      "titleLines": ["Los estudios que", "trabajan con KMLS."]
+      "titleLines": ["Estudios con los que", "Karen ha trabajado."]
     }
   },
 
@@ -187,18 +187,24 @@
 
   "about": {
     "kicker": "Estudio",
-    "titleLines": ["33 años", "haciendo una cosa."],
-    "introLead": "KM Lighting Studio hace una sola cosa: que la luz le dé sentido a un espacio.",
-    "introNote": "Lo que empezó con una persona tocando puertas en Lima es hoy un estudio.",
-    "lead": "Hemos entregado más de 2.500 proyectos en seis países, trabajando junto a estudios como RAMSA, Oppenheim y Adriana Hoyos. Pero el número que más importa no está en esa lista: es que después de tres décadas y de esa escala, el estudio sigue diseñando cada proyecto como si fuera el único.",
+    "titleLines": ["Un estudio nuevo.", "Treinta y tres años de oficio."],
+    "introLead": "KM Lighting Studio abrió en 2023. Lo que traía adentro no era nuevo: Karen Mannheim llevaba tres décadas iluminando arquitectura antes de fundarlo.",
+    "introNote": "Lo que empezó con una persona tocando puertas en Lima es hoy un estudio con equipo en Lima, Miami y Marbella.",
+    "originMicro": "El origen",
+    "originTitle": "Empezó tocando puertas.",
+    "originBody1": "A principios de los noventa Karen volvió a Lima con una idea y sin oficina. Importaba luminarias como representante y tocaba puertas — estudios de arquitectura, constructoras, quien la recibiera. Dos años así.",
+    "originBody2": "La primera oficina fueron cincuenta metros cuadrados en Surquillo. El primer showroom llegó siete años después.",
+    "originBody3": "Nada de eso cambió cuando el estudio creció. Sigue siendo alguien entrando a una obra a mirar cómo quedó la luz.",
+    "lead": "Karen ha entregado más de 2.500 proyectos en seis países, trabajando junto a estudios como RAMSA, Oppenheim y Adriana Hoyos. Pero el número que más importa no está en esa lista: es que después de tres décadas y de esa escala, cada proyecto se sigue diseñando como si fuera el único.",
     "throughline": "Lo que nunca cambió: acá la luz no es decoración. Es el alma de la arquitectura.",
-    "stat1Num": "33", "stat1Sup": "+", "stat1Label": "Años de práctica",
-    "stat2Num": "2.500", "stat2Sup": "+", "stat2Label": "Proyectos entregados",
-    "stat3Num": "80", "stat3Sup": "+", "stat3Label": "Personas en el estudio",
-    "stat4Num": "6", "stat4Sup": "", "stat4Label": "Países · 3 oficinas",
+    "statsKarenLabel": "Karen Mannheim",
+    "statsKaren": [["33", "+", "Años de práctica"], ["2.500", "+", "Proyectos entregados"], ["6", "", "Países"]],
+    "statsStudioLabel": "KM Lighting Studio",
+    "statsStudio": [["2023", "", "Año de fundación"], ["3", "", "Ciudades · Lima, Miami, Marbella"]],
     "founderMicro": "Quiénes somos",
     "founderName": "Karen Mannheim.",
     "founderRole": "Fundadora y Directora Creativa",
+    "founderAward": "Forbes Perú · 50 Mujeres Más Poderosas",
     "founderQuote": "\"No diseño la luz para que se note. La diseño para que el espacio, el material y la persona que vive ahí se sientan inevitables.\"",
     "founderBody": "Karen lleva más de tres décadas construyendo uno de los pocos estudios de iluminación que trabaja al nivel de los estudios de arquitectura más exigentes del mundo — y conserva el alma de un estudio. Lidera el diseño de cada proyecto que el estudio toma.",
     "recRecognition": "Reconocimiento",
@@ -212,8 +218,8 @@
     "teamTitle": "Liderazgo.",
     "teamSide": "Una arquitectura así de compleja necesita socios que entiendan lo que está en juego.",
     "trustedMicro": "Confían en nosotros",
-    "trustedTitle1": "Los estudios que",
-    "trustedTitle2": "trabajan con KMLS.",
+    "trustedTitle1": "Estudios con los que",
+    "trustedTitle2": "Karen ha trabajado.",
     "trazzoNote": "Obra anterior a 2023 entregada bajo TRAZZO Lighting, bajo dirección de Karen Mannheim."
   },
 

@@ -107,7 +107,7 @@
     },
     "trusted": {
       "micro": "Trusted by",
-      "titleLines": ["The firms who", "trust KMLS."]
+      "titleLines": ["Studios Karen", "has worked with."]
     }
   },
 
@@ -186,19 +186,25 @@
   },
 
   "about": {
-    "kicker": "About",
-    "titleLines": ["For 33 years,", "one thing."],
-    "introLead": "Karen Mannheim Lighting Studio has done one thing: make light give a space its meaning.",
-    "introNote": "What began as one person knocking on doors in Lima is now a practice.",
-    "lead": "We've delivered more than 2,500 projects across six countries, working alongside firms like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on this list: after three decades and that much scale, the studio still designs each project as if it were the only one.",
-    "throughline": "The throughline never changed — light, here, is never decoration. It's the soul of the architecture.",
-    "stat1Num": "33", "stat1Sup": "+", "stat1Label": "Years of practice",
-    "stat2Num": "2,500", "stat2Sup": "+", "stat2Label": "Projects delivered",
-    "stat3Num": "80", "stat3Sup": "+", "stat3Label": "People in the studio",
-    "stat4Num": "6", "stat4Sup": "", "stat4Label": "Countries · 3 offices",
+    "kicker": "Studio",
+    "titleLines": ["A new studio.", "Thirty-three years of craft."],
+    "introLead": "KM Lighting Studio opened in 2023. What it carried inside wasn't new: Karen Mannheim had spent three decades lighting architecture before founding it.",
+    "introNote": "What started with one person knocking on doors in Lima is now a studio with teams in Lima, Miami and Marbella.",
+    "originMicro": "Origin",
+    "originTitle": "It started by knocking on doors.",
+    "originBody1": "In the early nineties Karen came back to Lima with an idea and no office. She imported fixtures as a rep and knocked on doors — architecture studios, developers, whoever would see her. Two years of that.",
+    "originBody2": "The first office was fifty square meters in Surquillo. The first showroom came seven years later.",
+    "originBody3": "None of that changed when the studio grew. It's still someone walking into a site to see how the light turned out.",
+    "lead": "Karen has delivered more than 2,500 projects across six countries, working alongside studios like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on that list: after three decades and that scale, every project is still designed as if it were the only one.",
+    "throughline": "What never changed: here light isn't decoration. It's the soul of the architecture.",
+    "statsKarenLabel": "Karen Mannheim",
+    "statsKaren": [["33", "+", "Years of practice"], ["2,500", "+", "Projects delivered"], ["6", "", "Countries"]],
+    "statsStudioLabel": "KM Lighting Studio",
+    "statsStudio": [["2023", "", "Founded"], ["3", "", "Cities · Lima, Miami, Marbella"]],
     "founderMicro": "Who we are",
     "founderName": "Karen Mannheim.",
     "founderRole": "Founder & Creative Director",
+    "founderAward": "Forbes Perú · 50 Most Powerful Women",
     "founderQuote": "\"I don't design light to be noticed. I design it so the room, the material, the person living there all feel inevitable.\"",
     "founderBody": "Karen has spent more than three decades building one of the few lighting practices that works at the level of the world's most demanding architecture firms — and keeps the soul of a studio. She leads the design on every project the studio takes.",
     "recRecognition": "Recognition",
@@ -212,8 +218,8 @@
     "teamTitle": "Leadership.",
     "teamSide": "Architecture this complex needs partners who understand the stakes.",
     "trustedMicro": "Trusted by",
-    "trustedTitle1": "The firms who",
-    "trustedTitle2": "trust KMLS.",
+    "trustedTitle1": "Studios Karen",
+    "trustedTitle2": "has worked with.",
     "trazzoNote": "Work prior to 2023 delivered under TRAZZO Lighting, directed by Karen Mannheim."
   },
 
