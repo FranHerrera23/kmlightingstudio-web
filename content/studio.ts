@@ -2,6 +2,24 @@ import type { Firm, TeamMember, Office } from './types';
 
 /* ── Firmas · Equipo · Oficinas · v3 ── (portado tal cual, en español) */
 
+/**
+ * §7 brief 06 · cuatro destacados de la home, en pares estudio + proyecto con
+ * link a la ficha. Un nombre solo es un claim; un nombre con proyecto es prueba.
+ * (Coral Gables va como ubicación — la colaboración es con Studio Valle de Valle,
+ * el interiorista; la identidad confidencial del cliente nunca aparece.)
+ */
+export const FEATURED_STUDIOS: Array<{
+  studio: string;
+  desc: string;
+  projectId: string;
+  label: string;
+}> = [
+  { studio: 'RAMSA', desc: 'Robert A.M. Stern Architects', projectId: 'pezet3', label: 'Pezet 3, San Isidro' },
+  { studio: 'Oppenheim Architecture', desc: '', projectId: 'golden', label: 'Residencia privada, Golden Beach' },
+  { studio: 'Adriana Hoyos', desc: '', projectId: 'fourseasons', label: 'Four Seasons Residences Brickell' },
+  { studio: 'Studio Valle de Valle', desc: '', projectId: 'arvida', label: 'Coral Gables' }
+];
+
 export const FIRMS: Firm[] = [
   ['RAMSA', 'Robert A.M. Stern Architects'],
   ['MORPH Arquitectura', 'Top 100 mundial'],

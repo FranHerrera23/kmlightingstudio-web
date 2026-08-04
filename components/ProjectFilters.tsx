@@ -7,11 +7,13 @@ import {
   TYPOLOGIES,
   LOCATIONS,
   STATUSES,
+  firmMatches,
   type Project
 } from '@/content';
 import ProjectCard from './ProjectCard';
 
-export type Filters = { typ: string; loc: string; sta: string };
+// `partner` es un deep-link (§7): filtra por estudio sin faceta visible propia.
+export type Filters = { typ: string; loc: string; sta: string; partner?: string };
 
 function FilterRow({
   legend,
@@ -62,7 +64,8 @@ export default function ProjectFilters({
         (p: Project) =>
           (f.typ === 'all' || p.typ === f.typ) &&
           (f.loc === 'all' || p.loc === f.loc) &&
-          (f.sta === 'all' || p.sta === f.sta)
+          (f.sta === 'all' || p.sta === f.sta) &&
+          (!f.partner || firmMatches(p, f.partner))
       ),
     [f]
   );
@@ -94,6 +97,14 @@ export default function ProjectFilters({
           onPick={(k) => setF((s) => ({ ...s, sta: k }))}
         />
       </div>
+
+      {f.partner && (
+        <div className="fchip">
+          <button onClick={() => setF((s) => ({ ...s, partner: undefined }))}>
+            {f.partner} <i>✕</i>
+          </button>
+        </div>
+      )}
 
       <div className="fbar">
         <div className="cnt">{count}</div>

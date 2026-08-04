@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Masthead from '@/components/Masthead';
 import MaskLines from '@/components/MaskLines';
-import { TEAM, FIRMS } from '@/content';
+import { Link } from '@/i18n/navigation';
+import { TEAM, FIRMS, PROJECTS, firmMatches } from '@/content';
 import { social, localizedPath } from '@/lib/metadata';
 
 export async function generateMetadata(props: {
@@ -151,13 +152,30 @@ export default async function AboutPage(props: {
             </h2>
           </div>
         </div>
+        {/* §7 · cada estudio con obra linkea a /proyectos filtrado por él */}
         <div className="firms">
-          {FIRMS.map(([name, descriptor]) => (
-            <div className="rise" key={name}>
-              <div className="nm">{name}</div>
-              <div className="ty">{descriptor}</div>
-            </div>
-          ))}
+          {FIRMS.map(([name, descriptor]) => {
+            const hasWork = PROJECTS.some((p) => firmMatches(p, name));
+            const body = (
+              <>
+                <div className="nm">{name}</div>
+                <div className="ty">{descriptor}</div>
+              </>
+            );
+            return hasWork ? (
+              <Link
+                className="rise firm-link"
+                key={name}
+                href={{ pathname: '/proyectos', query: { estudio: name } }}
+              >
+                {body}
+              </Link>
+            ) : (
+              <div className="rise" key={name}>
+                {body}
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>

@@ -3,7 +3,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Masthead from '@/components/Masthead';
 import ProjectFilters, { type Filters } from '@/components/ProjectFilters';
 import { social, localizedPath } from '@/lib/metadata';
-import { TYPOLOGIES, LOCATIONS, STATUSES } from '@/content';
+import { TYPOLOGIES, LOCATIONS, STATUSES, FIRMS } from '@/content';
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -24,19 +24,28 @@ function pick(list: Array<[string, string]>, v: string | undefined): string {
 
 export default async function ProjectsPage(props: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ typ?: string; loc?: string; sta?: string }>;
+  searchParams: Promise<{
+    typ?: string;
+    loc?: string;
+    sta?: string;
+    estudio?: string;
+  }>;
 }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations('projects');
 
-  // Filtro inicial desde el query (redirects del dominio viejo). El grid se
-  // renderiza en el servidor con ese filtro ya aplicado → indexable.
+  // Filtro inicial desde el query (redirects del dominio viejo + deep-link de
+  // estudio §7). El grid se renderiza en el servidor con el filtro ya aplicado.
   const sp = await props.searchParams;
+  // `estudio` se valida contra la lista de estudios (§7): un nombre real, no
+  // texto libre. Si no matchea, se ignora.
+  const partner = FIRMS.find(([name]) => name === sp.estudio)?.[0];
   const initial: Filters = {
     typ: pick(TYPOLOGIES, sp.typ),
     loc: pick(LOCATIONS, sp.loc),
-    sta: pick(STATUSES, sp.sta)
+    sta: pick(STATUSES, sp.sta),
+    partner
   };
 
   return (

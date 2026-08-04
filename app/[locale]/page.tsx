@@ -5,7 +5,7 @@ import MaskLines from '@/components/MaskLines';
 import HeroVerticals from '@/components/HeroVerticals';
 import ProjectCard from '@/components/ProjectCard';
 import BuildNote from '@/components/BuildNote';
-import { FEATURED, FIRMS, getProject, type Project } from '@/content';
+import { FEATURED, FEATURED_STUDIOS, getProject, type Project } from '@/content';
 
 export default async function HomePage(props: {
   params: Promise<{ locale: string }>;
@@ -120,12 +120,20 @@ export default async function HomePage(props: {
             </h2>
           </div>
         </div>
-        <div className="firms">
-          {FIRMS.map(([name, descriptor]) => (
-            <div className="rise" key={name}>
-              <div className="nm">{name}</div>
-              <div className="ty">{descriptor}</div>
-            </div>
+        {/* §7 · cuatro destacados en pares estudio + proyecto, con link a la ficha.
+             Un nombre con proyecto al lado es prueba, no claim. (Fotos: assets.) */}
+        <div className="pairs" style={{ marginTop: 'clamp(30px,4vh,52px)' }}>
+          {FEATURED_STUDIOS.map((s) => (
+            <Link className="pair rise" key={s.projectId} href={`/proyectos/${s.projectId}`}>
+              <div className="ph" data-l={`${s.studio} · ${s.label}`}></div>
+              <div className="pair-st">
+                {s.studio}
+                {s.desc && <span>{s.desc}</span>}
+              </div>
+              <div className="pair-pj">
+                {s.label} <i>→</i>
+              </div>
+            </Link>
           ))}
         </div>
       </section>

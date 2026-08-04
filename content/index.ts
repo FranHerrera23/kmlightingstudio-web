@@ -119,6 +119,15 @@ export function verticalHasDato(v: { story: string[] }): boolean {
   return v.story.some((s) => s.includes('[DATO'));
 }
 
+/** §7 · ¿participó este estudio en el proyecto? Match por partner/arch/interior
+ *  (p. ej. 'Oppenheim' contra 'Oppenheim Architecture'). */
+export function firmMatches(p: Project, firm: string): boolean {
+  const f = firm.toLowerCase();
+  return [p.partner, p.arch, p.interior].some(
+    (v) => !isTodo(v) && typeof v === 'string' && v.toLowerCase().includes(f)
+  );
+}
+
 /* ── Journal ── */
 export function getArticle(slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug === slug);

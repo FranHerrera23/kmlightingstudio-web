@@ -213,6 +213,24 @@ p{line-height:1.75;color:var(--ink-2)}
 .firms>div:hover{background:var(--paper-2)}
 .firms .nm{font-weight:800;font-size:clamp(14px,1.2vw,18px);text-transform:uppercase;letter-spacing:-.018em}
 .firms .ty{font-size:9px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin-top:9px;line-height:1.5}
+/* §7 · estudio de la grilla como link (mismo look que la celda) */
+.firms>.firm-link{display:block;padding:clamp(28px,3.4vw,42px) clamp(20px,2.4vw,28px);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .4s var(--e)}
+.firms>.firm-link:hover{background:var(--paper-2)}
+/* §7 · pares estudio+proyecto destacados de la home */
+.pairs{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,1.6vw,24px)}
+@media(max-width:900px){.pairs{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pairs{grid-template-columns:1fr}}
+.pair{display:block}
+.pair .ph{aspect-ratio:4/5;margin-bottom:16px}
+.pair-st{font-weight:800;font-size:clamp(14px,1.1vw,17px);text-transform:uppercase;letter-spacing:-.015em;line-height:1.25}
+.pair-st span{display:block;font-size:9px;font-weight:600;letter-spacing:.11em;color:var(--ink-3);margin-top:5px}
+.pair-pj{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--gold);margin-top:11px;display:flex;align-items:center;gap:8px}
+.pair-pj i{transition:transform .3s}
+.pair:hover .pair-pj i{transform:translateX(4px)}
+/* §7 · chip del deep-link de estudio en /proyectos */
+.fchip{margin-top:20px}
+.fchip button{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);border-radius:100px;padding:9px 16px;cursor:pointer}
+.fchip button i{font-style:normal;color:var(--ink-3)}
 
 /* FOUNDER — ahora en ink, no navy */
 .founder{display:grid;grid-template-columns:.8fr 1.2fr;background:var(--ink);color:var(--paper)}
