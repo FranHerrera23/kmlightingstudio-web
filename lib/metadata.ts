@@ -7,7 +7,17 @@ export const DEFAULT_OG = `${SITE_URL}/og`;
 /** Ruta con prefijo de idioma (EN sin prefijo) para canonical / og:url. */
 export function localizedPath(locale: string, path: string): string {
   const clean = path === '/' ? '' : path;
-  return locale === 'en' ? clean || '/' : `/${locale}${clean}`;
+  // brief 06 §1 · ES es el locale por defecto y va SIN prefijo (es lo que sirve
+  // el sitio). EN/PT/RU van prefijados. Antes estaba invertido y el canonical
+  // apuntaba a /es/... — una URL que no existe.
+  return locale === 'es' ? clean || '/' : `/${locale}${clean}`;
+}
+
+/** Forma base (ES, sin prefijo) a partir de una ruta ya localizada — para hreflang. */
+function basePath(localized: string): string {
+  const m = localized.match(/^\/(en|pt|ru)(?=\/|$)/);
+  const base = m ? localized.slice(m[0].length) : localized;
+  return base === '' ? '/' : base;
 }
 
 /** URL de OG image para un proyecto: primera foto recortada a 1200×630. */
@@ -35,14 +45,24 @@ export function social(opts: {
   image?: string;
   type?: 'website' | 'article';
 }): Metadata {
-  const url = `${SITE_URL}${opts.path}`;
+  const url = `${SITE_URL}${opts.path === '/' ? '' : opts.path}`;
   const image = opts.image || DEFAULT_OG;
   const { title, description } = opts;
+
+  // hreflang (brief 06 §1 step 3): es sin prefijo, en con /en/, x-default → es.
+  // PT/RU son interfaz (fase 2), no entran como alternativas indexables.
+  const base = basePath(opts.path);
+  const baseClean = base === '/' ? '' : base;
+  const languages = {
+    es: `${SITE_URL}${baseClean}`,
+    en: `${SITE_URL}/en${baseClean}`,
+    'x-default': `${SITE_URL}${baseClean}`
+  };
 
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: { canonical: url, languages },
     openGraph: {
       type: opts.type || 'website',
       url,
