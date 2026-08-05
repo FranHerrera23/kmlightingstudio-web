@@ -41,28 +41,19 @@ Madrid solo como ubicación de proyecto · `foundingDate 2023` · SEIS PAÍSES �
 
 ---
 
-## QUÉ FALTA (ejecutable por CC — no empezado o parcial)
+### Proyectos — brief 03 + cierre (committeado y pusheado)
 
-**Proyectos — brief 03 (la unidad grande que queda).** Nada tocado aún. Ejecutable:
-- A.1 voseo `Filtrá`→`Filtra` (verificar)
-- A.3 ocultar los 6 conceptos del listado por defecto
-- A.5 ubicación vacía → `TODO` rojo (hoy `—` gris)
-- A.4 **[MODELO]** separar `partner` (solo estudios/NDA) de `subtipo` (rubro/descriptor)
-- B.2 **[MODELO]** campo "bisagra" (una línea al cierre del concepto); escribir las 34 es **[FRAN]**
-- B.4 créditos duplicados: barra del hero a 3 campos, ficha completa solo al final
-- B.5 **[MODELO]** campo atribución pre-2023 (se muestra si `año < 2023`)
-- B.7 enlaces bidireccionales (partner→proyectos, tipología→/servicios, proyecto→estudio)
-- B.9 bugs: `SIGUIENTE PROYECTO` doble render (el de colisión con nav ya lo arregla el nav sólido)
+| Commit | Qué |
+|---|---|
+| `ddc8088` | brief 03: A.3 ocultar conceptos · A.4 partner/subtipo · A.5 ubicación roja · B.2 bisagra (Pezet 1) · B.4 créditos a 3 · B.5 atribución pre-2023 · B.7 enlaces bidireccionales · B.9 doble render |
+| `146959d` | Contenido A.5 (captura al pie del artículo) + BuildNote fuera de producción (§C.4) |
 
-**Contenido:**
-- A.5 bloque de captura al pie de cada artículo (copy EN/ES ya está en kmls-copy-en.md §5 A.5) — pendiente
-- A.2 jerarquía entre pestañas → resuelto por §6 (hub con Artículos primero + bloques de acceso)
-- A.3 transcripciones de video (bloqueante para AEO, pero es trabajo de transcripción externo)
+**Todo lo ejecutable por CC de los seis briefs está hecho.** Lo que sigue depende de terceros:
 
-**Infra — §C/§D:**
-- Gatear las BuildNote restantes fuera de producción (home mapa) — cuidando que no quede caja vacía
-  (la de /tecnologia ya salió; la de conversaciones queda como nota de fase 2)
-- BreadcrumbList en fichas de proyecto y artículos (no existe)
+## QUÉ FALTA (ya no es de CC)
+
+**Infra menor pendiente:** BreadcrumbList en fichas de proyecto y artículos (no existe) — único
+ítem de CC realmente pendiente; se puede hacer cuando se retome.
 
 ---
 
