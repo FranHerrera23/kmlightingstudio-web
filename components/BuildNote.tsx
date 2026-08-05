@@ -13,6 +13,8 @@ export default function BuildNote({
   children: ReactNode;
   style?: React.CSSProperties;
 }) {
+  // §C.4 brief 05 · las notas de build no se renderizan en producción.
+  if (process.env.NODE_ENV === 'production') return null;
   return (
     <div className="bn" style={style}>
       <b>{title}</b>

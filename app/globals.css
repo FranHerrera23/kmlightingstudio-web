@@ -350,6 +350,11 @@ p{line-height:1.75;color:var(--ink-2)}
 .prel a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .prel a i{font-style:normal;transition:transform .3s}
 .prel a:hover i{transform:translateX(4px)}
+/* A.5 · bloque de captura al pie del artículo (antes del CTA genérico) */
+.capture{padding:clamp(40px,6vh,74px) var(--pad);background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.capture h3{font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;max-width:22ch}
+.capture p{margin-top:14px;font-size:15px;line-height:1.7;color:var(--ink-2);max-width:54ch}
+.capture .b{margin-top:26px}
 .full{position:relative;overflow:hidden;background:#0E1013}
 .full.r43{aspect-ratio:4/3} .full.r32{aspect-ratio:3/2} .full.r11{aspect-ratio:1/1}
 .wide{padding:0 var(--pad)}

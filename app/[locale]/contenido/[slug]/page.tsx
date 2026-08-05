@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import JsonLd from '@/components/JsonLd';
 import { Link } from '@/i18n/navigation';
 import { articleGraph, videoObject } from '@/lib/structuredData';
@@ -78,11 +78,23 @@ export default async function ContentDetailPage(props: {
   const item = getContentItem(slug);
   if (!item) notFound();
 
-  return item.type === 'article' ? (
-    <ArticleView a={item.article} />
-  ) : (
-    <VideoView v={item.video} />
-  );
+  if (item.type === 'article') {
+    const tc = await getTranslations('content');
+    return (
+      <>
+        <ArticleView a={item.article} />
+        {/* A.5 brief 05 · captura específica del lector, antes del CTA genérico */}
+        <section className="capture">
+          <h3>{tc('captureTitle')}</h3>
+          <p>{tc('captureBody')}</p>
+          <Link className="b" href="/contacto">
+            {tc('captureButton')}
+          </Link>
+        </section>
+      </>
+    );
+  }
+  return <VideoView v={item.video} />;
 }
 
 /* ══════════ ARTÍCULO (molde AEO) ══════════ */

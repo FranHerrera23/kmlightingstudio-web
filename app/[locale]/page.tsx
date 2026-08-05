@@ -250,26 +250,30 @@ export default async function HomePage(props: {
             <p className="lead rise d1">{t('where.side')}</p>
           </div>
         </div>
-        <div
-          className="rise d1"
-          style={{
-            marginTop: 'clamp(40px,6vh,80px)',
-            border: '1px solid var(--rule)',
-            minHeight: 'clamp(280px,42vh,440px)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: 40
-          }}
-        >
-          <BuildNote title="Mapa mundial · fase 2">
-            Ciudades con obra entregada sobre proyección con grilla. Seis países
-            con obra: Perú · Estados Unidos · España · EAU · Aruba · República
-            Dominicana. Ciudades: Lima · Miami · Madrid · Marbella · Abu Dhabi ·
-            Palm Beach · Golden Beach · Coral Gables · Key Biscayne · Fisher
-            Island · Aruba.
-          </BuildNote>
-        </div>
+        {/* §C.4 · el placeholder del mapa (fase 2) es andamiaje: solo en dev,
+            para no dejar una caja vacía en producción. */}
+        {process.env.NODE_ENV !== 'production' && (
+          <div
+            className="rise d1"
+            style={{
+              marginTop: 'clamp(40px,6vh,80px)',
+              border: '1px solid var(--rule)',
+              minHeight: 'clamp(280px,42vh,440px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 40
+            }}
+          >
+            <BuildNote title="Mapa mundial · fase 2">
+              Ciudades con obra entregada sobre proyección con grilla. Seis países
+              con obra: Perú · Estados Unidos · España · EAU · Aruba · República
+              Dominicana. Ciudades: Lima · Miami · Madrid · Marbella · Abu Dhabi ·
+              Palm Beach · Golden Beach · Coral Gables · Key Biscayne · Fisher
+              Island · Aruba.
+            </BuildNote>
+          </div>
+        )}
       </section>
 
     </div>
