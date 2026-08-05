@@ -5,7 +5,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import JsonLd from '@/components/JsonLd';
 import AddToSpec from '@/components/AddToSpec';
-import { fixtureProduct } from '@/lib/structuredData';
+import { fixtureProduct, breadcrumbList } from '@/lib/structuredData';
 import { social, localizedPath } from '@/lib/metadata';
 import { FIX, DRAW, getFixture, isTodo, SITE_NAME, type Fixture } from '@/content';
 
@@ -63,11 +63,18 @@ export default async function ProductPage(props: {
   if (!f) notFound();
 
   const t = await getTranslations('products');
+  const tn = await getTranslations('nav');
   const pending = t('technicalPending');
+  const crumbs = breadcrumbList(locale, [
+    { name: tn('home'), path: '/' },
+    { name: tn('products'), path: '/tecnologia' },
+    { name: f.name, path: `/tecnologia/${f.id}` }
+  ]);
 
   return (
     <div>
       <JsonLd data={fixtureProduct(f)} />
+      <JsonLd data={crumbs} />
 
       <section className="prodhead">
         <Link className="back" href="/tecnologia">

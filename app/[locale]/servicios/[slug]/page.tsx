@@ -4,6 +4,8 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import ProjectCard from '@/components/ProjectCard';
 import DatoText from '@/components/DatoText';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList } from '@/lib/structuredData';
 import { social, localizedPath } from '@/lib/metadata';
 import {
   VERTICALS,
@@ -52,13 +54,20 @@ export default async function VerticalPage(props: {
   if (!v) notFound();
 
   const t = await getTranslations('vertical');
+  const tn = await getTranslations('nav');
   const projects = PROJECTS.filter((p) => p.typ === v.id);
   // A.4 · narrativa en el idioma del lector (EN para el arquitecto de afuera).
   // Los `[DATO]` son idénticos en ambas, así que verticalHasDato sigue valiendo.
   const story = locale === 'en' ? v.storyEn : v.story;
+  const crumbs = breadcrumbList(locale, [
+    { name: tn('home'), path: '/' },
+    { name: tn('services'), path: '/servicios' },
+    { name: v.title, path: `/servicios/${v.slug}` }
+  ]);
 
   return (
     <div>
+      <JsonLd data={crumbs} />
       <header className="vhero">
         <div className="ph" data-l={`${v.title} · hero`}></div>
         <div>

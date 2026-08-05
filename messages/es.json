@@ -6,7 +6,7 @@
     },
     "projects": {
       "title": "Proyectos — KM Lighting Studio",
-      "description": "Filtra por tipología, ubicación o estado. Cada proyecto abre como página completa e indexable. Primero las imágenes, siempre."
+      "description": "Obra de iluminación arquitectónica en seis países: residencias privadas, multifamiliar, hotelería, comercial, cultural, aviación y yates."
     },
     "services": {
       "title": "Servicios — KM Lighting Studio",
@@ -32,6 +32,7 @@
 
   "nav": {
     "projects": "Proyectos",
+    "home": "Inicio",
     "services": "Servicios",
     "products": "Tecnología",
     "about": "Estudio",

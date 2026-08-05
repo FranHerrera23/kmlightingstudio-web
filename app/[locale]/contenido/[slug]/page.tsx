@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import JsonLd from '@/components/JsonLd';
 import { Link } from '@/i18n/navigation';
-import { articleGraph, videoObject } from '@/lib/structuredData';
+import { articleGraph, videoObject, breadcrumbList } from '@/lib/structuredData';
 import { social, localizedPath } from '@/lib/metadata';
 import { CONTENT_LOCALES } from '@/i18n/routing';
 import {
@@ -78,11 +78,21 @@ export default async function ContentDetailPage(props: {
   const item = getContentItem(slug);
   if (!item) notFound();
 
+  const tc = await getTranslations('content');
+  const tn = await getTranslations('nav');
+
   if (item.type === 'article') {
-    const tc = await getTranslations('content');
+    const a = item.article;
+    const crumbs = breadcrumbList(locale, [
+      { name: tn('home'), path: '/' },
+      { name: tn('content'), path: '/contenido' },
+      { name: tc('tabWritten'), path: '/contenido/articulos' },
+      { name: a.title, path: `/contenido/${a.slug}` }
+    ]);
     return (
       <>
-        <ArticleView a={item.article} />
+        <JsonLd data={crumbs} />
+        <ArticleView a={a} />
         {/* A.5 brief 05 · captura específica del lector, antes del CTA genérico */}
         <section className="capture">
           <h3>{tc('captureTitle')}</h3>
@@ -94,7 +104,30 @@ export default async function ContentDetailPage(props: {
       </>
     );
   }
-  return <VideoView v={item.video} />;
+
+  const v = item.video;
+  const isConv = v.kind === 'conversation';
+  const sectionName = isConv ? tc('tabConversations') : tc('tabWalkthroughs');
+  const sectionPath = isConv ? '/contenido/conversaciones' : '/contenido/recorridos';
+  const leaf = isConv
+    ? isTodo(v.guest)
+      ? sectionName
+      : (v.guest as string)
+    : isTodo(v.project)
+      ? sectionName
+      : (v.project as string);
+  const crumbs = breadcrumbList(locale, [
+    { name: tn('home'), path: '/' },
+    { name: tn('content'), path: '/contenido' },
+    { name: sectionName, path: sectionPath },
+    { name: leaf, path: `/contenido/${v.id}` }
+  ]);
+  return (
+    <>
+      <JsonLd data={crumbs} />
+      <VideoView v={v} />
+    </>
+  );
 }
 
 /* ══════════ ARTÍCULO (molde AEO) ══════════ */

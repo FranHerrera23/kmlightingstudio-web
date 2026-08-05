@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import JsonLd from '@/components/JsonLd';
 import ProjectName from '@/components/ProjectName';
 import SmartImage from '@/components/SmartImage';
-import { creativeWork } from '@/lib/structuredData';
+import { creativeWork, breadcrumbList } from '@/lib/structuredData';
 import { social, localizedPath, projectOg } from '@/lib/metadata';
 import {
   PROJECTS,
@@ -98,6 +98,13 @@ export default async function ProjectPage(props: {
   if (!p) notFound();
 
   const t = await getTranslations('project');
+  const tn = await getTranslations('nav');
+  const crumbName = isTodo(p.name) ? typologyLabel(p.typ) : (p.name as string);
+  const crumbs = breadcrumbList(locale, [
+    { name: tn('home'), path: '/' },
+    { name: tn('projects'), path: '/proyectos' },
+    { name: crumbName, path: `/proyectos/${p.id}` }
+  ]);
   const blocks = buildGallery(galleryOf(p));
   const { conceptAfter, challengeAfter } = narrativeAnchors(blocks.length);
   const nx = nextProject(p.id);
@@ -204,6 +211,7 @@ export default async function ProjectPage(props: {
   return (
     <div>
       <JsonLd data={creativeWork(p)} />
+      <JsonLd data={crumbs} />
 
       {/* 1 · HERO */}
       <header className="phero">

@@ -6,7 +6,7 @@
     },
     "projects": {
       "title": "Projects — KM Lighting Studio",
-      "description": "Filter by typology, location or status. Every project opens as a full, indexable page. Images first, always."
+      "description": "Architectural lighting work across six countries: private residences, multifamily, hospitality, commercial, cultural, aviation and yachts."
     },
     "services": {
       "title": "Services — KM Lighting Studio",
@@ -32,6 +32,7 @@
 
   "nav": {
     "projects": "Projects",
+    "home": "Home",
     "services": "Services",
     "products": "Technology",
     "about": "The Studio",

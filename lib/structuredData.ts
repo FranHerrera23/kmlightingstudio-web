@@ -14,6 +14,34 @@ import {
 const ORG_ID = `${SITE_URL}/#org`;
 const PERSON_ID = `${SITE_URL}/#karen`;
 
+/** Prefijo de locale idéntico al canonical (brief 06/07 §1): es sin prefijo. */
+function localeUrl(locale: string, path: string): string {
+  const clean = path === '/' ? '' : path;
+  const p = locale === 'es' ? clean : `/${locale}${clean}`;
+  return `${SITE_URL}${p}`;
+}
+
+/**
+ * BreadcrumbList (brief 07 §4). Los `item` usan el mismo host y esquema de
+ * prefijo que el canonical. El último nivel (la página) puede omitir `item`;
+ * acá se incluye con su canonical. Entradas sin `path` se rinden sin `item`.
+ */
+export function breadcrumbList(
+  locale: string,
+  crumbs: Array<{ name: string; path?: string }>
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      ...(c.path ? { item: localeUrl(locale, c.path) } : {})
+    }))
+  };
+}
+
 /**
  * Organization + Person (Karen) + LocalBusiness por oficina.
  * Va en el layout raíz — toda página lo lleva. (Brief §6)
