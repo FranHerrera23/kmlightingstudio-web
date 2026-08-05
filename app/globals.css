@@ -342,6 +342,14 @@ p{line-height:1.75;color:var(--ink-2)}
 .pnarr h3{margin-top:16px;max-width:15ch}
 .pnarr p{font-size:var(--t3);line-height:1.8;max-width:58ch}
 .pnarr .flag{color:var(--flag);font-style:italic}
+/* B.2 · la bisagra: cierre del concepto, en peso, entrega el pase al challenge */
+.pnarr .hinge{margin-top:clamp(20px,3vh,30px);font-size:clamp(17px,1.7vw,21px);line-height:1.5;font-weight:600;color:var(--ink);max-width:44ch}
+/* B.7 · enlaces bidireccionales al pie de la ficha */
+.prel{display:flex;flex-wrap:wrap;gap:14px 20px;padding:clamp(36px,5vh,60px) var(--pad)}
+.prel a{display:inline-flex;align-items:center;gap:10px;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--rule);border-radius:100px;padding:13px 24px;transition:.3s}
+.prel a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.prel a i{font-style:normal;transition:transform .3s}
+.prel a:hover i{transform:translateX(4px)}
 .full{position:relative;overflow:hidden;background:#0E1013}
 .full.r43{aspect-ratio:4/3} .full.r32{aspect-ratio:3/2} .full.r11{aspect-ratio:1/1}
 .wide{padding:0 var(--pad)}

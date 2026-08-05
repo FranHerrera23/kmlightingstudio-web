@@ -64,7 +64,9 @@ export default function ProjectFilters({
         (p: Project) =>
           (f.typ === 'all' || p.typ === f.typ) &&
           (f.loc === 'all' || p.loc === f.loc) &&
-          (f.sta === 'all' || p.sta === f.sta) &&
+          // A.3 · los conceptos salen del listado por defecto; aparecen solo con
+          // el filtro Concepto activo.
+          (f.sta === 'all' ? p.sta !== 'concept' : p.sta === f.sta) &&
           (!f.partner || firmMatches(p, f.partner))
       ),
     [f]

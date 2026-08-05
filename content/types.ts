@@ -51,7 +51,14 @@ export interface Project {
   name: Todoable<string>;
   /** Pista interna para los proyectos que Karen tiene que renombrar. */
   hint?: string;
+  /**
+   * A.4 · SOLO estudios de arquitectura/interiorismo y rótulos NDA. Los
+   * descriptores/rubros/subtipologías van en `subtipo`. La card muestra
+   * `TIPOLOGÍA · partner` si hay partner; si no, `TIPOLOGÍA · subtipo`.
+   */
   partner: Todoable<string>;
+  /** A.4 · rubro / descriptor / subtipología (no es un estudio). */
+  subtipo?: string;
   place: Todoable<string>;
   /** Créditos (barra oscura arriba del primer scroll). */
   arch: Todoable<string>;
@@ -60,6 +67,13 @@ export interface Project {
   year: Todoable<string>;
   scale: Todoable<string>;
   concept: Todoable<string>;
+  /**
+   * B.2 · "bisagra": una sola oración al cierre del concepto que convierte el
+   * contexto en exigencia y entrega el pase al challenge. Opcional (se escriben
+   * una por una, [FRAN]); si no está, no se renderiza. `hingeEn` = variante EN.
+   */
+  hinge?: string;
+  hingeEn?: string;
   challenge: Todoable<string>;
   /**
    * §4.4 · Obra anterior a 2023 (KMLS se fundó en 2023) → entregada bajo TRAZZO,

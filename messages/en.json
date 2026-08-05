@@ -382,6 +382,9 @@
     "specPending": "To be confirmed",
     "nextMicro": "Next project",
     "viewProject": "View project",
-    "nameTBD": "[NAME TO BE DEFINED]"
+    "nameTBD": "[NAME TO BE DEFINED]",
+    "moreFromStudio": "More from {studio}",
+    "lightingTrazzo": "Karen Mannheim · Delivered under TRAZZO Lighting",
+    "placeTBD": "[LOCATION TBD]"
   }
 }

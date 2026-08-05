@@ -10,6 +10,8 @@ import { creativeWork } from '@/lib/structuredData';
 import { social, localizedPath, projectOg } from '@/lib/metadata';
 import {
   PROJECTS,
+  VERTICALS,
+  FIRMS,
   getProject,
   nextProject,
   galleryOf,
@@ -99,18 +101,31 @@ export default async function ProjectPage(props: {
   const blocks = buildGallery(galleryOf(p));
   const { conceptAfter, challengeAfter } = narrativeAnchors(blocks.length);
   const nx = nextProject(p.id);
+  // B.7 · destinos de los enlaces bidireccionales
+  const verticalSlug = VERTICALS.find((v) => v.id === p.typ)?.slug;
+  const studioPartner =
+    !isTodo(p.partner) && FIRMS.some(([n]) => n === p.partner)
+      ? (p.partner as string)
+      : null;
 
   const eyebrow =
     typologyLabel(p.typ) + (isTodo(p.partner) ? '' : ' · ' + p.partner);
   const place = isTodo(p.place) ? p.hint || '' : (p.place as string);
 
+  // B.4 · la barra del hero se reduce a tres campos; la ficha completa vive
+  // solo al final (antes se repetían Arquitectura/Interiorismo/Desarrollador/Año).
   const credits: Array<[string, string | null]> = [
     [t('credArchitecture'), displayValue(p.arch)],
-    [t('credInterior'), displayValue(p.interior)],
-    [t('credDeveloper'), displayValue(p.dev)],
-    [t('credLighting'), t('lightingValue')],
-    [t('credYear'), displayValue(p.year)]
+    [t('specLocation'), displayValue(p.place)],
+    [t('specStatus'), statusLabel(p.sta)]
   ];
+
+  // B.5 · atribución de iluminación. La obra anterior a 2023 se entregó bajo
+  // TRAZZO, bajo dirección de Karen. Solo se muestra el rótulo TRAZZO cuando el
+  // año es < 2023 (o el flag preTrazzo); con año TODO no se asume nada.
+  const yearNum = isTodo(p.year) ? null : parseInt(p.year as string, 10);
+  const preTrazzo = p.preTrazzo || (yearNum !== null && yearNum < 2023);
+  const lightingCredit = preTrazzo ? t('lightingTrazzo') : t('lightingValue');
 
   const specs: Array<[string, string | null]> = [
     [t('specTypology'), typologyLabel(p.typ)],
@@ -118,12 +133,16 @@ export default async function ProjectPage(props: {
     [t('specArchitecture'), displayValue(p.arch)],
     [t('specInterior'), displayValue(p.interior)],
     [t('specDeveloper'), displayValue(p.dev)],
+    [t('credLighting'), lightingCredit],
     [t('specScale'), displayValue(p.scale)],
     [t('specYear'), displayValue(p.year)],
     [t('specStatus'), statusLabel(p.sta)],
     [t('specControl'), null], // TODO fase 2
     [t('specPhotography'), null] // TODO fase 2
   ];
+
+  // B.2 · la bisagra al cierre del concepto (variante EN si el lector es EN).
+  const hinge = locale === 'en' ? p.hingeEn ?? p.hinge : p.hinge;
 
   const conceptSection = (
     <section className="pnarr" key="concept">
@@ -141,6 +160,7 @@ export default async function ProjectPage(props: {
             (p.concept as string)
           )}
         </p>
+        {hinge && <p className="hinge">{hinge}</p>}
       </div>
     </section>
   );
@@ -236,9 +256,32 @@ export default async function ProjectPage(props: {
         </dl>
       </section>
 
-      {/* 14 · SIGUIENTE PROYECTO */}
+      {/* B.7 · enlaces bidireccionales: tipología → su vertical, estudio → su obra */}
+      {(verticalSlug || studioPartner) && (
+        <section className="prel">
+          {verticalSlug && (
+            <Link href={`/servicios/${verticalSlug}`}>
+              {typologyLabel(p.typ)} <i>→</i>
+            </Link>
+          )}
+          {studioPartner && (
+            <Link
+              href={{ pathname: '/proyectos', query: { estudio: studioPartner } }}
+            >
+              {t('moreFromStudio', { studio: studioPartner })} <i>→</i>
+            </Link>
+          )}
+        </section>
+      )}
+
+      {/* 14 · SIGUIENTE PROYECTO — B.9: el placeholder llevaba data-l "Siguiente
+          proyecto", que se solapaba con el eyebrow (doble render gris+dorado).
+          Ahora el placeholder rotula el proyecto siguiente. */}
       <Link className="pnext" href={`/proyectos/${nx.id}`}>
-        <div className="ph" data-l="Siguiente proyecto"></div>
+        <div
+          className="ph"
+          data-l={isTodo(nx.name) ? nx.hint || 'Proyecto' : (nx.name as string)}
+        ></div>
         <div className="micro">{t('nextMicro')}</div>
         <h3>
           <ProjectName p={nx} />
