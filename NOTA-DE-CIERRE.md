@@ -48,12 +48,40 @@ Madrid solo como ubicación de proyecto · `foundingDate 2023` · SEIS PAÍSES �
 | `ddc8088` | brief 03: A.3 ocultar conceptos · A.4 partner/subtipo · A.5 ubicación roja · B.2 bisagra (Pezet 1) · B.4 créditos a 3 · B.5 atribución pre-2023 · B.7 enlaces bidireccionales · B.9 doble render |
 | `146959d` | Contenido A.5 (captura al pie del artículo) + BuildNote fuera de producción (§C.4) |
 
-**Todo lo ejecutable por CC de los seis briefs está hecho.** Lo que sigue depende de terceros:
+### Brief 07 — verificaciones y cierre técnico (committeado y pusheado)
+
+| Commit | Qué |
+|---|---|
+| `4784841` | §4 BreadcrumbList en las 4 rutas dinámicas · §2 meta-description de /proyectos · §3 /estudio 12 linkeados |
+
+**Método de auditoría (nuevo, §5): contra el HTML servido, no contra el repo.**
+
+- **§1 · el 29 vs 36 — resuelto.** En `projects.ts` hay **42** proyectos: 6 `concept`, 8 `progress`,
+  28 `completed`. El índice con filtros en "Todas/Todas/Todos" oculta los 6 conceptos → **36**, y
+  el contador visible dice **36 proyectos**: grid y contador coinciden. **No hay filtrado silencioso.**
+  El "29" del reporte anterior fue un **artefacto de mi grep** (`href` con `sort -u` subcontó), no un
+  número del sitio. El total de 42 sigue sin reconciliar contra el CONTEXT-BRIEF (~40) → **[FRAN]**.
+- **§2 · metadata de /proyectos — presente.** El HTML servido trae `title`, `description`, `canonical`
+  (www, sin `/es`), `og:*` y `alternates.languages`. El "solo meta-viewport" fue caché del fetcher.
+  Se aplicó igual la meta-description literal nueva del brief (es+en).
+- **§3 · brief 06 confirmado en todo el sitio** (HTML servido): canonical www sin `/es` y 200 en
+  `/ · /estudio · /contenido · /tecnologia · /contacto · /servicios` + 4 dinámicas · `Síguenos` ·
+  cero `href="#"` · sin `el nuestro` + link a /tecnologia · 301 de slugs 2 y 3 · 4 tabs con ruta
+  propia sin listado duplicado · tile confidencial fuera de featured · 12 estudios linkeados.
+- **§4 · BreadcrumbList** en `/proyectos/[slug]`, `/servicios/[slug]`, `/tecnologia/[slug]`,
+  `/contenido/[slug]`, con item URLs en el host/prefijo del canonical.
+- **§5 · auditoría de producción limpia:** 6 rutas (2 dinámicas) 200 + canonical + description ·
+  cero voseo · cero atribución al estudio (incl. metadata) · cero `href="#"` · cero posesivos ·
+  `foundingDate 2023` · SEIS países · build limpio · gate NDA limpio.
+
+**Todo lo ejecutable por CC (briefs 01–07) está hecho y verificado contra producción.**
 
 ## QUÉ FALTA (ya no es de CC)
 
-**Infra menor pendiente:** BreadcrumbList en fichas de proyecto y artículos (no existe) — único
-ítem de CC realmente pendiente; se puede hacer cuando se retome.
+Nada ejecutable por CC. Lo pendiente depende de Fran, Karen, assets o servicios externos
+(ver §5/§6 del brief 07 y las secciones de arriba). Nota de deviación menor: `/estudio` linkea
+los 12 estudios; 4 no tienen obra catalogada en la data → su página filtrada muestra el estado
+vacío honesto ("ningún proyecto coincide"). Si molesta, se decide caso por caso — **[FRAN]**.
 
 ---
 
