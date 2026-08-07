@@ -108,6 +108,28 @@ Con JS deshabilitado se leen enteros; con JS los chips filtran sobre el DOM ya s
 y ¿qué incluye el honorario? — el copy es **[FRAN]**. Después del deploy: re-indexar en Search Console
 `/contenido`, las 4 hijas, los 3 artículos y 5 proyectos.
 
+### Brief 09 — answer capsules (committeado y pusheado)
+
+| Commit | Qué |
+|---|---|
+| `c5f0288` | §1 las 21 capsules · §2 título doble · §3 FAQ en H3 · §4 molde de scope |
+
+**Conteo de capsules en HTML crudo, ruta por ruta** (verificado con `curl`):
+`residencias-privadas` 3 (index) · `multifamiliar` 3 (noindex) · `hoteleria` 3 (noindex) ·
+`comercial` 3 (noindex) · `cultural` 3 (index) · `aviacion` 3 (noindex) · `yates` 3 (index) →
+**21 capsules**. Cada una es `H3` real con la respuesta inmediata debajo; el cuerpo narrativo no
+se tocó. Las 4 verticales con `[DATO]` siguen en `noindex`.
+
+- **§2 título doble:** `titleSeo` por vertical + `<title>` keyword en `/servicios` `/tecnologia`
+  `/estudio` `/proyectos`, distinto del H1 humano (ej.: `<title>` "…para yates y grado marino"
+  vs `<h1>` "Yates"). Fallback al patrón donde no se definió.
+- **§3 FAQ:** el artículo pasó de `dl/dt/dd` a `H3` real + respuesta inmediata (extraíble, sin acordeón).
+- **§4 molde de scope:** slots opcionales en `ScopeStage` (question/answer/deliverable, es+en),
+  render-when-present — el copy es **[FRAN]**.
+- **§5 authorship — verificado:** artículos con byline + `Person`(knowsAbout, award); las fichas de
+  proyecto **declaran `creator`** (Karen) en el JSON-LD, no son anónimas.
+- **§6 densidad de datos prestada** (Conversaciones como fuente citable) — estratégico, **[FRAN]**.
+
 ## QUÉ FALTA (ya no es de CC)
 
 Nada ejecutable por CC. Lo pendiente depende de Fran, Karen, assets o servicios externos
