@@ -22,7 +22,19 @@ export const VERTICALS: Vertical[] = [
       "Someone lives here every day. This isn't a space you visit: it's where someone has breakfast at seven and reads at eleven at night.",
       "A house has to be two different houses in the same day. And nobody wants to learn a sixteen-circuit panel to get there. Most residential projects fail right there — not on the fixture, on how many decisions they leave to the person living inside.",
       "Scenes are composed before the house is handed over. The space arrives complete with a single gesture, and at midnight nobody runs into office white."
-    ]
+    ],
+    questions: [
+      '¿Qué cambia cuando alguien vive en el espacio todos los días?',
+      '¿Por qué falla la iluminación en una casa de alta gama?',
+      '¿Cómo se controla la luz de una casa sin un tablero complicado?'
+    ],
+    questionsEn: [
+      'What changes when someone lives in the space every day?',
+      'Why does lighting fail in a high-end home?',
+      "How do you control a house's lighting without a complicated panel?"
+    ],
+    titleSeo: 'Diseño de iluminación para residencias privadas — KM Lighting Studio',
+    titleSeoEn: 'Private residence lighting design — KM Lighting Studio'
   },
   {
     id: 'multifamily', slug: 'multifamiliar', title: 'Multifamiliar',
@@ -42,7 +54,19 @@ export const VERTICALS: Vertical[] = [
       "The developer sells the lobby. The buyer buys the apartment, but decides in the first thirty seconds, and those thirty seconds happen in the entrance hall.",
       "A tower has to hold one identity from the entrance to the penthouse, with budgets that change floor by floor. Repetition is the trap: what gets resolved badly in one unit repeats across [DATO — cantidad de unidades tipo de un proyecto real].",
       "One lighting criterion for the whole building, with the investment placed where the eye registers it. Identity doesn't depend on spending the same everywhere."
-    ]
+    ],
+    questions: [
+      '¿Qué decide la compra de un departamento en los primeros treinta segundos?',
+      '¿Cómo se sostiene una sola identidad de luz del lobby al penthouse?',
+      '¿Dónde conviene concentrar el presupuesto de iluminación en una torre?'
+    ],
+    questionsEn: [
+      'What decides an apartment sale in the first thirty seconds?',
+      'How do you hold one lighting identity from lobby to penthouse?',
+      "Where should a tower's lighting budget be concentrated?"
+    ],
+    titleSeo: 'Diseño de iluminación para multifamiliar — KM Lighting Studio',
+    titleSeoEn: 'Multifamily lighting design — KM Lighting Studio'
   },
   {
     id: 'hospitality', slug: 'hoteleria', title: 'Hotelería',
@@ -64,7 +88,19 @@ export const VERTICALS: Vertical[] = [
       "The rooms have to look the same on day one and day one thousand. The problem isn't specifying well: it's that the day a source burns out, someone replaces it with whatever's in the storeroom. That's where hotels dim little by little, without anyone making a decision.",
       "Specification built for replacement, with the dossier that lets the operator restock without degrading. Consistency at scale isn't a design problem. It's a documentation problem.",
       '[DATO — CRI mínimo especificado, o vida útil del sistema]'
-    ]
+    ],
+    questions: [
+      '¿Quién opera la iluminación de un hotel después de la entrega?',
+      '¿Por qué un hotel se ve peor con los años?',
+      '¿Cómo se especifica iluminación de hotel para que sobreviva al recambio?'
+    ],
+    questionsEn: [
+      "Who operates a hotel's lighting after handover?",
+      'Why does a hotel look worse over the years?',
+      'How do you specify hotel lighting that survives replacement?'
+    ],
+    titleSeo: 'Diseño de iluminación para hoteles — KM Lighting Studio',
+    titleSeoEn: 'Hotel lighting design — KM Lighting Studio'
   },
   {
     id: 'commercial', slug: 'comercial', title: 'Comercial',
@@ -86,7 +122,19 @@ export const VERTICALS: Vertical[] = [
       "You have to solve color rendering and code at the same time, and the two push in opposite directions. The efficiency standard takes you to one source; the product's material takes you to another.",
       "It gets solved in schematic design, not at purchase. When the lighting decision arrives after the layout, all that's left is adding fixtures — which is exactly what makes a store look cheap.",
       '[DATO — CRI mínimo / normativa aplicable por mercado]'
-    ]
+    ],
+    questions: [
+      '¿Qué hace la iluminación en un local comercial?',
+      '¿Por qué el rendimiento de color y la normativa se contradicen?',
+      '¿En qué etapa hay que resolver la iluminación de un local?'
+    ],
+    questionsEn: [
+      'What does lighting do in a retail space?',
+      'Why do color rendering and code pull against each other?',
+      'At what stage should retail lighting be resolved?'
+    ],
+    titleSeo: 'Diseño de iluminación para espacios comerciales — KM Lighting Studio',
+    titleSeoEn: 'Retail lighting design — KM Lighting Studio'
   },
   {
     id: 'cultural', slug: 'cultural', title: 'Cultural',
@@ -106,7 +154,19 @@ export const VERTICALS: Vertical[] = [
       "The event happens once. There's no second night to correct it.",
       "A venue has to work for the person in the front row and the person at the back, with an audience in motion and no room to test. And everything installed comes back down.",
       "It's designed for the one night that matters. What a permanent project adjusts on site, here gets solved before the first truck arrives."
-    ]
+    ],
+    questions: [
+      '¿Qué tiene de distinto iluminar un evento?',
+      '¿Qué exige un venue que no exige un proyecto permanente?',
+      '¿Cómo se diseña iluminación para una sola noche?'
+    ],
+    questionsEn: [
+      'What makes lighting an event different?',
+      "What does a venue demand that a permanent project doesn't?",
+      'How do you design lighting for a single night?'
+    ],
+    titleSeo: 'Diseño de iluminación para espacios culturales y venues — KM Lighting Studio',
+    titleSeoEn: 'Cultural and venue lighting design — KM Lighting Studio'
   },
   {
     id: 'aviation', slug: 'aviacion', title: 'Aviación',
@@ -128,7 +188,19 @@ export const VERTICALS: Vertical[] = [
       "Every component has to be flight-approved, with its weight, its vibration tolerance and its paperwork. The list of what can be specified is a fraction of what exists — and within that fraction you still have to make the interior look the way the designer drew it.",
       "We work inside that list from day one, not after the supplier rejects the first specification.",
       '[DATO — certificación específica que aplica]'
-    ]
+    ],
+    questions: [
+      '¿Qué se puede especificar en la cabina de un avión privado?',
+      '¿Por qué la certificación limita el diseño de iluminación en aviación?',
+      '¿Cómo se ilumina un interior de aviación dentro de esas restricciones?'
+    ],
+    questionsEn: [
+      'What can be specified in a private jet cabin?',
+      'Why does certification limit lighting design in aviation?',
+      'How do you light an aviation interior within those constraints?'
+    ],
+    titleSeo: 'Iluminación certificada para aviación privada — KM Lighting Studio',
+    titleSeoEn: 'Certified private aviation lighting — KM Lighting Studio'
   },
   {
     id: 'yachts', slug: 'yates', title: 'Yates',
@@ -148,6 +220,18 @@ export const VERTICALS: Vertical[] = [
       "Salt takes everything. It's a matter of time, and the time is shorter than anyone calculates.",
       "Encapsulated 316 stainless is the floor, not the ceiling. Add constant vibration, minimal installation space, and maintenance that happens at sea. A fixture that fails in a house gets replaced; one that fails on board you live with until port.",
       "It's specified for the real environment, not for the catalog. Genuine marine grade, and a short list of sources we return to because we already know how they age."
-    ]
+    ],
+    questions: [
+      '¿Qué le hace la sal a la iluminación de un yate?',
+      '¿Qué exige realmente el grado marino?',
+      '¿Cómo se especifica iluminación para un yate?'
+    ],
+    questionsEn: [
+      "What does salt do to a yacht's lighting?",
+      'What does marine grade actually require?',
+      'How do you specify lighting for a yacht?'
+    ],
+    titleSeo: 'Diseño de iluminación para yates y grado marino — KM Lighting Studio',
+    titleSeoEn: 'Yacht and marine-grade lighting design — KM Lighting Studio'
   }
 ];

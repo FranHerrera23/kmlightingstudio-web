@@ -5,19 +5,19 @@
       "description": "Karen Mannheim Lighting Studio. 33 years, 2,500+ projects, six countries. Architectural lighting for residences, multifamily, hospitality, aviation and yachts."
     },
     "projects": {
-      "title": "Projects — KM Lighting Studio",
+      "title": "Architectural lighting projects across six countries — KM Lighting Studio",
       "description": "Architectural lighting work across six countries: private residences, multifamily, hospitality, commercial, cultural, aviation and yachts."
     },
     "services": {
-      "title": "Services — KM Lighting Studio",
+      "title": "Architectural lighting design by typology — KM Lighting Studio",
       "description": "One discipline, seven worlds. Lighting design, design management and on-site management across every typology."
     },
     "products": {
-      "title": "What We Specify — KM Lighting Studio",
+      "title": "Lighting specification and control — KM Lighting Studio",
       "description": "The instruments we return to — because they hold their colour, survive salt air, and disappear into a ceiling the way the architecture intended."
     },
     "about": {
-      "title": "The Studio — KM Lighting Studio",
+      "title": "Lighting design studio · Karen Mannheim — KM Lighting Studio",
       "description": "KM Lighting Studio opened in 2023. Karen Mannheim had spent three decades lighting architecture before founding it."
     },
     "contact": {
@@ -29,7 +29,6 @@
       "description": "Everything we know about light — articles, conversations, walkthroughs and press. Written and filmed with the people who design the buildings."
     }
   },
-
   "nav": {
     "projects": "Projects",
     "home": "Home",
@@ -40,7 +39,6 @@
     "contact": "Contact",
     "letsTalk": "Let's talk"
   },
-
   "languages": {
     "en": "English",
     "es": "Español",
@@ -48,35 +46,51 @@
     "ru": "Русский",
     "pending": "pend"
   },
-
   "home": {
     "hero": {
       "kicker": "Architectural Lighting Design · Lima · Miami · Marbella",
-      "titleLines": ["Great architecture", "deserves lighting", "that understands."],
+      "titleLines": [
+        "Great architecture",
+        "deserves lighting",
+        "that understands."
+      ],
       "scroll": "Scroll"
     },
     "dataOrg": "KM Lighting Studio · founded in 2023",
     "dataKaren": "Karen Mannheim · 33 years · 2,500+ projects · 6 countries",
     "statement": {
-      "titleLines": ["You spend years", "on a space."],
+      "titleLines": [
+        "You spend years",
+        "on a space."
+      ],
       "p1": "Every detail considered. Then lighting becomes an afterthought — and the architecture disappears.",
       "p2": "We design light that reveals what you've already created. Not light you notice; light that makes the room, the material and the person inside it feel <it>inevitable.</it>"
     },
     "philosophy": {
       "micro": "Our philosophy",
-      "titleLines": ["Lighting designed", "for the architecture.", "Not for the portfolio."],
+      "titleLines": [
+        "Lighting designed",
+        "for the architecture.",
+        "Not for the portfolio."
+      ],
       "body": "We listen to what each space wants to be — then design light that helps it become that. Single, intentional sources over flooded rooms. Deliberate pools of shadow that make warmth feel warmer.",
       "sign": "The architecture is the vision. Lighting serves it."
     },
     "selected": {
       "micro": "Selected work",
-      "titleLines": ["A portfolio,", "by typology."],
+      "titleLines": [
+        "A portfolio,",
+        "by typology."
+      ],
       "side": "The same studio that lights an art collector's home lights a tower, a beach house, a flagship, a jet.",
       "cta": "See all projects →"
     },
     "range": {
       "micro": "Our range",
-      "titleLines": ["Classical or", "contemporary."],
+      "titleLines": [
+        "Classical or",
+        "contemporary."
+      ],
       "side": "The language changes. The discipline doesn't.",
       "ramsaName": "RAMSA",
       "ramsaTitle": "Traditional",
@@ -87,7 +101,11 @@
     },
     "tech": {
       "micro": "The technology",
-      "titleLines": ["You design the room.", "We make the light", "disappear into it."],
+      "titleLines": [
+        "You design the room.",
+        "We make the light",
+        "disappear into it."
+      ],
       "side": "The light that feels like it was always there is the hardest kind to engineer. It takes more control, not less, to make light this calm.",
       "c1Label": "The light",
       "c1Title": "A light that dims like a candle.",
@@ -104,18 +122,25 @@
     "marquee2": "the architecture remains —",
     "where": {
       "micro": "Where we work",
-      "titleLines": ["Six countries.", "One standard."],
+      "titleLines": [
+        "Six countries.",
+        "One standard."
+      ],
       "side": "Residential needs scene control. Hospitality needs reliability at scale. Commercial needs adaptability."
     },
     "trusted": {
       "micro": "Trusted by",
-      "titleLines": ["Studios Karen", "has worked with."]
+      "titleLines": [
+        "Studios Karen",
+        "has worked with."
+      ]
     }
   },
-
   "projects": {
     "kicker": "Projects",
-    "titleLines": ["All projects."],
+    "titleLines": [
+      "All projects."
+    ],
     "introLead": "Filter by typology, location or status. Concept studies are labelled as such — we show them because they define the range of the studio, not because we're claiming them as delivered work.",
     "introNote": "Every project opens as a full page. Images first, always.",
     "typology": "Typology",
@@ -126,30 +151,53 @@
     "countOther": "{count} projects",
     "empty": "No projects match this combination."
   },
-
   "services": {
     "kicker": "Services",
-    "openTitleLines": ["Your client will never see the drawing.", "They'll see the room at eight at night."],
+    "openTitleLines": [
+      "Your client will never see the drawing.",
+      "They'll see the room at eight at night."
+    ],
     "openBody1": "You spend months on the plan, the materials, the proportion. And on handover day none of it gets judged in midday light. It gets judged with the lights on.",
     "openBody2": "If that light doesn't understand what you drew, the one exposed isn't the supplier. It's you.",
-    "titleLines": ["One discipline.", "Seven worlds."],
+    "titleLines": [
+      "One discipline.",
+      "Seven worlds."
+    ],
     "introLead": "We design the light, we protect it through construction, and we stay until it's right. What changes is what the space demands of it.",
     "introNote": "A jet needs certified components. A tower needs one identity from lobby to penthouse. A yacht needs to survive salt.",
     "scopeMicro": "How we work",
-    "scopeTitleLines": ["Three stages.", "One dossier."],
+    "scopeTitleLines": [
+      "Three stages.",
+      "One dossier."
+    ],
     "scopeBody": "The three stages are the same across all seven typologies. What changes is what each space demands of you.",
     "scopeSteps": [
-      ["Stage 1", "Lighting design", "15 business days · 6 steps"],
-      ["Stage 2", "Design management", ""],
-      ["Stage 3", "On-site management", "per schedule"],
-      ["—", "Final dossier", ""]
+      [
+        "Stage 1",
+        "Lighting design",
+        "15 business days · 6 steps"
+      ],
+      [
+        "Stage 2",
+        "Design management",
+        ""
+      ],
+      [
+        "Stage 3",
+        "On-site management",
+        "per schedule"
+      ],
+      [
+        "—",
+        "Final dossier",
+        ""
+      ]
     ],
     "scopeClose": "Every drawing, one closing dossier. Not a set of fragments handed over stage by stage — one complete dossier you can hold us to.",
     "projectCountOne": "{count} project",
     "projectCountOther": "{count} projects",
     "workProcess": "Work process"
   },
-
   "vertical": {
     "back": "← All services",
     "wpMicro": "Work process",
@@ -160,16 +208,21 @@
     "dossierTitle1": "Every drawing,",
     "dossierTitle2": "one final dossier.",
     "dossierLead": "Not a set of fragments handed over stage by stage — one complete, closeout dossier you can hold us to.",
-    "selectedWork": "Selected work in this vertical"
+    "selectedWork": "Selected work in this vertical",
+    "whatYouGet": "What you get:"
   },
-
   "products": {
     "kicker": "Technology",
-    "openTitleLines": ["You chose that material over months.", "At eight at night it stops existing."],
+    "openTitleLines": [
+      "You chose that material over months.",
+      "At eight at night it stops existing."
+    ],
     "openBody1": "Most LEDs dim without warming. At twenty percent they hold the same white they had at a hundred.",
     "openBody2": "Stone flattens. Wood goes dull. The color you chose in daylight isn't the color your client sees at dinner.",
     "openBody3": "It isn't a material problem. It's a specification problem.",
-    "titleLines": ["What we specify."],
+    "titleLines": [
+      "What we specify."
+    ],
     "introLead": "Every project is built from a short, deliberate list of instruments — fixtures we come back to because they hold their color, survive salt air, and disappear into the ceiling the way the architecture <it>intended.</it>",
     "introNote": "Not a shop. Photometric files and spec sheets available to specifying professionals, ungated.",
     "indepTitle": "We don't sell fixtures or represent brands.",
@@ -190,10 +243,12 @@
     "cctHeading": "Colour temperature",
     "technicalPending": "Awaiting TRAZZO data"
   },
-
   "about": {
     "kicker": "Studio",
-    "titleLines": ["A new studio.", "Thirty-three years of craft."],
+    "titleLines": [
+      "A new studio.",
+      "Thirty-three years of craft."
+    ],
     "introLead": "KM Lighting Studio opened in 2023. What it carried inside wasn't new: Karen Mannheim had spent three decades lighting architecture before founding it.",
     "introNote": "What started with one person knocking on doors in Lima is now a studio with teams in Lima, Miami and Marbella.",
     "originMicro": "Origin",
@@ -204,9 +259,36 @@
     "lead": "Karen has delivered more than 2,500 projects across six countries, working alongside studios like RAMSA, Oppenheim and Adriana Hoyos. But the number that matters most isn't on that list: after three decades and that scale, every project is still designed as if it were the only one.",
     "throughline": "What never changed: here light isn't decoration. It's the soul of the architecture.",
     "statsKarenLabel": "Karen Mannheim",
-    "statsKaren": [["33", "+", "Years of practice"], ["2,500", "+", "Projects delivered"], ["6", "", "Countries"]],
+    "statsKaren": [
+      [
+        "33",
+        "+",
+        "Years of practice"
+      ],
+      [
+        "2,500",
+        "+",
+        "Projects delivered"
+      ],
+      [
+        "6",
+        "",
+        "Countries"
+      ]
+    ],
     "statsStudioLabel": "KM Lighting Studio",
-    "statsStudio": [["2023", "", "Founded"], ["3", "", "Cities · Lima, Miami, Marbella"]],
+    "statsStudio": [
+      [
+        "2023",
+        "",
+        "Founded"
+      ],
+      [
+        "3",
+        "",
+        "Cities · Lima, Miami, Marbella"
+      ]
+    ],
     "founderMicro": "Who we are",
     "founderName": "Karen Mannheim.",
     "founderRole": "Founder & Creative Director",
@@ -228,25 +310,28 @@
     "trustedTitle2": "has worked with.",
     "trazzoNote": "Work prior to 2023 delivered under TRAZZO Lighting, directed by Karen Mannheim."
   },
-
   "contact": {
     "kicker": "Contact",
-    "titleLines": ["We don't pitch.", "We partner."],
+    "titleLines": [
+      "We don't pitch.",
+      "We partner."
+    ],
     "introLead": "Whether it's a tower in Lima, an oceanfront house in Florida or a project in Marbella — we'd like to work on projects that ask for light worthy of the architecture.",
     "introNote": "Your clients will never know our name. They'll just never want to leave.",
     "officeFallback": "Office",
     "addressPending": "Address to be confirmed"
   },
-
   "cta": {
     "kicker": "Let's begin",
-    "titleLines": ["Tell us what", "you're building."],
+    "titleLines": [
+      "Tell us what",
+      "you're building."
+    ],
     "body": "Whatever stage you're in — concept, tender, or a ceiling that's already closed. We'll tell you honestly if we're the right studio.",
     "bodyServices": "Tell us the typology, the stage, and who's on the team. If we're not the right studio for that project, we'll say so on the first call.",
     "bodyTech": "If you're specifying and need photometrics, write to us. And if you don't know what to specify yet, even better — that conversation is shorter at the start of a project than at the end.",
     "button": "Write to us"
   },
-
   "contactForm": {
     "name": "Name",
     "email": "Email",
@@ -282,16 +367,16 @@
       "completed": "Completed"
     }
   },
-
   "notFound": {
     "kicker": "404",
-    "titleLines": ["Nothing here."],
+    "titleLines": [
+      "Nothing here."
+    ],
     "lead": "The page you're looking for doesn't exist or moved. Head back to the work.",
     "projects": "Projects",
     "services": "Services",
     "contact": "Contact"
   },
-
   "footer": {
     "navigate": "Navigate",
     "verticals": "Verticals",
@@ -302,10 +387,12 @@
     "tag": "Great lighting disappears. The architecture remains.",
     "copyright": "© 2026"
   },
-
   "content": {
     "kicker": "Content",
-    "titleLines": ["Everything we", "know about light."],
+    "titleLines": [
+      "Everything we",
+      "know about light."
+    ],
     "introLead": "Thirty-three years of Karen specifying, commissioning and sometimes getting it wrong — written, filmed and talked through with the people who design the buildings.",
     "seeAll": "See all →",
     "captureTitle": "Pricing a project right now?",
@@ -354,7 +441,6 @@
     "transcriptTodo": "Transcript to be added — the full text in the original language. A video is indexed by no one; the text is.",
     "backToContent": "← Content"
   },
-
   "project": {
     "credArchitecture": "Architecture",
     "credInterior": "Interior Design",

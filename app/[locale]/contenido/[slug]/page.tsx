@@ -257,23 +257,22 @@ function ArticleView({ a }: { a: Article }) {
         </section>
       </div>
 
-      {/* Preguntas frecuentes */}
+      {/* Preguntas frecuentes — §3 brief 09: H3 real + respuesta inmediata en el
+          DOM (sin acordeón), extraíble por un motor de respuesta. */}
       <section className="faq">
         <div className="micro">Preguntas frecuentes</div>
-        <dl>
-          {a.faq.map((item, i) => (
-            <div className="faq-q" key={i}>
-              <dt>{item.q}</dt>
-              <dd>
-                {isTodo(item.a) ? (
-                  <Pending>Respuesta por escribir.</Pending>
-                ) : (
-                  (item.a as string)
-                )}
-              </dd>
-            </div>
-          ))}
-        </dl>
+        {a.faq.map((item, i) => (
+          <div className="faq-q" key={i}>
+            <h3>{item.q}</h3>
+            <p>
+              {isTodo(item.a) ? (
+                <Pending>Respuesta por escribir.</Pending>
+              ) : (
+                (item.a as string)
+              )}
+            </p>
+          </div>
+        ))}
       </section>
 
       {/* Autor */}

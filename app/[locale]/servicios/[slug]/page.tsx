@@ -33,9 +33,11 @@ export async function generateMetadata(props: {
   const { locale, slug } = await props.params;
   const v = getVertical(slug);
   if (!v) return {};
+  // §2 brief 09 · <title> keyword (titleSeo) distinto del H1 humano; fallback al patrón.
+  const titleSeo = (locale === 'en' ? v.titleSeoEn : v.titleSeo) || `${v.title} — ${SITE_NAME}`;
   return {
     ...social({
-      title: `${v.title} — ${SITE_NAME}`,
+      title: titleSeo,
       description: v.sub,
       path: localizedPath(locale, `/servicios/${v.slug}`)
     }),
@@ -59,6 +61,9 @@ export default async function VerticalPage(props: {
   // A.4 · narrativa en el idioma del lector (EN para el arquitecto de afuera).
   // Los `[DATO]` son idénticos en ambas, así que verticalHasDato sigue valiendo.
   const story = locale === 'en' ? v.storyEn : v.story;
+  // §1 brief 09 · answer capsules: cada párrafo narrativo encabezado por su
+  // pregunta (H3). Se aparean por índice; la línea [DATO] suelta no lleva pregunta.
+  const questions = locale === 'en' ? v.questionsEn : v.questions;
   const crumbs = breadcrumbList(locale, [
     { name: tn('home'), path: '/' },
     { name: tn('services'), path: '/servicios' },
@@ -81,9 +86,12 @@ export default async function VerticalPage(props: {
       <section className="sec-s" style={{ paddingBottom: 0 }}>
         <div className="vnarr rise">
           {story.map((p, i) => (
-            <p key={i}>
-              <DatoText text={p} />
-            </p>
+            <div className="vcapsule" key={i}>
+              {questions[i] && <h3>{questions[i]}</h3>}
+              <p>
+                <DatoText text={p} />
+              </p>
+            </div>
           ))}
         </div>
       </section>
@@ -133,6 +141,25 @@ export default async function VerticalPage(props: {
                   </div>
                 </div>
               ))}
+              {/* §4 brief 09 · molde de guía por pasos — capsule + entregable.
+                  Renderiza solo cuando Fran llene los slots (question/deliverable). */}
+              {(() => {
+                const sq = locale === 'en' ? s.questionEn : s.question;
+                const sa = locale === 'en' ? s.answerEn : s.answer;
+                const sd = locale === 'en' ? s.deliverableEn : s.deliverable;
+                if (!sq && !sd) return null;
+                return (
+                  <div className="stg-cap">
+                    {sq && <h4 className="stg-q">{sq}</h4>}
+                    {sa && <p>{sa}</p>}
+                    {sd && (
+                      <p className="stg-deliver">
+                        <strong>{t('whatYouGet')}</strong> {sd}
+                      </p>
+                    )}
+                  </div>
+                );
+              })()}
             </div>
           ))}
         </div>

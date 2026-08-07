@@ -111,6 +111,20 @@ export interface Vertical {
    * `[DATO — …]` son idénticos a los del ES y siguen disparando `noindex`.
    */
   storyEn: string[];
+  /**
+   * §1 brief 09 · las 3 preguntas (H3) que encabezan los 3 párrafos narrativos
+   * — en juego → obstáculo → lo que cambia, ahora como pregunta literal del
+   * comprador. Es la answer capsule: pregunta + respuesta inmediata debajo.
+   * Se aparean por índice con los 3 primeros párrafos de `story`.
+   */
+  questions: string[];
+  questionsEn: string[];
+  /**
+   * §2 brief 09 · `<title>` optimizado para la máquina (keyword), distinto del
+   * H1 humano. Si vacío, cae al patrón por defecto.
+   */
+  titleSeo?: string;
+  titleSeoEn?: string;
 }
 
 export interface ScopeStage {
@@ -118,6 +132,19 @@ export interface ScopeStage {
   title: string;
   delivery: string;
   steps: Array<[index: string, title: string, items: string[]]>;
+  /**
+   * §4 brief 09 · molde de guía por pasos (Tenex). CC deja los slots; el copy es
+   * [FRAN]. Renderizan solo cuando están presentes — nada de placeholders TODO.
+   *   · question/answer → answer capsule del paso (H3 + respuesta directa)
+   *   · deliverable → "Qué recibes: <entregable concreto>"
+   * `*En` son las variantes EN.
+   */
+  question?: string;
+  questionEn?: string;
+  answer?: string;
+  answerEn?: string;
+  deliverable?: string;
+  deliverableEn?: string;
 }
 
 /**

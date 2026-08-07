@@ -296,6 +296,12 @@ p{line-height:1.75;color:var(--ink-2)}
 .stg h3{font-size:clamp(21px,2.3vw,32px)}
 .stg .dl{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);border-radius:100px;padding:6px 14px;margin-left:auto;white-space:nowrap}
 .stg .narr{font-size:15.5px;line-height:1.78;color:var(--ink-2);max-width:50ch;margin:18px 0 28px}
+/* §4 brief 09 · capsule + entregable del paso (render-when-present) */
+.stg-cap{margin-top:clamp(22px,3vh,34px);padding-top:22px;border-top:1px solid var(--rule-2);max-width:56ch}
+.stg-q{font-size:clamp(15px,1.5vw,18px);font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.stg-cap p{font-size:14.5px;line-height:1.72;color:var(--ink-2)}
+.stg-deliver{margin-top:12px}
+.stg-deliver strong{color:var(--gold)}
 .step{padding:18px 0;border-top:1px solid var(--rule-2);display:grid;grid-template-columns:34px 1fr;gap:16px}
 .step .i{font-size:10.5px;font-weight:600;color:var(--gold);letter-spacing:.08em;padding-top:3px}
 .step h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
@@ -312,7 +318,8 @@ p{line-height:1.75;color:var(--ink-2)}
 .doss li::before{content:'';position:absolute;left:0;top:11px;width:9px;height:1px;background:var(--gold-lt)}
 
 /* SERVICIOS · A.4 narrativa de vertical (EN JUEGO → OBSTÁCULO → CAMBIA) */
-.vnarr{max-width:64ch;display:grid;gap:clamp(18px,2.6vh,28px)}
+.vnarr{max-width:64ch;display:grid;gap:clamp(30px,4.2vh,52px)}
+.vcapsule h3{font-size:clamp(18px,2vw,25px);line-height:1.28;letter-spacing:-.02em;color:var(--ink);margin-bottom:13px;max-width:30ch}
 .vnarr p{font-size:clamp(16px,1.55vw,19px);line-height:1.74;color:var(--ink-2)}
 .vnarr .flag{color:var(--flag)}
 
@@ -557,8 +564,8 @@ p{line-height:1.75;color:var(--ink-2)}
 .faq{margin-top:clamp(44px,7vh,80px);border-top:1px solid var(--rule);padding-top:clamp(30px,4vh,48px)}
 .faq .micro{color:var(--gold);display:block;margin-bottom:22px}
 .faq-q{padding:18px 0;border-bottom:1px solid var(--rule-2)}
-.faq dt{font-size:17px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
-.faq dd{font-size:15px;line-height:1.75;color:var(--ink-2)}
+.faq-q h3{font-size:17px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.faq-q p{font-size:15px;line-height:1.75;color:var(--ink-2)}
 .faq .flag{color:var(--flag);font-style:italic}
 .author{margin-top:clamp(44px,7vh,80px);margin-bottom:clamp(60px,10vh,130px);background:var(--paper-2);padding:clamp(28px,4vw,44px)}
 .author .micro{color:var(--gold);display:block;margin-bottom:14px}
