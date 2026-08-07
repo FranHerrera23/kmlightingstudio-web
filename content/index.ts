@@ -94,6 +94,12 @@ export function isIndexable(p: Project): boolean {
   return !isTodo(p.name) && !isTodo(p.concept);
 }
 
+/** §7 brief 08 · proyecto bajo NDA. Nunca se expone su foto (og:image cae al
+ *  /og genérico). Cubre athlete/yacht/jet (loc) y arvida/musician (name). */
+export function isConfidential(p: Project): boolean {
+  return p.loc === 'confidential' || p.name === 'Confidencial';
+}
+
 /** Valor real o null (para mostrar "Por confirmar" en fase 1). */
 export function displayValue<T>(v: Todoable<T>): T | null {
   return isTodo(v) ? null : (v as T);

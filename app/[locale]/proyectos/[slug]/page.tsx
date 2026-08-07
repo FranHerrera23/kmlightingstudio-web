@@ -21,6 +21,7 @@ import {
   photoUrl,
   isTodo,
   isIndexable,
+  isConfidential,
   typologyLabel,
   statusLabel,
   displayValue,
@@ -46,8 +47,9 @@ export async function generateMetadata(props: {
   const description = isTodo(p.concept)
     ? `${typ}${place ? ` · ${place}` : ''} — architectural lighting by ${SITE_NAME}.`
     : (p.concept as string);
-  // og:image = primera foto de galería, recortada a 1200×630 (o marca si 404).
-  const photo = p.ph > 0 ? photoUrl(p, 1) : null;
+  // og:image = primera foto de galería, recortada a 1200×630. §7 brief 08: si el
+  // proyecto es confidencial, NUNCA su foto — cae al /og genérico (photo=null).
+  const photo = p.ph > 0 && !isConfidential(p) ? photoUrl(p, 1) : null;
 
   return {
     ...social({

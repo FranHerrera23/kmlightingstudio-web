@@ -156,9 +156,12 @@ function ArticleView({ a }: { a: Article }) {
         </div>
       </header>
 
-      {/* En corto — el bloque que la IA levanta */}
+      {/* En corto — el bloque que la IA levanta. §4 brief 08: encabezado por la
+          pregunta literal del arquitecto, no por una etiqueta; respuesta citable
+          autocontenida debajo. */}
       <section className="capsule">
         <div className="micro">En corto</div>
+        <h2 className="capsule-q">{a.question}</h2>
         <p>
           {isTodo(a.answer) ? (
             <Pending>

@@ -534,6 +534,7 @@ p{line-height:1.75;color:var(--ink-2)}
 .artmeta span:not(:last-child)::after{content:'·';margin-left:20px;color:var(--rule)}
 .capsule{margin-top:clamp(40px,6vh,64px);background:var(--ink);color:var(--paper);padding:clamp(28px,4vw,44px)}
 .capsule .micro{color:var(--gold-lt);display:block;margin-bottom:14px}
+.capsule-q{font-size:clamp(19px,2.1vw,27px);line-height:1.25;letter-spacing:-.02em;color:#fff;margin-bottom:16px;max-width:32ch}
 .capsule p{font-size:var(--t3);line-height:1.7;color:rgba(250,250,248,.92)}
 .capsule .flag{color:#E5896D;font-style:italic}
 .takeaways{margin-top:clamp(36px,5vh,56px)}
