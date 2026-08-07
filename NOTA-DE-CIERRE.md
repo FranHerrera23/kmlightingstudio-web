@@ -76,6 +76,38 @@ Madrid solo como ubicación de proyecto · `foundingDate 2023` · SEIS PAÍSES �
 
 **Todo lo ejecutable por CC (briefs 01–07) está hecho y verificado contra producción.**
 
+### Brief 08 — infraestructura de demanda / AEO (committeado y pusheado)
+
+| Commit | Qué |
+|---|---|
+| `acc4f09` | §3 llms.txt/ai.txt desde datos · §7 og:image confidencial → genérico · §4 bloque citable por pregunta |
+
+**Tarea 1 — auditoría contra HTML crudo (`curl`), ruta por ruta:**
+
+*1.1 Hubs (links en crudo):* `/proyectos` **36** ✓ · `/tecnologia` **8** ✓ · `/servicios` **7** ✓ ·
+`/contenido` hub con artículos + teasers ✓ · `/contenido/articulos` 3 artículos ✓.
+**La trampa de `useSearchParams` NO se repitió** — los filtros client SSRean la lista completa.
+Con JS deshabilitado se leen enteros; con JS los chips filtran sobre el DOM ya servido.
+
+*1.2 Cuerpo en crudo (palabras · JSON-LD):* artículo 1 **2511** · artículo 2 **2508** · artículo 3
+**2523** · pezet1 **2728** · arvida **2444** · servicios/aviacion **2900** · tecnologia/marine-uplight
+**2246** · estudio **2932** · conversaciones **2301** · recorridos **2294**. Cada una con su JSON-LD
+(`Article`+`BreadcrumbList` en artículos — `FAQPage` omite por respuestas en TODO; `CreativeWork`+
+`BreadcrumbList` en proyectos).
+
+*1.3 Metadata de rutas hijas de Contenido:* cada una con **title y canonical propios**
+(Contenido/Artículos/Conversaciones/Recorridos/Prensa) — sin competencia entre URLs.
+
+**Tarea 2** — nada que arreglar: los hubs ya sirven las listas en crudo.
+**Tarea 3** — `/llms.txt` y `/ai.txt` generados desde el modelo (NDA con rótulo, TODO excluidos, 0 nombres reales).
+**Tarea 4** — el slot citable existe (`.capsule`, marcado propio); se lo encabezó con la pregunta literal.
+**Tarea 5** — `VideoObject` (inLanguage+transcript) y la transcripción en página ya existen; contenido [EXTERNO].
+**Tarea 7** — og:image confidencial → `/og` genérico; proyectos no-confidenciales usan su foto.
+
+*Pendiente de copy (no molde):* slots de pregunta en páginas comerciales para ¿en qué etapa? (home §5.2)
+y ¿qué incluye el honorario? — el copy es **[FRAN]**. Después del deploy: re-indexar en Search Console
+`/contenido`, las 4 hijas, los 3 artículos y 5 proyectos.
+
 ## QUÉ FALTA (ya no es de CC)
 
 Nada ejecutable por CC. Lo pendiente depende de Fran, Karen, assets o servicios externos
